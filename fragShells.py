@@ -1,4 +1,5 @@
 # CS412 HW2 Question4
+import sys
 from sets import Set
 
 def buildIndexTable(datacube, partitions):
@@ -34,6 +35,7 @@ def buildIndexTable(datacube, partitions):
     # compute cuboids
     for i in range(len(tableList)):
         computeCuboids(tableList[i], order)
+        print
     return      
 
 def computeCuboids(indexTable, order):
@@ -80,23 +82,19 @@ def printCuboids(indexTable, order):
             if int(c1[i][1]) != int(c2[i][1]):
                 return int(c1[i][1]) - int(c2[i][1])
     cuboids = sorted(cuboids, cmp=cuboidCmp)
-    # print sorted cuboids 
-    # print cuboids
+    # print sorted cuboids
     length = len(cuboids[0])
     for i in range(len(cuboids)):
         print ' '.join(cuboids[i][:length-1]), ':', cuboids[i][length-1]
 
 def main():
-    datacube = [
-        ['a1', 'b2', 'c1', 'd1', 'e1'],
-        ['a1', 'b2', 'c1', 'd2', 'e1'],
-        ['a1', 'b2', 'c1', 'd1', 'e2'],
-        ['a2', 'b1', 'c1', 'd1', 'e2'],
-        ['a2', 'b1', 'c1', 'd1', 'e3']
-    ]
-    partitions = 2
+    datacube = []
+    partitions = input()
+    lines = sys.stdin.readlines()
+    for i in range(len(lines)):   
+        l = lines[i].split()
+        datacube.append(l)
     buildIndexTable(datacube, partitions)
-    i = "finish"
 
 if __name__ == "__main__":
    main()
