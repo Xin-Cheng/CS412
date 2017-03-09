@@ -54,16 +54,7 @@ def computeCuboids(indexTable, order):
             c2Idx = indexTable[j][1]
             newIdx = Set(c1Idx) & Set(c2Idx)
             if len(newIdx) > 0:
-                newCuboid = Set(c1 + c2)
-                # sort dimension by order
-                def dimensionCmp(d1, d2):
-                    i1 = order.index(d1[0][0])
-                    i2 = order.index(d2[0][0])
-                    if i1 != i2:
-                        return i1-i2
-                    else:
-                        return int(d1[0][1]) - int(d2[0][1])
-                newCuboid = sorted(newCuboid, cmp=dimensionCmp)
+                newCuboid = list(Set(c1 + c2))
                 t = tuple(newCuboid)
                 if t not in cuboids:
                     newtable.append([newCuboid,newIdx])
@@ -71,6 +62,16 @@ def computeCuboids(indexTable, order):
     computeCuboids(newtable, order)
 
 def printCuboids(indexTable, order):
+    # sort dimension by order
+    def dimensionCmp(d1, d2):
+        i1 = order.index(d1[0][0])
+        i2 = order.index(d2[0][0])
+        if i1 != i2:
+            return i1-i2
+        else:
+            return int(d1[0][1]) - int(d2[0][1])
+    for i in range(len(indexTable)):
+        indexTable[i][0] = sorted(indexTable[i][0], cmp=dimensionCmp)
     # sort cuboids
     def cuboidCmp(cube1, cube2):
         # determine cube order
@@ -101,6 +102,7 @@ def main():
     ]
     partitions = 2
     buildIndexTable(datacube, partitions)
+    i = 'finish'
 
 if __name__ == "__main__":
    main()
