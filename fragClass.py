@@ -97,16 +97,13 @@ def printCuboids(indexTable, order):
         print ' '.join(cuboids[i].cell)+' : '+str(len(cuboids[i].TIDs))
 
 def main():
-    datacube = [
-        ['a1', 'b2', 'c1', 'd1', 'e1'],
-        ['a1', 'b2', 'c1', 'd2', 'e1'],
-        ['a1', 'b2', 'c1', 'd1', 'e2'],
-        ['a2', 'b1', 'c1', 'd1', 'e2'],
-        ['a2', 'b1', 'c1', 'd1', 'e3']
-    ]
-    partitions = 2
+    datacube = []
+    partitions = input()
+    lines = sys.stdin.readlines()
+    for i in range(len(lines)):   
+        l = lines[i].split()
+        datacube.append(l)
     buildIndexTable(datacube, partitions)
-    i = 'finish'
 
 if __name__ == "__main__":
    main()
