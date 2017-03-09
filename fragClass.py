@@ -15,10 +15,8 @@ class Cuboid:
     def sort(self, order):
         # sort dimension by order
         def dimensionCmp(d1, d2):
-            i1 = order.index(d1[0])
-            i2 = order.index(d2[0])
-            if i1 != i2:
-                return i1-i2
+            if order.index(d1[0]) != order.index(d2[0]):
+                return order.index(d1[0]) - order.index(d2[0])
             else:
                 return int(d1[1]) - int(d2[1])
         self.cell = sorted(self.cell, cmp = dimensionCmp)
@@ -67,11 +65,12 @@ def buildIndexTable(datacube, partitions):
     # compute cuboids
     for i in range(len(tableList)):
         computeCuboids(tableList[i], order)
-        print 'hi'
+        print
 
 def computeCuboids(indexTable, order):
     if len(indexTable) == 0:
         return
+    printCuboids(indexTable, order)
     newtable = []
     for i in range(len(indexTable)):
         for j in range(i+1, len(indexTable)):
@@ -80,6 +79,22 @@ def computeCuboids(indexTable, order):
                 if contains(newtable, cube) == -1:
                     newtable.append(cube)
     computeCuboids(newtable, order)
+
+def printCuboids(indexTable, order):
+    # sort cuboids
+    def cuboidCmp(cube1, cube2):
+        # determine cube order
+        for i in range(len(cube1.cell)):
+            if order.index(cube1.cell[i][0]) != order.index(cube2.cell[i][0]):
+                return order.index(cube1.cell[i][0]) - order.index(cube2.cell[i][0])
+        # determine cell order
+        for i in range(len(cube1.cell)):
+            if int(cube1.cell[i][1]) != int(cube2.cell[i][1]):
+                return int(cube1.cell[i][1]) - int(cube2.cell[i][1])
+    cuboids = sorted(indexTable, cmp = cuboidCmp)
+    # print sorted cuboids
+    for i in range(len(cuboids)):
+        print ' '.join(cuboids[i].cell)+' : '+str(len(cuboids[i].TIDs))
 
 def main():
     datacube = [
