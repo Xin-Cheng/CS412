@@ -1,10 +1,17 @@
+# CS412 HW2 Question4
+import sys
+from sets import Set
+
 class Cuboid:
+    name = ''
     cell = []
     TIDs = []
     def __init__(self, cell, TIDs, order):
         self.cell = cell
-        self.sort(order)
         self.TIDs = TIDs
+        if len(self.cell) > 1:
+            self.sort(order)
+        self.name = ''.join(self.cell)
     def sort(self, order):
         # sort dimension by order
         def dimensionCmp(d1, d2):
@@ -13,8 +20,19 @@ class Cuboid:
             if i1 != i2:
                 return i1-i2
             else:
-                return int(d1[0][1]) - int(d2[0][1])
+                return int(d1[1]) - int(d2[1])
         self.cell = sorted(self.cell, cmp = dimensionCmp)
+
+def cuboidJoin(first, second, order):
+    cell = list(Set(first.cell) | Set(second.cell))
+    tids = list(Set(first.TIDs) & Set(second.TIDs))
+    return Cuboid(cell, tids, order)
+
+def contains(cuboidlist, cuboid):
+    for i in range(len(cuboidlist)):
+        if cuboid.name == cuboidlist[i].name:
+            return i
+    return -1
 
 def buildIndexTable(datacube, partitions):
     # topological order of dimension
@@ -30,16 +48,38 @@ def buildIndexTable(datacube, partitions):
         temp -= temp/size
         size -= 1
         parIndices.append(temp)
-    cube = Cuboid(['b2', 'a1'], [1, 2], order)
+    # iterate each shell
     tableList = []
-    for i in range(len(datacube)):
-        for j in range(len(datacube)):
-            attr = [datacube[i][j]]
-            tid = [i]
-            cube = Cuboid(attr, tid)
-            tableList.append(cube)
-    tableList[1].TIDs.append(222)
-    i = 0
+    while len(parIndices) > 0:
+        start = parIndices.pop()
+        end = parIndices[-1] if len(parIndices) > 0 else dimension
+        # index table: attribut + TID list
+        indexTable = []
+        for r in range(dimension):
+            for c in range(start, end):
+                cube = Cuboid([datacube[r][c]], [r], order)
+                cont = contains(indexTable, cube)
+                if cont == -1:
+                    indexTable.append(cube)
+                else:
+                    indexTable[cont].TIDs.append(r)
+        tableList.append(indexTable)
+    # compute cuboids
+    for i in range(len(tableList)):
+        computeCuboids(tableList[i], order)
+        print 'hi'
+
+def computeCuboids(indexTable, order):
+    if len(indexTable) == 0:
+        return
+    newtable = []
+    for i in range(len(indexTable)):
+        for j in range(i+1, len(indexTable)):
+            cube = cuboidJoin(indexTable[i], indexTable[j], order)
+            if len(cube.TIDs) > 0:
+                if contains(newtable, cube) == -1:
+                    newtable.append(cube)
+    computeCuboids(newtable, order)
 
 def main():
     datacube = [
