@@ -8,15 +8,32 @@ def contains_set(transaction, item):
             return False
     return True
 
+def contains_pattern(pattern_set, pattern):
+    if len(pattern_set) == 0:
+        return False
+    for i in range(len(pattern_set)):
+        str1 = "".join(pattern_set[i][1:])
+        str2 = "".join(pattern[1:])
+        if str1 == str2:
+            return True
+    return False
+
+# merge two itemset
+def merge_set(s1, s2):
+    s = set(s1 + s2)
+    s = sorted(list(s))
+    return s
+
 # self join
 def self_join(new_set):
-    if len(new_set) <= 1:
-        return new_set
     itemset = []
+    if len(new_set) <= 1:
+        return itemset
     for i in range(len(new_set)):
         for j in range(i + 1, len(new_set)):
-            s = [ 0 ] + new_set[i][1:] + new_set[j][1:]
-            itemset.append(s)
+            s = [ 0 ] + merge_set(new_set[i][1:] , new_set[j][1:])
+            if not contains_pattern(itemset, s):
+                itemset.append(s)
     return itemset
 
 # print result
