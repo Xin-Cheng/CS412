@@ -36,23 +36,6 @@ def self_join(new_set):
                 itemset.append(s)
     return itemset
 
-# print result
-def print_patterns(freq_set):
-    def setCmp(s1, s2):
-        if s1[0] != s2[0]:
-            return s2[0] - s1[0]
-        else:
-            str1 = " ".join(s1[1:])
-            str2 = " ".join(s2[1:])
-            if str1 < str2:
-                return -1
-            else:
-                return 1
-    ordered_set = sorted(freq_set, cmp = setCmp)
-    for i in range(len(ordered_set)):
-        print ("{0} [{1}]").format(ordered_set[i][0], " ".join(ordered_set[i][1:]))
-    print ("finish")
-
 def apriori(dataset, itemset, min_sup, freq_set):
     if (len(itemset) == 0):
         return
@@ -69,6 +52,36 @@ def apriori(dataset, itemset, min_sup, freq_set):
             new_set.append(itemset[i])
     new_itemset = self_join(new_set)
     apriori(dataset, new_itemset, min_sup, freq_set)
+
+def isClose(freq_set, index, pattern):
+    for i in range(index + 1, len(freq_set)):
+        if len(freq_set[i]) > len(pattern) and contains_set(freq_set[i][1:], pattern) and freq_set[i][0] == pattern[0]:
+            return False
+    return True
+
+def CLOSET(freq_set):
+    close_set = []
+    for i in range(len(freq_set)):
+        if isClose(freq_set, i, freq_set[i]):
+            close_set.append(freq_set[i])
+    return  close_set         
+
+# print result
+def print_patterns(freq_set):
+    def setCmp(s1, s2):
+        if s1[0] != s2[0]:
+            return s2[0] - s1[0]
+        else:
+            str1 = " ".join(s1[1:])
+            str2 = " ".join(s2[1:])
+            if str1 < str2:
+                return -1
+            else:
+                return 1
+    ordered_set = sorted(freq_set, cmp = setCmp)
+    for i in range(len(ordered_set)):
+        print ("{0} [{1}]").format(ordered_set[i][0], " ".join(ordered_set[i][1:]))
+    print("")
 
 def main():
     dataset = []
@@ -88,6 +101,8 @@ def main():
     freq_set = []
     apriori(dataset, itemset, min_sup, freq_set)
     print_patterns(freq_set)
+    close_set = CLOSET(freq_set)
+    print_patterns(close_set)
     print ("finish")
 
 if __name__ == "__main__":
