@@ -53,18 +53,31 @@ def apriori(dataset, itemset, min_sup, freq_set):
     new_itemset = self_join(new_set)
     apriori(dataset, new_itemset, min_sup, freq_set)
 
-def isClose(freq_set, index, pattern):
+def is_close(freq_set, index, pattern):
     for i in range(index + 1, len(freq_set)):
         if len(freq_set[i]) > len(pattern) and contains_set(freq_set[i][1:], pattern) and freq_set[i][0] == pattern[0]:
+            return False
+    return True
+
+def is_max(freq_set, index, pattern):
+    for i in range(index + 1, len(freq_set)):
+        if len(freq_set[i]) > len(pattern) and contains_set(freq_set[i][1:], pattern):
             return False
     return True
 
 def CLOSET(freq_set):
     close_set = []
     for i in range(len(freq_set)):
-        if isClose(freq_set, i, freq_set[i]):
+        if is_close(freq_set, i, freq_set[i]):
             close_set.append(freq_set[i])
     return  close_set         
+
+def MaxMiner(freq_set):
+    max_set = []
+    for i in range(len(freq_set)):
+        if is_max(freq_set, i, freq_set[i]):
+            max_set.append(freq_set[i])
+    return  max_set 
 
 # print result
 def print_patterns(freq_set):
@@ -103,7 +116,8 @@ def main():
     print_patterns(freq_set)
     close_set = CLOSET(freq_set)
     print_patterns(close_set)
-    print ("finish")
+    max_set = MaxMiner(freq_set)
+    print_patterns(max_set)
 
 if __name__ == "__main__":
    main()
