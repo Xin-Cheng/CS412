@@ -95,15 +95,25 @@ def output(patterns, minSup):
     for pattern in patterns:
         if (len(pattern) == maxLen):
             longestPatterns.append(pattern)
-    longestTuples = []
-    for lp in longestPatterns:
-        for i in range(len(lp)):
-            if lp[i][0] == '_':
-                lp[i] = lp[i][1:]
-        strPattern = ' '.join(lp)
-        if strPattern not in longestTuples:
-            longestTuples.append(strPattern)            
-    cdd = 0
+            for i in range(len(longestPatterns[-1])):
+                if not isinstance(longestPatterns[-1][i], int) and longestPatterns[-1][i][0] == '_':
+                    longestPatterns[-1][i] = longestPatterns[-1][i][1:]
+    printPattern(longestPatterns)
+
+def printPattern(patterns):
+    def patternCmp(p1, p2):
+        if p1[0] != p2[0]:
+            return p2[0] - p1[0]
+        else:
+            str1 = " ".join(p1[1:])
+            str2 = " ".join(p2[1:])
+            if str1 < str2:
+                return -1
+            else:
+                return 1
+    orderedPattern = sorted(patterns, cmp = patternCmp)
+    for pattern in orderedPattern:
+        print ("{0} [{1}]").format(pattern[0], " ".join(pattern[1:]))
 
 def main():
     transactions = []
@@ -120,7 +130,6 @@ def main():
     patterns = []
     prefixSpan(prefix, projectedDB, patterns, minSup)
     output(patterns, minSup)
-    cdd = 1
     
 if __name__ == "__main__":
     main()
