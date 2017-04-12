@@ -1,0 +1,4 @@
+3
+b and c d and e f
+b c d e f
+b and c d b e g f
