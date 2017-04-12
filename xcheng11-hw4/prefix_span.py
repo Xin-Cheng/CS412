@@ -76,10 +76,30 @@ def prefixSpan(prefix, projectedDB, patterns, minSup):
                     newDB[-1][0] = newDB[-1][0][idx+1:]
                     if not newDB[-1][0]:
                         newDB[-1].pop(0)
+                    else:
+                        newDB[-1][0][0] = '_' + newDB[-1][0][0]
                 else:
                     newDB[-1].pop(0)
         prefixSpan(newPrefix, newDB, patterns, minSup)
-    return
+
+def output(patterns, minSup):
+    maxLen = 0
+    for pattern in patterns:
+        if len(pattern) > maxLen:
+            maxLen = len(pattern)
+    longestPatterns = []
+    for pattern in patterns:
+        if (len(pattern) == maxLen):
+            longestPatterns.append(pattern)
+    longestTuples = []
+    for lp in longestPatterns:
+        for i in range(len(lp)):
+            if lp[i][0] == '_':
+                lp[i] = lp[i][1:]
+        strPattern = ' '.join(lp)
+        if strPattern not in longestTuples:
+            longestTuples.append(strPattern)            
+    cdd = 0
 
 def main():
     transactions = []
@@ -95,6 +115,7 @@ def main():
     projectedDB = transactions
     patterns = []
     prefixSpan(prefix, projectedDB, patterns, minSup)
+    output(patterns, minSup)
     cdd = 1
     
 if __name__ == "__main__":
