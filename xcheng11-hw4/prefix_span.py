@@ -56,13 +56,30 @@ def prune(singleItems, database, minSup):
                 count[i] += 1
     for i in range(len(singleItems)):
         if (count[i] >= minSup):
-            frequents.append(singleItems[i])
-    print frequents
-    cdd = 1
+            frequents.append(singleItems[i])    
+    return frequents
     
 def prefixSpan(prefix, projectedDB, patterns, minSup):
     singleItems = findDistincItem(projectedDB)
-    prune(singleItems, projectedDB, minSup)
+    frequentItems = prune(singleItems, projectedDB, minSup)
+    if not frequentItems:
+        return
+    for freq in frequentItems:
+        newPrefix = [freq] if not prefix else prefix.append(freq)
+        patterns.append(newPrefix)
+        newDB = []
+        for transaction in projectedDB:
+            idx = contains(transaction, freq)
+            if idx != -1:
+                newDB.append(transaction[idx:])
+                if isinstance(newDB[-1][0], list):
+                    idx = newDB[-1][0].index(freq)
+                    newDB[-1][0] = newDB[-1][0][idx+1:]
+                    if not newDB[-1][0]:
+                        newDB[-1].pop(0)
+                else:
+                    newDB[-1].pop(0)
+        prefixSpan(newPrefix, newDB, patterns, minSup)
 
 def main():
     transactions = []
@@ -74,8 +91,6 @@ def main():
             l[-1] = l[-1][:-1]
         transactions.append(l)
     transactions = clean(transactions, stopwords)
-    #cdd = contains(transactions[1], 'classification')
-    #findDistincItem(transactions)
     prefix = []
     projectedDB = transactions
     patterns = []
