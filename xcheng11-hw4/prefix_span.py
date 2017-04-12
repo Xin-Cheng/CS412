@@ -62,10 +62,9 @@ def prune(singleItems, database, minSup):
 def prefixSpan(prefix, projectedDB, patterns, minSup):
     singleItems = findDistincItem(projectedDB)
     frequentItems = prune(singleItems, projectedDB, minSup)
-    if not frequentItems:
-        return
     for freq in frequentItems:
-        newPrefix = [freq] if not prefix else prefix.append(freq)
+        newPrefix = list(prefix)
+        newPrefix.append(freq)
         patterns.append(newPrefix)
         newDB = []
         for transaction in projectedDB:
@@ -80,6 +79,7 @@ def prefixSpan(prefix, projectedDB, patterns, minSup):
                 else:
                     newDB[-1].pop(0)
         prefixSpan(newPrefix, newDB, patterns, minSup)
+    return
 
 def main():
     transactions = []
