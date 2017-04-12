@@ -1,4 +1,5 @@
 import sys
+from sets import Set
 def clean(transactions, stopwords):
     for i in range(len(transactions)):
         # group joined words
@@ -21,27 +22,24 @@ def clean(transactions, stopwords):
         # remove stop words
         last = len(transactions[i]) - 1
         for s in range(last, -1, -1):
-            if not isinstance(transactions[i][s], list):
-                if s == last and transactions[i][s][-1] == '.':
-                    transactions[i][s] = transactions[i][s][:-1]
-                if transactions[i][s] in stopwords:
-                    transactions[i].remove(transactions[i][s])
-            else:
-                if s == last and transactions[i][s][-1][-1] == '.':
-                    transactions[i][s][-1] = transactions[i][s][-1][:-1]
+            if not isinstance(transactions[i][s], list) and transactions[i][s] in stopwords:
+                transactions[i].remove(transactions[i][s])
+            elif isinstance(transactions[i][s], list):
                 for item in transactions[i][s]:
                     if item in stopwords:
                         transactions[i][s].remove(item)
         print transactions[i]
-
 def main():
     transactions = []
+    distinct_words = []
     stopwords = ["a", "an", "are", "as", "at", "by", "be", "for", "from", "has", "he", "in", "is", "it", "its", "of", "on", "that", "the", "to", "was", "were", "will", "with"]
     min_sup = input()
-    for line in sys.stdin.readlines():  
-        transactions.append(line.lower().split())
+    for line in sys.stdin.readlines():
+        l = line.lower().split()
+        if l[-1][-1] == '.':
+            l[-1] = l[-1][:-1]
+        transactions.append(l)
     clean(transactions, stopwords)
     
-
 if __name__ == "__main__":
     main()
