@@ -26,16 +26,31 @@ def preprocess():
 
 # build decision tree
 def build_decision_tree(train_data):
-    # get distinct genres
-    # genres_str = '|'.join(movies['Genre'].unique())
-    # genres = np.unique(genres_str.split('|'))
     # calculate entropy of training dataset
     entr = entropy(train_data)
     # calculate infomation gain of each feature
     feature_names = list(train_data)
-    info = information(train_data, feature_names[0])
+    gender_info = discrete_information(train_data, feature_names[0])
+    genre_info = combined_discrete_info(train_data, feature_names[4])
 
-def information(train_data, f_name):
+# calculate combined discrete feature, genre in this project
+def combined_discrete_info(train_data, f_name):
+    size = train_data.shape[0]
+    # get distinct genres
+    genres_str = '|'.join(train_data['Genre'].unique())
+    genres = np.unique(genres_str.split('|'))
+    counts = zeros(len(genres), dtype=float)
+    eps = zeros(len(genres))
+    for i in range(len(genres)):
+        group = train_data[train_data['Genre'].str.contains(genres[i])]
+        counts[i] = group.shape[0]
+        eps[i] = entropy(group)
+    group_probability = (counts/size)/sum(counts/size)
+    info = dot(group_probability, eps)
+    return info
+
+# calculate information of discrete feature, gender in this project
+def discrete_information(train_data, f_name):
     size = train_data.shape[0]
     # calculate the probability of each distinct value of this feature
     groups = train_data.groupby(f_name)
