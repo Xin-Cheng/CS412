@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
-from sklearn import preprocessing
 from math import *
+from numpy import *
 
 # load data and preprocess
 def preprocess():
@@ -29,6 +29,17 @@ def build_decision_tree(train_data):
     # get distinct genres
     # genres_str = '|'.join(movies['Genre'].unique())
     # genres = np.unique(genres_str.split('|'))
+    # calculate entropy of training dataset
+    size = train_data.shape[0]
+    groups = train_data.groupby('rating').size().reset_index(name='count')
+    ratings = array(groups['rating'])
+    counts = array(groups['count'], dtype=float)
+    probabilities = counts/size
+    log_probabilities = -log2(probabilities)
+    entropy = dot(probabilities, log_probabilities)
+    print probabilities
+    print log_probabilities
+    print entropy, sum(probabilities)
     cdd = 1
 
 # assign the most common value of the attribute to missing values
