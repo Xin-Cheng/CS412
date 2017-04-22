@@ -30,8 +30,30 @@ def build_decision_tree(train_data):
     entr = entropy(train_data)
     # calculate infomation gain of each feature
     feature_names = list(train_data)
-    gender_info = discrete_information(train_data, feature_names[0])
-    genre_info = combined_discrete_info(train_data, feature_names[4])
+    # gender_info = discrete_information(train_data, feature_names[0])
+    # genre_info = combined_discrete_info(train_data, feature_names[4])
+    age_split, age_info = continuous_info(train_data, feature_names[1])
+    print age_split, age_info
+
+# calculate continuous feature, 'Age', 'Occupation', and 'Year' in this project
+def continuous_info(train_data, f_name):
+    size = train_data.shape[0]
+    features = train_data[f_name].unique()
+    sorted_features = sort(features)
+    split_info = zeros(len(sorted_features) - 1, dtype=float)
+    split_points = zeros(len(sorted_features) - 1, dtype=float)
+    # find split point
+    for i in range(len(sorted_features) - 1):
+        split = (sorted_features[i] + sorted_features[i + 1])/2
+        split_points[i] = split
+        left = train_data[train_data[f_name] <= split]
+        right = train_data[train_data[f_name] > split]
+        info = entropy(left)*(float(left.shape[0])/size) + entropy(right)*(float(right.shape[0])/size)
+        split_info[i] = info
+    min_split = argmin(split_info)
+    print sorted_features
+    print split_points
+    return split_points[min_split], split_info[min_split]
 
 # calculate combined discrete feature, genre in this project
 def combined_discrete_info(train_data, f_name):
@@ -39,6 +61,7 @@ def combined_discrete_info(train_data, f_name):
     # get distinct genres
     genres_str = '|'.join(train_data['Genre'].unique())
     genres = np.unique(genres_str.split('|'))
+    # calculate entropy of each distinct value
     counts = zeros(len(genres), dtype=float)
     eps = zeros(len(genres))
     for i in range(len(genres)):
