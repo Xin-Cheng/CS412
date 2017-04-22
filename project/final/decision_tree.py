@@ -30,30 +30,35 @@ def build_decision_tree(train_data):
     # genres_str = '|'.join(movies['Genre'].unique())
     # genres = np.unique(genres_str.split('|'))
     # calculate entropy of training dataset
+    entr = entropy(train_data)
+    # calculate infomation gain of each feature
+    feature_names = list(train_data)
+    info = information(train_data, feature_names[0])
+
+def information(train_data, f_name):
     size = train_data.shape[0]
-    groups = train_data.groupby('rating').size().reset_index(name='count')
+    # calculate the probability of each distinct value of this feature
+    groups = train_data.groupby(f_name)
+    counts = groups.size().reset_index(name='count')
+    group_probability = array(counts['count'], dtype=float)/size
+    # calculate entropy of each distinct value
+    distinct_names = train_data[f_name].unique()
+    eps = zeros(len(distinct_names))
+    for i in range(len(distinct_names)):
+        eps[i] = entropy(groups.get_group(distinct_names[i]))
+    info = dot(group_probability, eps)
+    return info
+
+# calculate entropy
+def entropy(group):
+    size = group.shape[0]
+    groups = group.groupby('rating').size().reset_index(name='count')
     ratings = array(groups['rating'])
     counts = array(groups['count'], dtype=float)
     probabilities = counts/size
     log_probabilities = -log2(probabilities)
     entropy = dot(probabilities, log_probabilities)
-    # calculate infomation gain of each feature
-    feature_names = list(train_data)
-    information(train_data, feature_names[0])
-
-def information(train_data, f_name):
-    size = train_data.shape[0]
-    # calculate the probability of each distinct value of this feature
-    groups = train_data.groupby(f_name).size().reset_index(name='count')
-    group_probability = array(groups['count'], dtype=float)/size
-    # calculate entropy of each distinct value
-    distinct_names = train_data[f_name].unique()
-    male = train_data.groupby(f_name).get_group('M')
-    print groups
-    print distinct_names
-    print group_probability
-    cdd = 0
-
+    return entropy
 
 # assign the most common value of the attribute to missing values
 def fill_na(dataframe):
