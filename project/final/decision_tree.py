@@ -37,10 +37,23 @@ def build_decision_tree(train_data):
     probabilities = counts/size
     log_probabilities = -log2(probabilities)
     entropy = dot(probabilities, log_probabilities)
-    print probabilities
-    print log_probabilities
-    print entropy, sum(probabilities)
-    cdd = 1
+    # calculate infomation gain of each feature
+    feature_names = list(train_data)
+    information(train_data, feature_names[0])
+
+def information(train_data, f_name):
+    size = train_data.shape[0]
+    # calculate the probability of each distinct value of this feature
+    groups = train_data.groupby(f_name).size().reset_index(name='count')
+    group_probability = array(groups['count'], dtype=float)/size
+    # calculate entropy of each distinct value
+    distinct_names = train_data[f_name].unique()
+    male = train_data.groupby(f_name).get_group('M')
+    print groups
+    print distinct_names
+    print group_probability
+    cdd = 0
+
 
 # assign the most common value of the attribute to missing values
 def fill_na(dataframe):
