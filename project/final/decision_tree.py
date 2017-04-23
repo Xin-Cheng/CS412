@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import pickle
 from math import *
 from numpy import *
 
@@ -29,8 +30,10 @@ def preprocess():
     whole_train_data = pd.merge(user_train, movies, how='inner', left_on='movie-Id', right_on='Id')
     train_data = whole_train_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre', 'rating']]
     # build decision tree
-    root = Decision_Tree('root', None, False)
-    build_decision_tree(train_data, root)
+    # root = Decision_Tree('root', None, False)
+    # build_decision_tree(train_data, root)
+    # pickle.dump( root, open( 'decision_tree.p', 'wb' ) )
+    my_tree = pickle.load( open( 'decision_tree.p', 'rb' ) )
     # test data
     user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
     whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
@@ -38,7 +41,6 @@ def preprocess():
 
 # find split feature according to information gain
 def find_split(train_data):
-    print train_data['rating'].tolist()[0]
     size = train_data.groupby('rating').size().shape[0]
     if size == 1:
         return Decision_Tree('label', train_data['rating'].tolist()[0], True)
@@ -71,7 +73,7 @@ def find_split(train_data):
     
 # build decision tree
 def build_decision_tree(train_data, tree_root):
-    if tree_root.condition == None:
+    if tree_root.condition is None:
         tree_root.children[0] = find_split(train_data)
         build_decision_tree(train_data, tree_root.children[0])
     elif tree_root.name == 'label':
