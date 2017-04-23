@@ -30,23 +30,64 @@ def preprocess():
     train_data = whole_train_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre', 'rating']]
     # build decision tree
     root = Decision_Tree('root', None, False)
-    build_decision_tree(train_data, root.children[0])
+    build_decision_tree(train_data, root)
     # test data
     user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
     whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
     test_data = whole_test_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre']]
 
-# build decision tree
-def build_decision_tree(train_data, tree_root):
-    print train_data
+# find split feature according to information gain
+def find_split(train_data):
     size = train_data.groupby('rating').size().shape[0]
-    print size
-    # only one class, terminate
     if size == 1:
-        return Decision_Tree('Label', train_data['rating'][0], True)
+        return Decision_Tree('label', train_data['rating'][0], True)
     # go for majority vote
     elif train_data.shape[1] == 1:
-        return Decision_Tree('Label', bincount(train_data['rating']).argmax(), True)
+        return Decision_Tree('label', bincount(train_data['rating']).argmax(), True)
+    # find split feature
+    # calculate infomation of each feature
+    feature_names = list(train_data)
+    information = zeros(len(feature_names) - 1)
+    information_split = zeros([len(feature_names) - 1, 2])
+    for i in range(0, len(feature_names) - 1):
+        if feature_names[i] == 'Gender':
+            information[i] = discrete_information(train_data, feature_names[i])
+        elif feature_names[i] == 'Genre':
+            information[i] = combined_discrete_info(train_data, feature_names[i])
+        else:
+            info, split = continuous_info(train_data, feature_names[i])
+            information_split[i, :] = [info, split]
+            information[i] = info
+    # choose the feature with lowest infomation as current tree node
+    node_name = feature_names[argmin(information)]
+    if node_name == 'Gender':
+        condition = ['M', 'F']
+    elif node_name == 'Genre':
+        condition = unique(('|'.join(train_data[node_name].unique())).split('|'))
+    else:
+        condition = information_split[argmin(information)][1]
+    return Decision_Tree(node_name, condition, False)
+    
+# build decision tree
+def build_decision_tree(train_data, tree_root):
+    if tree_root.condition == None:
+        tree_root.children[0] = find_split(train_data)
+        build_decision_tree(train_data, tree_root.children[0])
+    elif tree_root.name == 'label':
+        return
+    else: 
+        condition = tree_root.condition
+        name = tree_root.name
+        data = train_data.drop(name, axis=1)
+        if isinstance(condition, int) or isinstance(condition, float):
+            left = data[data[name] <= condition]
+            right = data[data[name] > condition]
+            tree_root.children[0] = find_split(left)
+            tree_root.children[1] = find_split(right)
+            build_decision_tree(left, tree_root.children[0])
+            build_decision_tree(right, tree_root.children[1])
+        elif name == 'Gender':
+            pass
     # find split feature
     # calculate infomation of each feature
     feature_names = list(train_data)
