@@ -8,7 +8,7 @@ class Decision_Tree:
         self.name = name    # name of each tree node
         self.condition = condition
         if not is_label:
-            if not condition:
+            if condition is None:
                 num_of_children = 1
             else:
                 num_of_children = 2 if isinstance(condition, int) or isinstance(condition, float) else len(condition)
@@ -41,30 +41,34 @@ def build_decision_tree(train_data, tree_root):
     print train_data
     size = train_data.groupby('rating').size().shape[0]
     print size
-    if size == 0:
-        return Decision_Tree('Label', 0, True)
-    elif size == 1:
+    # only one class, terminate
+    if size == 1:
         return Decision_Tree('Label', train_data['rating'][0], True)
+    # go for majority vote
+    elif train_data.shape[1] == 1:
+        return Decision_Tree('Label', bincount(train_data['rating']).argmax(), True)
     # find split feature
     # calculate infomation of each feature
     feature_names = list(train_data)
     information = zeros(len(feature_names) - 1)
     information_split = zeros([len(feature_names) - 1, 2])
-    gender_info = discrete_information(train_data, feature_names[0])
-    genre_info = combined_discrete_info(train_data, feature_names[4])
-    information[0] = gender_info
-    information[4] = genre_info
-    for i in range(1, len(feature_names) - 2):
-        info, split = continuous_info(train_data, feature_names[i])
-        information_split[i, :] = [info, split]
-        information[i] = info
+    for i in range(0, len(feature_names) - 1):
+        if feature_names[i] == 'Gender':
+            information[i] = discrete_information(train_data, feature_names[i])
+        elif feature_names[i] == 'Genre':
+            information[i] = combined_discrete_info(train_data, feature_names[i])
+        else:
+            info, split = continuous_info(train_data, feature_names[i])
+            information_split[i, :] = [info, split]
+            information[i] = info
     # choose the feature with lowest infomation as current tree node
     node_name = feature_names[argmin(information)]
     data_list = []
     if node_name == 'Gender':
         condition = ['M', 'F']
-        gender_group = train_data.groupby('Gender')
-        data_list.extend((groups.get_group('M'), groups.get_group('F')))
+        male = train_data.groupby('Gender').get_group('M')
+        female = train_data.groupby('Gender').get_group('M')
+        data_list.extend((male, female))
     elif node_name == 'Genre':
         condition = unique(('|'.join(train_data[node_name].unique())).split('|'))
         for c in condition:
