@@ -3,6 +3,17 @@ import pandas as pd
 from math import *
 from numpy import *
 
+class Decision_Tree:
+    def __init__(self, name, condition, is_label):
+        self.name = name    # name of each tree node
+        self.condition = condition
+        if not is_label:
+            if not condition:
+                num_of_children = 1
+            else:
+                num_of_children = 2 if isinstance(condition, int) else len(condition)
+            self.children = [None]*num_of_children
+    
 # load data and preprocess
 def preprocess():
     # load data
@@ -18,14 +29,15 @@ def preprocess():
     whole_train_data = pd.merge(user_train, movies, how='inner', left_on='movie-Id', right_on='Id')
     train_data = whole_train_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre', 'rating']]
     # build decision tree
-    build_decision_tree(train_data)
+    root = Decision_Tree('root', None, False)
+    build_decision_tree(train_data, root)
     # test data
     user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
     whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
     test_data = whole_test_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre']]
 
 # build decision tree
-def build_decision_tree(train_data):
+def build_decision_tree(train_data, tree_root):
     # calculate entropy of training dataset
     entr = entropy(train_data)
     # calculate infomation gain of each feature
@@ -40,11 +52,8 @@ def build_decision_tree(train_data):
         info, split = continuous_info(train_data, feature_names[i])
         information_split[i, :] = [info, split]
         information[i] = info
-    print
-    print information
-    print information_split
-    print feature_names[argmin(information)]
-    print
+    node = feature_names[argmin(information)]
+    print node
     cdd = 1
 
 # calculate continuous feature, 'Age', 'Occupation', and 'Year' in this project
