@@ -38,9 +38,10 @@ def preprocess():
 
 # find split feature according to information gain
 def find_split(train_data):
+    print train_data['rating'].tolist()[0]
     size = train_data.groupby('rating').size().shape[0]
     if size == 1:
-        return Decision_Tree('label', train_data['rating'][0], True)
+        return Decision_Tree('label', train_data['rating'].tolist()[0], True)
     # go for majority vote
     elif train_data.shape[1] == 1:
         return Decision_Tree('label', bincount(train_data['rating']).argmax(), True)
@@ -78,49 +79,18 @@ def build_decision_tree(train_data, tree_root):
     else: 
         condition = tree_root.condition
         name = tree_root.name
-        data = train_data.drop(name, axis=1)
-        if isinstance(condition, int) or isinstance(condition, float):
-            left = data[data[name] <= condition]
-            right = data[data[name] > condition]
+        if name != 'Genre':
+            left = (train_data[train_data[name] <= condition] if name != 'Gender' else train_data.groupby('Gender').get_group('M')).drop(name, axis=1)
+            right = (train_data[train_data[name] > condition] if name != 'Gender' else train_data.groupby('Gender').get_group('F')).drop(name, axis=1)
             tree_root.children[0] = find_split(left)
             tree_root.children[1] = find_split(right)
             build_decision_tree(left, tree_root.children[0])
             build_decision_tree(right, tree_root.children[1])
-        elif name == 'Gender':
-            pass
-    # find split feature
-    # calculate infomation of each feature
-    feature_names = list(train_data)
-    information = zeros(len(feature_names) - 1)
-    information_split = zeros([len(feature_names) - 1, 2])
-    for i in range(0, len(feature_names) - 1):
-        if feature_names[i] == 'Gender':
-            information[i] = discrete_information(train_data, feature_names[i])
-        elif feature_names[i] == 'Genre':
-            information[i] = combined_discrete_info(train_data, feature_names[i])
         else:
-            info, split = continuous_info(train_data, feature_names[i])
-            information_split[i, :] = [info, split]
-            information[i] = info
-    # choose the feature with lowest infomation as current tree node
-    node_name = feature_names[argmin(information)]
-    data_list = []
-    if node_name == 'Gender':
-        condition = ['M', 'F']
-        male = train_data.groupby('Gender').get_group('M')
-        female = train_data.groupby('Gender').get_group('M')
-        data_list.extend((male, female))
-    elif node_name == 'Genre':
-        condition = unique(('|'.join(train_data[node_name].unique())).split('|'))
-        for c in condition:
-            data_list.append(train_data[train_data['Genre'].str.contains(c)])
-    else:
-        condition = information_split[argmin(information)][1]
-        data_list.extend((train_data[train_data[node_name] <= condition], train_data[train_data[node_name] > condition]))
-    tree_root = Decision_Tree(node_name, condition, False)
-    for i in range(len(data_list)):
-        new_data = data_list[i].drop(node_name, axis=1)
-        build_decision_tree(new_data, tree_root.children[i])
+            for i in range(len(condition)):
+                group = (train_data[train_data['Genre'].str.contains(condition[i])]).drop(name, axis=1)
+                tree_root.children[i] = find_split(group)
+                build_decision_tree(group, tree_root.children[i])
 
 # calculate continuous feature, 'Age', 'Occupation', and 'Year' in this project
 def continuous_info(train_data, f_name):
