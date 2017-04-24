@@ -114,18 +114,18 @@ def build_decision_tree(train_data, tree_root):
             tree_root.children[0] = find_split(left)
             tree_root.children[1] = find_split(right)
             if name != 'Gender':
-                tree_root.children[0].set_constraint('<=' + str(condition))
-                tree_root.children[1].set_constraint('>' + str(condition))
+                tree_root.children[0].set_constraint('(test_data[\"' + name + '\"]' + '<=' + str(condition) + ')')
+                tree_root.children[1].set_constraint('(test_data[\"' + name + '\"]' + '>' + str(condition))
             else:
-                tree_root.children[0].set_constraint('==\"M\"')
-                tree_root.children[1].set_constraint('==\"F\"')
+                tree_root.children[0].set_constraint('(test_data["Gender"] == \"M\")')
+                tree_root.children[1].set_constraint('(test_data["Gender"] == \"F\")')
             build_decision_tree(left, tree_root.children[0])
             build_decision_tree(right, tree_root.children[1])
         else:
             for i in range(len(condition)):
                 group = (train_data[train_data['Genre'].str.contains(condition[i])]).drop(name, axis=1)
                 tree_root.children[i] = find_split(group)
-                tree_root.children[i].set_constraint('==' + '\"' + condition[i] + '\"')
+                tree_root.children[i].set_constraint('(test_data[\"' + name + '\"]' + '==' + '\"' + condition[i] + '\"' + ')')
                 build_decision_tree(group, tree_root.children[i])
 
 # calculate continuous feature, 'Age', 'Occupation', and 'Year' in this project

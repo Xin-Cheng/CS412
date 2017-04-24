@@ -70,7 +70,7 @@ tp32
 Rp33
 sS'constraint'
 p34
-S'=="M"'
+S'(test_data["Gender"] == "M")'
 p35
 sba(i__main__
 Decision_Tree
@@ -86,7 +86,7 @@ p38
 tp39
 Rp40
 sg34
-S'=="F"'
+S'(test_data["Gender"] == "F")'
 p41
 sbasg21
 S'Gender'
@@ -98,7 +98,7 @@ p44
 aS'F'
 p45
 asg34
-S'<=1.5'
+S'(test_data["Occupation"]<=1.5)'
 p46
 sba(i__main__
 Decision_Tree
@@ -143,7 +143,7 @@ sg23
 g44
 ag45
 asg34
-S'>1.5'
+S'(test_data["Occupation"]>1.5'
 p61
 sbasg21
 S'Occupation'
@@ -169,7 +169,7 @@ p68
 tp69
 Rp70
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p71
 sba(i__main__
 Decision_Tree
@@ -220,7 +220,7 @@ sg23
 g44
 ag45
 asg34
-S'<=1.5'
+S'(test_data["Occupation"]<=1.5)'
 p89
 sba(i__main__
 Decision_Tree
@@ -265,7 +265,7 @@ sg23
 g44
 ag45
 asg34
-S'>1.5'
+S'(test_data["Occupation"]>1.5'
 p104
 sbasg21
 g62
@@ -277,7 +277,7 @@ p105
 tp106
 Rp107
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p108
 sbasg21
 S'Age'
@@ -290,7 +290,7 @@ p110
 tp111
 Rp112
 sg34
-S'=="Action"'
+S'(test_data["Genre"]=="Action")'
 p113
 sba(i__main__
 Decision_Tree
@@ -347,7 +347,7 @@ sg23
 g44
 ag45
 asg34
-S'<=2.5'
+S'(test_data["Occupation"]<=2.5)'
 p134
 sba(i__main__
 Decision_Tree
@@ -392,7 +392,7 @@ sg23
 g44
 ag45
 asg34
-S'>2.5'
+S'(test_data["Occupation"]>2.5'
 p149
 sbasg21
 g62
@@ -404,7 +404,7 @@ p150
 tp151
 Rp152
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p153
 sba(i__main__
 Decision_Tree
@@ -455,7 +455,7 @@ sg23
 g44
 ag45
 asg34
-S'<=11.5'
+S'(test_data["Occupation"]<=11.5)'
 p171
 sba(i__main__
 Decision_Tree
@@ -500,7 +500,7 @@ sg23
 g44
 ag45
 asg34
-S'>11.5'
+S'(test_data["Occupation"]>11.5'
 p186
 sbasg21
 g62
@@ -512,7 +512,7 @@ p187
 tp188
 Rp189
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p190
 sbasg21
 g109
@@ -524,7 +524,7 @@ p191
 tp192
 Rp193
 sg34
-S'=="Adventure"'
+S'(test_data["Genre"]=="Adventure")'
 p194
 sba(i__main__
 Decision_Tree
@@ -558,7 +558,7 @@ p206
 tp207
 Rp208
 sg34
-S'<=19.5'
+S'(test_data["Occupation"]<=19.5)'
 p209
 sba(i__main__
 Decision_Tree
@@ -574,7 +574,7 @@ p212
 tp213
 Rp214
 sg34
-S'>19.5'
+S'(test_data["Occupation"]>19.5'
 p215
 sbasg21
 g62
@@ -586,7 +586,7 @@ p216
 tp217
 Rp218
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p219
 sba(i__main__
 Decision_Tree
@@ -608,7 +608,7 @@ p225
 tp226
 Rp227
 sg34
-S'<=16.5'
+S'(test_data["Occupation"]<=16.5)'
 p228
 sba(i__main__
 Decision_Tree
@@ -624,7 +624,7 @@ p231
 tp232
 Rp233
 sg34
-S'>16.5'
+S'(test_data["Occupation"]>16.5'
 p234
 sbasg21
 g62
@@ -636,7 +636,7 @@ p235
 tp236
 Rp237
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p238
 sbasg21
 g109
@@ -675,7 +675,7 @@ p250
 tp251
 Rp252
 sg34
-S'<=14.5'
+S'(test_data["Occupation"]<=14.5)'
 p253
 sba(i__main__
 Decision_Tree
@@ -691,7 +691,7 @@ p256
 tp257
 Rp258
 sg34
-S'>14.5'
+S'(test_data["Occupation"]>14.5'
 p259
 sbasg21
 g62
@@ -703,7 +703,7 @@ p260
 tp261
 Rp262
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p263
 sba(i__main__
 Decision_Tree
@@ -725,7 +725,7 @@ p269
 tp270
 Rp271
 sg34
-S'<=11.5'
+S'(test_data["Occupation"]<=11.5)'
 p272
 sba(i__main__
 Decision_Tree
@@ -741,7 +741,7 @@ p275
 tp276
 Rp277
 sg34
-S'>11.5'
+S'(test_data["Occupation"]>11.5'
 p278
 sbasg21
 g62
@@ -753,7 +753,7 @@ p279
 tp280
 Rp281
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p282
 sbasg21
 g109
@@ -773,7 +773,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Animation"'
+S'(test_data["Genre"]=="Animation")'
 p287
 sba(i__main__
 Decision_Tree
@@ -807,7 +807,7 @@ p299
 tp300
 Rp301
 sg34
-S'<=19.5'
+S'(test_data["Occupation"]<=19.5)'
 p302
 sba(i__main__
 Decision_Tree
@@ -823,7 +823,7 @@ p305
 tp306
 Rp307
 sg34
-S'>19.5'
+S'(test_data["Occupation"]>19.5'
 p308
 sbasg21
 g62
@@ -835,7 +835,7 @@ p309
 tp310
 Rp311
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p312
 sba(i__main__
 Decision_Tree
@@ -857,7 +857,7 @@ p318
 tp319
 Rp320
 sg34
-S'<=15.5'
+S'(test_data["Occupation"]<=15.5)'
 p321
 sba(i__main__
 Decision_Tree
@@ -873,7 +873,7 @@ p324
 tp325
 Rp326
 sg34
-S'>15.5'
+S'(test_data["Occupation"]>15.5'
 p327
 sbasg21
 g62
@@ -885,7 +885,7 @@ p328
 tp329
 Rp330
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p331
 sbasg21
 g109
@@ -924,7 +924,7 @@ p343
 tp344
 Rp345
 sg34
-S'<=19.5'
+S'(test_data["Occupation"]<=19.5)'
 p346
 sba(i__main__
 Decision_Tree
@@ -940,7 +940,7 @@ p349
 tp350
 Rp351
 sg34
-S'>19.5'
+S'(test_data["Occupation"]>19.5'
 p352
 sbasg21
 g62
@@ -952,7 +952,7 @@ p353
 tp354
 Rp355
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p356
 sba(i__main__
 Decision_Tree
@@ -974,7 +974,7 @@ p362
 tp363
 Rp364
 sg34
-S'<=3.5'
+S'(test_data["Occupation"]<=3.5)'
 p365
 sba(i__main__
 Decision_Tree
@@ -990,7 +990,7 @@ p368
 tp369
 Rp370
 sg34
-S'>3.5'
+S'(test_data["Occupation"]>3.5'
 p371
 sbasg21
 g62
@@ -1002,7 +1002,7 @@ p372
 tp373
 Rp374
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p375
 sbasg21
 g109
@@ -1022,7 +1022,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Children\'s"'
+S'(test_data["Genre"]=="Children\'s")'
 p380
 sba(i__main__
 Decision_Tree
@@ -1056,7 +1056,7 @@ p392
 tp393
 Rp394
 sg34
-S'<=5.5'
+S'(test_data["Occupation"]<=5.5)'
 p395
 sba(i__main__
 Decision_Tree
@@ -1072,7 +1072,7 @@ p398
 tp399
 Rp400
 sg34
-S'>5.5'
+S'(test_data["Occupation"]>5.5'
 p401
 sbasg21
 g62
@@ -1084,7 +1084,7 @@ p402
 tp403
 Rp404
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p405
 sba(i__main__
 Decision_Tree
@@ -1106,7 +1106,7 @@ p411
 tp412
 Rp413
 sg34
-S'<=4.5'
+S'(test_data["Occupation"]<=4.5)'
 p414
 sba(i__main__
 Decision_Tree
@@ -1122,7 +1122,7 @@ p417
 tp418
 Rp419
 sg34
-S'>4.5'
+S'(test_data["Occupation"]>4.5'
 p420
 sbasg21
 g62
@@ -1134,7 +1134,7 @@ p421
 tp422
 Rp423
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p424
 sbasg21
 g109
@@ -1173,7 +1173,7 @@ p436
 tp437
 Rp438
 sg34
-S'<=2.5'
+S'(test_data["Occupation"]<=2.5)'
 p439
 sba(i__main__
 Decision_Tree
@@ -1189,7 +1189,7 @@ p442
 tp443
 Rp444
 sg34
-S'>2.5'
+S'(test_data["Occupation"]>2.5'
 p445
 sbasg21
 g62
@@ -1201,7 +1201,7 @@ p446
 tp447
 Rp448
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p449
 sba(i__main__
 Decision_Tree
@@ -1223,7 +1223,7 @@ p455
 tp456
 Rp457
 sg34
-S'<=12.5'
+S'(test_data["Occupation"]<=12.5)'
 p458
 sba(i__main__
 Decision_Tree
@@ -1239,7 +1239,7 @@ p461
 tp462
 Rp463
 sg34
-S'>12.5'
+S'(test_data["Occupation"]>12.5'
 p464
 sbasg21
 g62
@@ -1251,7 +1251,7 @@ p465
 tp466
 Rp467
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p468
 sbasg21
 g109
@@ -1271,7 +1271,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Comedy"'
+S'(test_data["Genre"]=="Comedy")'
 p473
 sba(i__main__
 Decision_Tree
@@ -1328,7 +1328,7 @@ sg23
 g44
 ag45
 asg34
-S'<=3.5'
+S'(test_data["Occupation"]<=3.5)'
 p494
 sba(i__main__
 Decision_Tree
@@ -1373,7 +1373,7 @@ sg23
 g44
 ag45
 asg34
-S'>3.5'
+S'(test_data["Occupation"]>3.5'
 p509
 sbasg21
 g62
@@ -1385,7 +1385,7 @@ p510
 tp511
 Rp512
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p513
 sba(i__main__
 Decision_Tree
@@ -1436,7 +1436,7 @@ sg23
 g44
 ag45
 asg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p531
 sba(i__main__
 Decision_Tree
@@ -1481,7 +1481,7 @@ sg23
 g44
 ag45
 asg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p546
 sbasg21
 g62
@@ -1493,7 +1493,7 @@ p547
 tp548
 Rp549
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p550
 sbasg21
 g109
@@ -1505,7 +1505,7 @@ p551
 tp552
 Rp553
 sg34
-S'=="Crime"'
+S'(test_data["Genre"]=="Crime")'
 p554
 sba(i__main__
 Decision_Tree
@@ -1539,7 +1539,7 @@ p566
 tp567
 Rp568
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p569
 sba(i__main__
 Decision_Tree
@@ -1555,7 +1555,7 @@ p572
 tp573
 Rp574
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p575
 sbasg21
 g109
@@ -1567,7 +1567,7 @@ p576
 tp577
 Rp578
 sg34
-S'<=4.5'
+S'(test_data["Occupation"]<=4.5)'
 p579
 sba(i__main__
 Decision_Tree
@@ -1589,7 +1589,7 @@ p585
 tp586
 Rp587
 sg34
-S'<=53.0'
+S'(test_data["Age"]<=53.0)'
 p588
 sba(i__main__
 Decision_Tree
@@ -1605,7 +1605,7 @@ p591
 tp592
 Rp593
 sg34
-S'>53.0'
+S'(test_data["Age"]>53.0'
 p594
 sbasg21
 g109
@@ -1617,7 +1617,7 @@ p595
 tp596
 Rp597
 sg34
-S'>4.5'
+S'(test_data["Occupation"]>4.5'
 p598
 sbasg21
 g62
@@ -1656,7 +1656,7 @@ p610
 tp611
 Rp612
 sg34
-S'<=40.0'
+S'(test_data["Age"]<=40.0)'
 p613
 sba(i__main__
 Decision_Tree
@@ -1672,7 +1672,7 @@ p616
 tp617
 Rp618
 sg34
-S'>40.0'
+S'(test_data["Age"]>40.0'
 p619
 sbasg21
 g109
@@ -1684,7 +1684,7 @@ p620
 tp621
 Rp622
 sg34
-S'<=5.0'
+S'(test_data["Occupation"]<=5.0)'
 p623
 sba(i__main__
 Decision_Tree
@@ -1706,7 +1706,7 @@ p629
 tp630
 Rp631
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p632
 sba(i__main__
 Decision_Tree
@@ -1722,7 +1722,7 @@ p635
 tp636
 Rp637
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p638
 sbasg21
 g109
@@ -1734,7 +1734,7 @@ p639
 tp640
 Rp641
 sg34
-S'>5.0'
+S'(test_data["Occupation"]>5.0'
 p642
 sbasg21
 g62
@@ -1754,7 +1754,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Documentary"'
+S'(test_data["Genre"]=="Documentary")'
 p647
 sba(i__main__
 Decision_Tree
@@ -1811,7 +1811,7 @@ sg23
 g44
 ag45
 asg34
-S'<=4.5'
+S'(test_data["Occupation"]<=4.5)'
 p668
 sba(i__main__
 Decision_Tree
@@ -1856,7 +1856,7 @@ sg23
 g44
 ag45
 asg34
-S'>4.5'
+S'(test_data["Occupation"]>4.5'
 p683
 sbasg21
 g62
@@ -1868,7 +1868,7 @@ p684
 tp685
 Rp686
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p687
 sba(i__main__
 Decision_Tree
@@ -1919,7 +1919,7 @@ sg23
 g44
 ag45
 asg34
-S'<=10.5'
+S'(test_data["Occupation"]<=10.5)'
 p705
 sba(i__main__
 Decision_Tree
@@ -1964,7 +1964,7 @@ sg23
 g44
 ag45
 asg34
-S'>10.5'
+S'(test_data["Occupation"]>10.5'
 p720
 sbasg21
 g62
@@ -1976,7 +1976,7 @@ p721
 tp722
 Rp723
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p724
 sbasg21
 g109
@@ -1988,7 +1988,7 @@ p725
 tp726
 Rp727
 sg34
-S'=="Drama"'
+S'(test_data["Genre"]=="Drama")'
 p728
 sba(i__main__
 Decision_Tree
@@ -2022,7 +2022,7 @@ p740
 tp741
 Rp742
 sg34
-S'<=19.5'
+S'(test_data["Occupation"]<=19.5)'
 p743
 sba(i__main__
 Decision_Tree
@@ -2038,7 +2038,7 @@ p746
 tp747
 Rp748
 sg34
-S'>19.5'
+S'(test_data["Occupation"]>19.5'
 p749
 sbasg21
 g62
@@ -2050,7 +2050,7 @@ p750
 tp751
 Rp752
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p753
 sba(i__main__
 Decision_Tree
@@ -2072,7 +2072,7 @@ p759
 tp760
 Rp761
 sg34
-S'<=11.5'
+S'(test_data["Occupation"]<=11.5)'
 p762
 sba(i__main__
 Decision_Tree
@@ -2088,7 +2088,7 @@ p765
 tp766
 Rp767
 sg34
-S'>11.5'
+S'(test_data["Occupation"]>11.5'
 p768
 sbasg21
 g62
@@ -2100,7 +2100,7 @@ p769
 tp770
 Rp771
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p772
 sbasg21
 g109
@@ -2139,7 +2139,7 @@ p784
 tp785
 Rp786
 sg34
-S'<=9.5'
+S'(test_data["Age"]<=9.5)'
 p787
 sba(i__main__
 Decision_Tree
@@ -2155,7 +2155,7 @@ p790
 tp791
 Rp792
 sg34
-S'>9.5'
+S'(test_data["Age"]>9.5'
 p793
 sbasg21
 g109
@@ -2167,7 +2167,7 @@ p794
 tp795
 Rp796
 sg34
-S'<=4.5'
+S'(test_data["Occupation"]<=4.5)'
 p797
 sba(i__main__
 Decision_Tree
@@ -2189,7 +2189,7 @@ p803
 tp804
 Rp805
 sg34
-S'<=40.0'
+S'(test_data["Age"]<=40.0)'
 p806
 sba(i__main__
 Decision_Tree
@@ -2205,7 +2205,7 @@ p809
 tp810
 Rp811
 sg34
-S'>40.0'
+S'(test_data["Age"]>40.0'
 p812
 sbasg21
 g109
@@ -2217,7 +2217,7 @@ p813
 tp814
 Rp815
 sg34
-S'>4.5'
+S'(test_data["Occupation"]>4.5'
 p816
 sbasg21
 g62
@@ -2237,7 +2237,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Fantasy"'
+S'(test_data["Genre"]=="Fantasy")'
 p821
 sba(i__main__
 Decision_Tree
@@ -2294,7 +2294,7 @@ sg23
 g44
 ag45
 asg34
-S'<=4.5'
+S'(test_data["Occupation"]<=4.5)'
 p842
 sba(i__main__
 Decision_Tree
@@ -2339,7 +2339,7 @@ sg23
 g44
 ag45
 asg34
-S'>4.5'
+S'(test_data["Occupation"]>4.5'
 p857
 sbasg21
 g62
@@ -2351,7 +2351,7 @@ p858
 tp859
 Rp860
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p861
 sba(i__main__
 Decision_Tree
@@ -2402,7 +2402,7 @@ sg23
 g44
 ag45
 asg34
-S'<=14.5'
+S'(test_data["Occupation"]<=14.5)'
 p879
 sba(i__main__
 Decision_Tree
@@ -2447,7 +2447,7 @@ sg23
 g44
 ag45
 asg34
-S'>14.5'
+S'(test_data["Occupation"]>14.5'
 p894
 sbasg21
 g62
@@ -2459,7 +2459,7 @@ p895
 tp896
 Rp897
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p898
 sbasg21
 g109
@@ -2471,7 +2471,7 @@ p899
 tp900
 Rp901
 sg34
-S'=="Film-Noir"'
+S'(test_data["Genre"]=="Film-Noir")'
 p902
 sba(i__main__
 Decision_Tree
@@ -2528,7 +2528,7 @@ sg23
 g44
 ag45
 asg34
-S'<=11.5'
+S'(test_data["Occupation"]<=11.5)'
 p923
 sba(i__main__
 Decision_Tree
@@ -2573,7 +2573,7 @@ sg23
 g44
 ag45
 asg34
-S'>11.5'
+S'(test_data["Occupation"]>11.5'
 p938
 sbasg21
 g62
@@ -2585,7 +2585,7 @@ p939
 tp940
 Rp941
 sg34
-S'<=47.5'
+S'(test_data["Age"]<=47.5)'
 p942
 sba(i__main__
 Decision_Tree
@@ -2613,7 +2613,7 @@ p951
 tp952
 Rp953
 sg34
-S'<=0.5'
+S'(test_data["Occupation"]<=0.5)'
 p954
 sba(i__main__
 Decision_Tree
@@ -2629,7 +2629,7 @@ p957
 tp958
 Rp959
 sg34
-S'>0.5'
+S'(test_data["Occupation"]>0.5'
 p960
 sbasg21
 g62
@@ -2662,7 +2662,7 @@ p969
 tp970
 Rp971
 sg34
-S'<=13.5'
+S'(test_data["Occupation"]<=13.5)'
 p972
 sba(i__main__
 Decision_Tree
@@ -2678,7 +2678,7 @@ p975
 tp976
 Rp977
 sg34
-S'>13.5'
+S'(test_data["Occupation"]>13.5'
 p978
 sbasg21
 g62
@@ -2698,7 +2698,7 @@ sg23
 g44
 ag45
 asg34
-S'>47.5'
+S'(test_data["Age"]>47.5'
 p983
 sbasg21
 g109
@@ -2710,7 +2710,7 @@ p984
 tp985
 Rp986
 sg34
-S'=="Horror"'
+S'(test_data["Genre"]=="Horror")'
 p987
 sba(i__main__
 Decision_Tree
@@ -2744,7 +2744,7 @@ p999
 tp1000
 Rp1001
 sg34
-S'<=5.5'
+S'(test_data["Occupation"]<=5.5)'
 p1002
 sba(i__main__
 Decision_Tree
@@ -2760,7 +2760,7 @@ p1005
 tp1006
 Rp1007
 sg34
-S'>5.5'
+S'(test_data["Occupation"]>5.5'
 p1008
 sbasg21
 g62
@@ -2772,7 +2772,7 @@ p1009
 tp1010
 Rp1011
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1012
 sba(i__main__
 Decision_Tree
@@ -2794,7 +2794,7 @@ p1018
 tp1019
 Rp1020
 sg34
-S'<=5.5'
+S'(test_data["Occupation"]<=5.5)'
 p1021
 sba(i__main__
 Decision_Tree
@@ -2810,7 +2810,7 @@ p1024
 tp1025
 Rp1026
 sg34
-S'>5.5'
+S'(test_data["Occupation"]>5.5'
 p1027
 sbasg21
 g62
@@ -2822,7 +2822,7 @@ p1028
 tp1029
 Rp1030
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1031
 sbasg21
 g109
@@ -2861,7 +2861,7 @@ p1043
 tp1044
 Rp1045
 sg34
-S'<=16.0'
+S'(test_data["Occupation"]<=16.0)'
 p1046
 sba(i__main__
 Decision_Tree
@@ -2877,7 +2877,7 @@ p1049
 tp1050
 Rp1051
 sg34
-S'>16.0'
+S'(test_data["Occupation"]>16.0'
 p1052
 sbasg21
 g62
@@ -2889,7 +2889,7 @@ p1053
 tp1054
 Rp1055
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1056
 sba(i__main__
 Decision_Tree
@@ -2911,7 +2911,7 @@ p1062
 tp1063
 Rp1064
 sg34
-S'<=1.5'
+S'(test_data["Occupation"]<=1.5)'
 p1065
 sba(i__main__
 Decision_Tree
@@ -2927,7 +2927,7 @@ p1068
 tp1069
 Rp1070
 sg34
-S'>1.5'
+S'(test_data["Occupation"]>1.5'
 p1071
 sbasg21
 g62
@@ -2939,7 +2939,7 @@ p1072
 tp1073
 Rp1074
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1075
 sbasg21
 g109
@@ -2959,7 +2959,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Musical"'
+S'(test_data["Genre"]=="Musical")'
 p1080
 sba(i__main__
 Decision_Tree
@@ -3016,7 +3016,7 @@ sg23
 g44
 ag45
 asg34
-S'<=4.5'
+S'(test_data["Occupation"]<=4.5)'
 p1101
 sba(i__main__
 Decision_Tree
@@ -3061,7 +3061,7 @@ sg23
 g44
 ag45
 asg34
-S'>4.5'
+S'(test_data["Occupation"]>4.5'
 p1116
 sbasg21
 g62
@@ -3073,7 +3073,7 @@ p1117
 tp1118
 Rp1119
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1120
 sba(i__main__
 Decision_Tree
@@ -3124,7 +3124,7 @@ sg23
 g44
 ag45
 asg34
-S'<=1.5'
+S'(test_data["Occupation"]<=1.5)'
 p1138
 sba(i__main__
 Decision_Tree
@@ -3169,7 +3169,7 @@ sg23
 g44
 ag45
 asg34
-S'>1.5'
+S'(test_data["Occupation"]>1.5'
 p1153
 sbasg21
 g62
@@ -3181,7 +3181,7 @@ p1154
 tp1155
 Rp1156
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1157
 sbasg21
 g109
@@ -3193,7 +3193,7 @@ p1158
 tp1159
 Rp1160
 sg34
-S'=="Mystery"'
+S'(test_data["Genre"]=="Mystery")'
 p1161
 sba(i__main__
 Decision_Tree
@@ -3227,7 +3227,7 @@ p1173
 tp1174
 Rp1175
 sg34
-S'<=6.5'
+S'(test_data["Occupation"]<=6.5)'
 p1176
 sba(i__main__
 Decision_Tree
@@ -3243,7 +3243,7 @@ p1179
 tp1180
 Rp1181
 sg34
-S'>6.5'
+S'(test_data["Occupation"]>6.5'
 p1182
 sbasg21
 g62
@@ -3255,7 +3255,7 @@ p1183
 tp1184
 Rp1185
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1186
 sba(i__main__
 Decision_Tree
@@ -3277,7 +3277,7 @@ p1192
 tp1193
 Rp1194
 sg34
-S'<=6.5'
+S'(test_data["Occupation"]<=6.5)'
 p1195
 sba(i__main__
 Decision_Tree
@@ -3293,7 +3293,7 @@ p1198
 tp1199
 Rp1200
 sg34
-S'>6.5'
+S'(test_data["Occupation"]>6.5'
 p1201
 sbasg21
 g62
@@ -3305,7 +3305,7 @@ p1202
 tp1203
 Rp1204
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1205
 sbasg21
 g109
@@ -3344,7 +3344,7 @@ p1217
 tp1218
 Rp1219
 sg34
-S'<=17.5'
+S'(test_data["Occupation"]<=17.5)'
 p1220
 sba(i__main__
 Decision_Tree
@@ -3360,7 +3360,7 @@ p1223
 tp1224
 Rp1225
 sg34
-S'>17.5'
+S'(test_data["Occupation"]>17.5'
 p1226
 sbasg21
 g62
@@ -3372,7 +3372,7 @@ p1227
 tp1228
 Rp1229
 sg34
-S'<=53.0'
+S'(test_data["Age"]<=53.0)'
 p1230
 sba(i__main__
 Decision_Tree
@@ -3394,7 +3394,7 @@ p1236
 tp1237
 Rp1238
 sg34
-S'<=18.0'
+S'(test_data["Occupation"]<=18.0)'
 p1239
 sba(i__main__
 Decision_Tree
@@ -3410,7 +3410,7 @@ p1242
 tp1243
 Rp1244
 sg34
-S'>18.0'
+S'(test_data["Occupation"]>18.0'
 p1245
 sbasg21
 g62
@@ -3422,7 +3422,7 @@ p1246
 tp1247
 Rp1248
 sg34
-S'>53.0'
+S'(test_data["Age"]>53.0'
 p1249
 sbasg21
 g109
@@ -3442,7 +3442,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Romance"'
+S'(test_data["Genre"]=="Romance")'
 p1254
 sba(i__main__
 Decision_Tree
@@ -3499,7 +3499,7 @@ sg23
 g44
 ag45
 asg34
-S'<=16.5'
+S'(test_data["Occupation"]<=16.5)'
 p1275
 sba(i__main__
 Decision_Tree
@@ -3544,7 +3544,7 @@ sg23
 g44
 ag45
 asg34
-S'>16.5'
+S'(test_data["Occupation"]>16.5'
 p1290
 sbasg21
 g62
@@ -3556,7 +3556,7 @@ p1291
 tp1292
 Rp1293
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1294
 sba(i__main__
 Decision_Tree
@@ -3607,7 +3607,7 @@ sg23
 g44
 ag45
 asg34
-S'<=6.5'
+S'(test_data["Occupation"]<=6.5)'
 p1312
 sba(i__main__
 Decision_Tree
@@ -3652,7 +3652,7 @@ sg23
 g44
 ag45
 asg34
-S'>6.5'
+S'(test_data["Occupation"]>6.5'
 p1327
 sbasg21
 g62
@@ -3664,7 +3664,7 @@ p1328
 tp1329
 Rp1330
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1331
 sbasg21
 g109
@@ -3676,7 +3676,7 @@ p1332
 tp1333
 Rp1334
 sg34
-S'=="Sci-Fi"'
+S'(test_data["Genre"]=="Sci-Fi")'
 p1335
 sba(i__main__
 Decision_Tree
@@ -3733,7 +3733,7 @@ sg23
 g44
 ag45
 asg34
-S'<=5.5'
+S'(test_data["Occupation"]<=5.5)'
 p1356
 sba(i__main__
 Decision_Tree
@@ -3778,7 +3778,7 @@ sg23
 g44
 ag45
 asg34
-S'>5.5'
+S'(test_data["Occupation"]>5.5'
 p1371
 sbasg21
 g62
@@ -3790,7 +3790,7 @@ p1372
 tp1373
 Rp1374
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1375
 sba(i__main__
 Decision_Tree
@@ -3841,7 +3841,7 @@ sg23
 g44
 ag45
 asg34
-S'<=19.5'
+S'(test_data["Occupation"]<=19.5)'
 p1393
 sba(i__main__
 Decision_Tree
@@ -3886,7 +3886,7 @@ sg23
 g44
 ag45
 asg34
-S'>19.5'
+S'(test_data["Occupation"]>19.5'
 p1408
 sbasg21
 g62
@@ -3898,7 +3898,7 @@ p1409
 tp1410
 Rp1411
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1412
 sbasg21
 g109
@@ -3910,7 +3910,7 @@ p1413
 tp1414
 Rp1415
 sg34
-S'=="Thriller"'
+S'(test_data["Genre"]=="Thriller")'
 p1416
 sba(i__main__
 Decision_Tree
@@ -3967,7 +3967,7 @@ sg23
 g44
 ag45
 asg34
-S'<=5.5'
+S'(test_data["Occupation"]<=5.5)'
 p1437
 sba(i__main__
 Decision_Tree
@@ -4012,7 +4012,7 @@ sg23
 g44
 ag45
 asg34
-S'>5.5'
+S'(test_data["Occupation"]>5.5'
 p1452
 sbasg21
 g62
@@ -4024,7 +4024,7 @@ p1453
 tp1454
 Rp1455
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1456
 sba(i__main__
 Decision_Tree
@@ -4075,7 +4075,7 @@ sg23
 g44
 ag45
 asg34
-S'<=8.5'
+S'(test_data["Occupation"]<=8.5)'
 p1474
 sba(i__main__
 Decision_Tree
@@ -4120,7 +4120,7 @@ sg23
 g44
 ag45
 asg34
-S'>8.5'
+S'(test_data["Occupation"]>8.5'
 p1489
 sbasg21
 g62
@@ -4132,7 +4132,7 @@ p1490
 tp1491
 Rp1492
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1493
 sbasg21
 g109
@@ -4144,7 +4144,7 @@ p1494
 tp1495
 Rp1496
 sg34
-S'=="War"'
+S'(test_data["Genre"]=="War")'
 p1497
 sba(i__main__
 Decision_Tree
@@ -4201,7 +4201,7 @@ sg23
 g44
 ag45
 asg34
-S'<=16.5'
+S'(test_data["Occupation"]<=16.5)'
 p1518
 sba(i__main__
 Decision_Tree
@@ -4246,7 +4246,7 @@ sg23
 g44
 ag45
 asg34
-S'>16.5'
+S'(test_data["Occupation"]>16.5'
 p1533
 sbasg21
 g62
@@ -4258,7 +4258,7 @@ p1534
 tp1535
 Rp1536
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1537
 sba(i__main__
 Decision_Tree
@@ -4309,7 +4309,7 @@ sg23
 g44
 ag45
 asg34
-S'<=11.5'
+S'(test_data["Occupation"]<=11.5)'
 p1555
 sba(i__main__
 Decision_Tree
@@ -4354,7 +4354,7 @@ sg23
 g44
 ag45
 asg34
-S'>11.5'
+S'(test_data["Occupation"]>11.5'
 p1570
 sbasg21
 g62
@@ -4366,7 +4366,7 @@ p1571
 tp1572
 Rp1573
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1574
 sbasg21
 g109
@@ -4378,7 +4378,7 @@ p1575
 tp1576
 Rp1577
 sg34
-S'=="Western"'
+S'(test_data["Genre"]=="Western")'
 p1578
 sbasg21
 S'Genre'
@@ -4418,7 +4418,7 @@ S"Action\x00\x00\x00\x00\x00Adventure\x00\x00Animation\x00\x00Children's\x00Come
 p1592
 tp1593
 bsg34
-S'<=1977.5'
+S'(test_data["Year"]<=1977.5)'
 p1594
 sba(i__main__
 Decision_Tree
@@ -4481,7 +4481,7 @@ sg23
 g44
 ag45
 asg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p1618
 sba(i__main__
 Decision_Tree
@@ -4526,7 +4526,7 @@ sg23
 g44
 ag45
 asg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p1633
 sbasg21
 g62
@@ -4538,7 +4538,7 @@ p1634
 tp1635
 Rp1636
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p1637
 sba(i__main__
 Decision_Tree
@@ -4566,7 +4566,7 @@ p1646
 tp1647
 Rp1648
 sg34
-S'<=1.5'
+S'(test_data["Occupation"]<=1.5)'
 p1649
 sba(i__main__
 Decision_Tree
@@ -4582,7 +4582,7 @@ p1652
 tp1653
 Rp1654
 sg34
-S'>1.5'
+S'(test_data["Occupation"]>1.5'
 p1655
 sbasg21
 g62
@@ -4615,7 +4615,7 @@ p1664
 tp1665
 Rp1666
 sg34
-S'<=3.5'
+S'(test_data["Occupation"]<=3.5)'
 p1667
 sba(i__main__
 Decision_Tree
@@ -4631,7 +4631,7 @@ p1670
 tp1671
 Rp1672
 sg34
-S'>3.5'
+S'(test_data["Occupation"]>3.5'
 p1673
 sbasg21
 g62
@@ -4651,7 +4651,7 @@ sg23
 g44
 ag45
 asg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p1678
 sbasg21
 g109
@@ -4663,7 +4663,7 @@ p1679
 tp1680
 Rp1681
 sg34
-S'=="Action"'
+S'(test_data["Genre"]=="Action")'
 p1682
 sba(i__main__
 Decision_Tree
@@ -4720,7 +4720,7 @@ sg23
 g44
 ag45
 asg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p1703
 sba(i__main__
 Decision_Tree
@@ -4765,7 +4765,7 @@ sg23
 g44
 ag45
 asg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p1718
 sbasg21
 g62
@@ -4777,7 +4777,7 @@ p1719
 tp1720
 Rp1721
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p1722
 sba(i__main__
 Decision_Tree
@@ -4828,7 +4828,7 @@ sg23
 g44
 ag45
 asg34
-S'<=17.5'
+S'(test_data["Occupation"]<=17.5)'
 p1740
 sba(i__main__
 Decision_Tree
@@ -4873,7 +4873,7 @@ sg23
 g44
 ag45
 asg34
-S'>17.5'
+S'(test_data["Occupation"]>17.5'
 p1755
 sbasg21
 g62
@@ -4885,7 +4885,7 @@ p1756
 tp1757
 Rp1758
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p1759
 sbasg21
 g109
@@ -4897,7 +4897,7 @@ p1760
 tp1761
 Rp1762
 sg34
-S'=="Adventure"'
+S'(test_data["Genre"]=="Adventure")'
 p1763
 sba(i__main__
 Decision_Tree
@@ -4931,7 +4931,7 @@ p1775
 tp1776
 Rp1777
 sg34
-S'<=3.0'
+S'(test_data["Occupation"]<=3.0)'
 p1778
 sba(i__main__
 Decision_Tree
@@ -4947,7 +4947,7 @@ p1781
 tp1782
 Rp1783
 sg34
-S'>3.0'
+S'(test_data["Occupation"]>3.0'
 p1784
 sbasg21
 g62
@@ -4959,7 +4959,7 @@ p1785
 tp1786
 Rp1787
 sg34
-S'<=9.5'
+S'(test_data["Age"]<=9.5)'
 p1788
 sba(i__main__
 Decision_Tree
@@ -4981,7 +4981,7 @@ p1794
 tp1795
 Rp1796
 sg34
-S'<=1.5'
+S'(test_data["Occupation"]<=1.5)'
 p1797
 sba(i__main__
 Decision_Tree
@@ -4997,7 +4997,7 @@ p1800
 tp1801
 Rp1802
 sg34
-S'>1.5'
+S'(test_data["Occupation"]>1.5'
 p1803
 sbasg21
 g62
@@ -5009,7 +5009,7 @@ p1804
 tp1805
 Rp1806
 sg34
-S'>9.5'
+S'(test_data["Age"]>9.5'
 p1807
 sbasg21
 g109
@@ -5048,7 +5048,7 @@ p1819
 tp1820
 Rp1821
 sg34
-S'<=8.0'
+S'(test_data["Occupation"]<=8.0)'
 p1822
 sba(i__main__
 Decision_Tree
@@ -5064,7 +5064,7 @@ p1825
 tp1826
 Rp1827
 sg34
-S'>8.0'
+S'(test_data["Occupation"]>8.0'
 p1828
 sbasg21
 g62
@@ -5076,7 +5076,7 @@ p1829
 tp1830
 Rp1831
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1832
 sba(i__main__
 Decision_Tree
@@ -5098,7 +5098,7 @@ p1838
 tp1839
 Rp1840
 sg34
-S'<=13.5'
+S'(test_data["Occupation"]<=13.5)'
 p1841
 sba(i__main__
 Decision_Tree
@@ -5114,7 +5114,7 @@ p1844
 tp1845
 Rp1846
 sg34
-S'>13.5'
+S'(test_data["Occupation"]>13.5'
 p1847
 sbasg21
 g62
@@ -5126,7 +5126,7 @@ p1848
 tp1849
 Rp1850
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1851
 sbasg21
 g109
@@ -5146,7 +5146,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Animation"'
+S'(test_data["Genre"]=="Animation")'
 p1856
 sba(i__main__
 Decision_Tree
@@ -5180,7 +5180,7 @@ p1868
 tp1869
 Rp1870
 sg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p1871
 sba(i__main__
 Decision_Tree
@@ -5196,7 +5196,7 @@ p1874
 tp1875
 Rp1876
 sg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p1877
 sbasg21
 g62
@@ -5208,7 +5208,7 @@ p1878
 tp1879
 Rp1880
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p1881
 sba(i__main__
 Decision_Tree
@@ -5230,7 +5230,7 @@ p1887
 tp1888
 Rp1889
 sg34
-S'<=10.5'
+S'(test_data["Occupation"]<=10.5)'
 p1890
 sba(i__main__
 Decision_Tree
@@ -5246,7 +5246,7 @@ p1893
 tp1894
 Rp1895
 sg34
-S'>10.5'
+S'(test_data["Occupation"]>10.5'
 p1896
 sbasg21
 g62
@@ -5258,7 +5258,7 @@ p1897
 tp1898
 Rp1899
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p1900
 sbasg21
 g109
@@ -5297,7 +5297,7 @@ p1912
 tp1913
 Rp1914
 sg34
-S'<=19.5'
+S'(test_data["Occupation"]<=19.5)'
 p1915
 sba(i__main__
 Decision_Tree
@@ -5313,7 +5313,7 @@ p1918
 tp1919
 Rp1920
 sg34
-S'>19.5'
+S'(test_data["Occupation"]>19.5'
 p1921
 sbasg21
 g62
@@ -5325,7 +5325,7 @@ p1922
 tp1923
 Rp1924
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1925
 sba(i__main__
 Decision_Tree
@@ -5347,7 +5347,7 @@ p1931
 tp1932
 Rp1933
 sg34
-S'<=3.5'
+S'(test_data["Occupation"]<=3.5)'
 p1934
 sba(i__main__
 Decision_Tree
@@ -5363,7 +5363,7 @@ p1937
 tp1938
 Rp1939
 sg34
-S'>3.5'
+S'(test_data["Occupation"]>3.5'
 p1940
 sbasg21
 g62
@@ -5375,7 +5375,7 @@ p1941
 tp1942
 Rp1943
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1944
 sbasg21
 g109
@@ -5395,7 +5395,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Children\'s"'
+S'(test_data["Genre"]=="Children\'s")'
 p1949
 sba(i__main__
 Decision_Tree
@@ -5429,7 +5429,7 @@ p1961
 tp1962
 Rp1963
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p1964
 sba(i__main__
 Decision_Tree
@@ -5445,7 +5445,7 @@ p1967
 tp1968
 Rp1969
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p1970
 sbasg21
 g109
@@ -5457,7 +5457,7 @@ p1971
 tp1972
 Rp1973
 sg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p1974
 sba(i__main__
 Decision_Tree
@@ -5479,7 +5479,7 @@ p1980
 tp1981
 Rp1982
 sg34
-S'<=47.5'
+S'(test_data["Age"]<=47.5)'
 p1983
 sba(i__main__
 Decision_Tree
@@ -5495,7 +5495,7 @@ p1986
 tp1987
 Rp1988
 sg34
-S'>47.5'
+S'(test_data["Age"]>47.5'
 p1989
 sbasg21
 g109
@@ -5507,7 +5507,7 @@ p1990
 tp1991
 Rp1992
 sg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p1993
 sbasg21
 g62
@@ -5546,7 +5546,7 @@ p2005
 tp2006
 Rp2007
 sg34
-S'<=19.5'
+S'(test_data["Occupation"]<=19.5)'
 p2008
 sba(i__main__
 Decision_Tree
@@ -5562,7 +5562,7 @@ p2011
 tp2012
 Rp2013
 sg34
-S'>19.5'
+S'(test_data["Occupation"]>19.5'
 p2014
 sbasg21
 g62
@@ -5574,7 +5574,7 @@ p2015
 tp2016
 Rp2017
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p2018
 sba(i__main__
 Decision_Tree
@@ -5596,7 +5596,7 @@ p2024
 tp2025
 Rp2026
 sg34
-S'<=0.5'
+S'(test_data["Occupation"]<=0.5)'
 p2027
 sba(i__main__
 Decision_Tree
@@ -5612,7 +5612,7 @@ p2030
 tp2031
 Rp2032
 sg34
-S'>0.5'
+S'(test_data["Occupation"]>0.5'
 p2033
 sbasg21
 g62
@@ -5624,7 +5624,7 @@ p2034
 tp2035
 Rp2036
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p2037
 sbasg21
 g109
@@ -5644,7 +5644,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Comedy"'
+S'(test_data["Genre"]=="Comedy")'
 p2042
 sba(i__main__
 Decision_Tree
@@ -5678,7 +5678,7 @@ p2054
 tp2055
 Rp2056
 sg34
-S'<=1.5'
+S'(test_data["Occupation"]<=1.5)'
 p2057
 sba(i__main__
 Decision_Tree
@@ -5694,7 +5694,7 @@ p2060
 tp2061
 Rp2062
 sg34
-S'>1.5'
+S'(test_data["Occupation"]>1.5'
 p2063
 sbasg21
 g62
@@ -5727,7 +5727,7 @@ p2072
 tp2073
 Rp2074
 sg34
-S'<=15.5'
+S'(test_data["Occupation"]<=15.5)'
 p2075
 sba(i__main__
 Decision_Tree
@@ -5743,7 +5743,7 @@ p2078
 tp2079
 Rp2080
 sg34
-S'>15.5'
+S'(test_data["Occupation"]>15.5'
 p2081
 sbasg21
 g62
@@ -5763,7 +5763,7 @@ sg23
 g44
 ag45
 asg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p2086
 sba(i__main__
 Decision_Tree
@@ -5814,7 +5814,7 @@ sg23
 g44
 ag45
 asg34
-S'<=4.5'
+S'(test_data["Occupation"]<=4.5)'
 p2104
 sba(i__main__
 Decision_Tree
@@ -5859,7 +5859,7 @@ sg23
 g44
 ag45
 asg34
-S'>4.5'
+S'(test_data["Occupation"]>4.5'
 p2119
 sbasg21
 g62
@@ -5871,7 +5871,7 @@ p2120
 tp2121
 Rp2122
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p2123
 sbasg21
 g109
@@ -5883,7 +5883,7 @@ p2124
 tp2125
 Rp2126
 sg34
-S'=="Crime"'
+S'(test_data["Genre"]=="Crime")'
 p2127
 sba(i__main__
 Decision_Tree
@@ -5917,7 +5917,7 @@ p2139
 tp2140
 Rp2141
 sg34
-S'<=47.5'
+S'(test_data["Age"]<=47.5)'
 p2142
 sba(i__main__
 Decision_Tree
@@ -5933,7 +5933,7 @@ p2145
 tp2146
 Rp2147
 sg34
-S'>47.5'
+S'(test_data["Age"]>47.5'
 p2148
 sbasg21
 g109
@@ -5945,7 +5945,7 @@ p2149
 tp2150
 Rp2151
 sg34
-S'<=0.5'
+S'(test_data["Occupation"]<=0.5)'
 p2152
 sba(i__main__
 Decision_Tree
@@ -5967,7 +5967,7 @@ p2158
 tp2159
 Rp2160
 sg34
-S'<=40.0'
+S'(test_data["Age"]<=40.0)'
 p2161
 sba(i__main__
 Decision_Tree
@@ -5983,7 +5983,7 @@ p2164
 tp2165
 Rp2166
 sg34
-S'>40.0'
+S'(test_data["Age"]>40.0'
 p2167
 sbasg21
 g109
@@ -5995,7 +5995,7 @@ p2168
 tp2169
 Rp2170
 sg34
-S'>0.5'
+S'(test_data["Occupation"]>0.5'
 p2171
 sbasg21
 g62
@@ -6034,7 +6034,7 @@ p2183
 tp2184
 Rp2185
 sg34
-S'<=9.5'
+S'(test_data["Age"]<=9.5)'
 p2186
 sba(i__main__
 Decision_Tree
@@ -6050,7 +6050,7 @@ p2189
 tp2190
 Rp2191
 sg34
-S'>9.5'
+S'(test_data["Age"]>9.5'
 p2192
 sbasg21
 g109
@@ -6062,7 +6062,7 @@ p2193
 tp2194
 Rp2195
 sg34
-S'<=19.5'
+S'(test_data["Occupation"]<=19.5)'
 p2196
 sba(i__main__
 Decision_Tree
@@ -6084,7 +6084,7 @@ p2202
 tp2203
 Rp2204
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p2205
 sba(i__main__
 Decision_Tree
@@ -6100,7 +6100,7 @@ p2208
 tp2209
 Rp2210
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p2211
 sbasg21
 g109
@@ -6112,7 +6112,7 @@ p2212
 tp2213
 Rp2214
 sg34
-S'>19.5'
+S'(test_data["Occupation"]>19.5'
 p2215
 sbasg21
 g62
@@ -6132,7 +6132,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Documentary"'
+S'(test_data["Genre"]=="Documentary")'
 p2220
 sba(i__main__
 Decision_Tree
@@ -6189,7 +6189,7 @@ sg23
 g44
 ag45
 asg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p2241
 sba(i__main__
 Decision_Tree
@@ -6234,7 +6234,7 @@ sg23
 g44
 ag45
 asg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p2256
 sbasg21
 g62
@@ -6246,7 +6246,7 @@ p2257
 tp2258
 Rp2259
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p2260
 sba(i__main__
 Decision_Tree
@@ -6274,7 +6274,7 @@ p2269
 tp2270
 Rp2271
 sg34
-S'<=0.5'
+S'(test_data["Occupation"]<=0.5)'
 p2272
 sba(i__main__
 Decision_Tree
@@ -6290,7 +6290,7 @@ p2275
 tp2276
 Rp2277
 sg34
-S'>0.5'
+S'(test_data["Occupation"]>0.5'
 p2278
 sbasg21
 g62
@@ -6323,7 +6323,7 @@ p2287
 tp2288
 Rp2289
 sg34
-S'<=0.5'
+S'(test_data["Occupation"]<=0.5)'
 p2290
 sba(i__main__
 Decision_Tree
@@ -6339,7 +6339,7 @@ p2293
 tp2294
 Rp2295
 sg34
-S'>0.5'
+S'(test_data["Occupation"]>0.5'
 p2296
 sbasg21
 g62
@@ -6359,7 +6359,7 @@ sg23
 g44
 ag45
 asg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p2301
 sbasg21
 g109
@@ -6371,7 +6371,7 @@ p2302
 tp2303
 Rp2304
 sg34
-S'=="Drama"'
+S'(test_data["Genre"]=="Drama")'
 p2305
 sba(i__main__
 Decision_Tree
@@ -6428,7 +6428,7 @@ sg23
 g44
 ag45
 asg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p2326
 sba(i__main__
 Decision_Tree
@@ -6473,7 +6473,7 @@ sg23
 g44
 ag45
 asg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p2341
 sbasg21
 g62
@@ -6485,7 +6485,7 @@ p2342
 tp2343
 Rp2344
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p2345
 sba(i__main__
 Decision_Tree
@@ -6513,7 +6513,7 @@ p2354
 tp2355
 Rp2356
 sg34
-S'<=4.5'
+S'(test_data["Occupation"]<=4.5)'
 p2357
 sba(i__main__
 Decision_Tree
@@ -6529,7 +6529,7 @@ p2360
 tp2361
 Rp2362
 sg34
-S'>4.5'
+S'(test_data["Occupation"]>4.5'
 p2363
 sbasg21
 g62
@@ -6562,7 +6562,7 @@ p2372
 tp2373
 Rp2374
 sg34
-S'<=4.5'
+S'(test_data["Occupation"]<=4.5)'
 p2375
 sba(i__main__
 Decision_Tree
@@ -6578,7 +6578,7 @@ p2378
 tp2379
 Rp2380
 sg34
-S'>4.5'
+S'(test_data["Occupation"]>4.5'
 p2381
 sbasg21
 g62
@@ -6598,7 +6598,7 @@ sg23
 g44
 ag45
 asg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p2386
 sbasg21
 g109
@@ -6610,7 +6610,7 @@ p2387
 tp2388
 Rp2389
 sg34
-S'=="Fantasy"'
+S'(test_data["Genre"]=="Fantasy")'
 p2390
 sba(i__main__
 Decision_Tree
@@ -6667,7 +6667,7 @@ sg23
 g44
 ag45
 asg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p2411
 sba(i__main__
 Decision_Tree
@@ -6712,7 +6712,7 @@ sg23
 g44
 ag45
 asg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p2426
 sbasg21
 g109
@@ -6724,7 +6724,7 @@ p2427
 tp2428
 Rp2429
 sg34
-S'<=9.5'
+S'(test_data["Occupation"]<=9.5)'
 p2430
 sba(i__main__
 Decision_Tree
@@ -6775,7 +6775,7 @@ sg23
 g44
 ag45
 asg34
-S'<=9.5'
+S'(test_data["Age"]<=9.5)'
 p2448
 sba(i__main__
 Decision_Tree
@@ -6820,7 +6820,7 @@ sg23
 g44
 ag45
 asg34
-S'>9.5'
+S'(test_data["Age"]>9.5'
 p2463
 sbasg21
 g109
@@ -6832,7 +6832,7 @@ p2464
 tp2465
 Rp2466
 sg34
-S'>9.5'
+S'(test_data["Occupation"]>9.5'
 p2467
 sbasg21
 g62
@@ -6844,7 +6844,7 @@ p2468
 tp2469
 Rp2470
 sg34
-S'=="Film-Noir"'
+S'(test_data["Genre"]=="Film-Noir")'
 p2471
 sba(i__main__
 Decision_Tree
@@ -6901,7 +6901,7 @@ sg23
 g44
 ag45
 asg34
-S'<=11.5'
+S'(test_data["Occupation"]<=11.5)'
 p2492
 sba(i__main__
 Decision_Tree
@@ -6946,7 +6946,7 @@ sg23
 g44
 ag45
 asg34
-S'>11.5'
+S'(test_data["Occupation"]>11.5'
 p2507
 sbasg21
 g62
@@ -6958,7 +6958,7 @@ p2508
 tp2509
 Rp2510
 sg34
-S'<=47.5'
+S'(test_data["Age"]<=47.5)'
 p2511
 sba(i__main__
 Decision_Tree
@@ -7009,7 +7009,7 @@ sg23
 g44
 ag45
 asg34
-S'<=1.5'
+S'(test_data["Occupation"]<=1.5)'
 p2529
 sba(i__main__
 Decision_Tree
@@ -7054,7 +7054,7 @@ sg23
 g44
 ag45
 asg34
-S'>1.5'
+S'(test_data["Occupation"]>1.5'
 p2544
 sbasg21
 g62
@@ -7066,7 +7066,7 @@ p2545
 tp2546
 Rp2547
 sg34
-S'>47.5'
+S'(test_data["Age"]>47.5'
 p2548
 sbasg21
 g109
@@ -7078,7 +7078,7 @@ p2549
 tp2550
 Rp2551
 sg34
-S'=="Horror"'
+S'(test_data["Genre"]=="Horror")'
 p2552
 sba(i__main__
 Decision_Tree
@@ -7112,7 +7112,7 @@ p2564
 tp2565
 Rp2566
 sg34
-S'<=11.5'
+S'(test_data["Occupation"]<=11.5)'
 p2567
 sba(i__main__
 Decision_Tree
@@ -7128,7 +7128,7 @@ p2570
 tp2571
 Rp2572
 sg34
-S'>11.5'
+S'(test_data["Occupation"]>11.5'
 p2573
 sbasg21
 g62
@@ -7140,7 +7140,7 @@ p2574
 tp2575
 Rp2576
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p2577
 sba(i__main__
 Decision_Tree
@@ -7162,7 +7162,7 @@ p2583
 tp2584
 Rp2585
 sg34
-S'<=7.5'
+S'(test_data["Occupation"]<=7.5)'
 p2586
 sba(i__main__
 Decision_Tree
@@ -7178,7 +7178,7 @@ p2589
 tp2590
 Rp2591
 sg34
-S'>7.5'
+S'(test_data["Occupation"]>7.5'
 p2592
 sbasg21
 g62
@@ -7190,7 +7190,7 @@ p2593
 tp2594
 Rp2595
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p2596
 sbasg21
 g109
@@ -7229,7 +7229,7 @@ p2608
 tp2609
 Rp2610
 sg34
-S'<=2.5'
+S'(test_data["Occupation"]<=2.5)'
 p2611
 sba(i__main__
 Decision_Tree
@@ -7245,7 +7245,7 @@ p2614
 tp2615
 Rp2616
 sg34
-S'>2.5'
+S'(test_data["Occupation"]>2.5'
 p2617
 sbasg21
 g62
@@ -7257,7 +7257,7 @@ p2618
 tp2619
 Rp2620
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p2621
 sba(i__main__
 Decision_Tree
@@ -7279,7 +7279,7 @@ p2627
 tp2628
 Rp2629
 sg34
-S'<=3.5'
+S'(test_data["Occupation"]<=3.5)'
 p2630
 sba(i__main__
 Decision_Tree
@@ -7295,7 +7295,7 @@ p2633
 tp2634
 Rp2635
 sg34
-S'>3.5'
+S'(test_data["Occupation"]>3.5'
 p2636
 sbasg21
 g62
@@ -7307,7 +7307,7 @@ p2637
 tp2638
 Rp2639
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p2640
 sbasg21
 g109
@@ -7327,7 +7327,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Musical"'
+S'(test_data["Genre"]=="Musical")'
 p2645
 sba(i__main__
 Decision_Tree
@@ -7384,7 +7384,7 @@ sg23
 g44
 ag45
 asg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p2666
 sba(i__main__
 Decision_Tree
@@ -7429,7 +7429,7 @@ sg23
 g44
 ag45
 asg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p2681
 sbasg21
 g62
@@ -7441,7 +7441,7 @@ p2682
 tp2683
 Rp2684
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p2685
 sba(i__main__
 Decision_Tree
@@ -7492,7 +7492,7 @@ sg23
 g44
 ag45
 asg34
-S'<=5.5'
+S'(test_data["Occupation"]<=5.5)'
 p2703
 sba(i__main__
 Decision_Tree
@@ -7537,7 +7537,7 @@ sg23
 g44
 ag45
 asg34
-S'>5.5'
+S'(test_data["Occupation"]>5.5'
 p2718
 sbasg21
 g62
@@ -7549,7 +7549,7 @@ p2719
 tp2720
 Rp2721
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p2722
 sbasg21
 g109
@@ -7561,7 +7561,7 @@ p2723
 tp2724
 Rp2725
 sg34
-S'=="Mystery"'
+S'(test_data["Genre"]=="Mystery")'
 p2726
 sba(i__main__
 Decision_Tree
@@ -7595,7 +7595,7 @@ p2738
 tp2739
 Rp2740
 sg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p2741
 sba(i__main__
 Decision_Tree
@@ -7611,7 +7611,7 @@ p2744
 tp2745
 Rp2746
 sg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p2747
 sbasg21
 g62
@@ -7623,7 +7623,7 @@ p2748
 tp2749
 Rp2750
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p2751
 sba(i__main__
 Decision_Tree
@@ -7645,7 +7645,7 @@ p2757
 tp2758
 Rp2759
 sg34
-S'<=17.5'
+S'(test_data["Occupation"]<=17.5)'
 p2760
 sba(i__main__
 Decision_Tree
@@ -7661,7 +7661,7 @@ p2763
 tp2764
 Rp2765
 sg34
-S'>17.5'
+S'(test_data["Occupation"]>17.5'
 p2766
 sbasg21
 g62
@@ -7673,7 +7673,7 @@ p2767
 tp2768
 Rp2769
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p2770
 sbasg21
 g109
@@ -7712,7 +7712,7 @@ p2782
 tp2783
 Rp2784
 sg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p2785
 sba(i__main__
 Decision_Tree
@@ -7728,7 +7728,7 @@ p2788
 tp2789
 Rp2790
 sg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p2791
 sbasg21
 g62
@@ -7740,7 +7740,7 @@ p2792
 tp2793
 Rp2794
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p2795
 sba(i__main__
 Decision_Tree
@@ -7762,7 +7762,7 @@ p2801
 tp2802
 Rp2803
 sg34
-S'<=0.5'
+S'(test_data["Occupation"]<=0.5)'
 p2804
 sba(i__main__
 Decision_Tree
@@ -7778,7 +7778,7 @@ p2807
 tp2808
 Rp2809
 sg34
-S'>0.5'
+S'(test_data["Occupation"]>0.5'
 p2810
 sbasg21
 g62
@@ -7790,7 +7790,7 @@ p2811
 tp2812
 Rp2813
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p2814
 sbasg21
 g109
@@ -7810,7 +7810,7 @@ sg23
 g44
 ag45
 asg34
-S'=="Romance"'
+S'(test_data["Genre"]=="Romance")'
 p2819
 sba(i__main__
 Decision_Tree
@@ -7867,7 +7867,7 @@ sg23
 g44
 ag45
 asg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p2840
 sba(i__main__
 Decision_Tree
@@ -7912,7 +7912,7 @@ sg23
 g44
 ag45
 asg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p2855
 sbasg21
 g62
@@ -7924,7 +7924,7 @@ p2856
 tp2857
 Rp2858
 sg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p2859
 sba(i__main__
 Decision_Tree
@@ -7975,7 +7975,7 @@ sg23
 g44
 ag45
 asg34
-S'<=1.5'
+S'(test_data["Occupation"]<=1.5)'
 p2877
 sba(i__main__
 Decision_Tree
@@ -8020,7 +8020,7 @@ sg23
 g44
 ag45
 asg34
-S'>1.5'
+S'(test_data["Occupation"]>1.5'
 p2892
 sbasg21
 g62
@@ -8032,7 +8032,7 @@ p2893
 tp2894
 Rp2895
 sg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p2896
 sbasg21
 g109
@@ -8044,7 +8044,7 @@ p2897
 tp2898
 Rp2899
 sg34
-S'=="Sci-Fi"'
+S'(test_data["Genre"]=="Sci-Fi")'
 p2900
 sba(i__main__
 Decision_Tree
@@ -8101,7 +8101,7 @@ sg23
 g44
 ag45
 asg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p2921
 sba(i__main__
 Decision_Tree
@@ -8146,7 +8146,7 @@ sg23
 g44
 ag45
 asg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p2936
 sbasg21
 g109
@@ -8158,7 +8158,7 @@ p2937
 tp2938
 Rp2939
 sg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p2940
 sba(i__main__
 Decision_Tree
@@ -8209,7 +8209,7 @@ sg23
 g44
 ag45
 asg34
-S'<=30.0'
+S'(test_data["Age"]<=30.0)'
 p2958
 sba(i__main__
 Decision_Tree
@@ -8254,7 +8254,7 @@ sg23
 g44
 ag45
 asg34
-S'>30.0'
+S'(test_data["Age"]>30.0'
 p2973
 sbasg21
 g109
@@ -8266,7 +8266,7 @@ p2974
 tp2975
 Rp2976
 sg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p2977
 sbasg21
 g62
@@ -8278,7 +8278,7 @@ p2978
 tp2979
 Rp2980
 sg34
-S'=="Thriller"'
+S'(test_data["Genre"]=="Thriller")'
 p2981
 sba(i__main__
 Decision_Tree
@@ -8335,7 +8335,7 @@ sg23
 g44
 ag45
 asg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p3002
 sba(i__main__
 Decision_Tree
@@ -8380,7 +8380,7 @@ sg23
 g44
 ag45
 asg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p3017
 sbasg21
 g109
@@ -8392,7 +8392,7 @@ p3018
 tp3019
 Rp3020
 sg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p3021
 sba(i__main__
 Decision_Tree
@@ -8420,7 +8420,7 @@ p3030
 tp3031
 Rp3032
 sg34
-S'<=47.5'
+S'(test_data["Age"]<=47.5)'
 p3033
 sba(i__main__
 Decision_Tree
@@ -8436,7 +8436,7 @@ p3036
 tp3037
 Rp3038
 sg34
-S'>47.5'
+S'(test_data["Age"]>47.5'
 p3039
 sbasg21
 g109
@@ -8469,7 +8469,7 @@ p3048
 tp3049
 Rp3050
 sg34
-S'<=21.5'
+S'(test_data["Age"]<=21.5)'
 p3051
 sba(i__main__
 Decision_Tree
@@ -8485,7 +8485,7 @@ p3054
 tp3055
 Rp3056
 sg34
-S'>21.5'
+S'(test_data["Age"]>21.5'
 p3057
 sbasg21
 g109
@@ -8505,7 +8505,7 @@ sg23
 g44
 ag45
 asg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p3062
 sbasg21
 g62
@@ -8517,7 +8517,7 @@ p3063
 tp3064
 Rp3065
 sg34
-S'=="War"'
+S'(test_data["Genre"]=="War")'
 p3066
 sba(i__main__
 Decision_Tree
@@ -8574,7 +8574,7 @@ sg23
 g44
 ag45
 asg34
-S'<=18.5'
+S'(test_data["Occupation"]<=18.5)'
 p3087
 sba(i__main__
 Decision_Tree
@@ -8619,7 +8619,7 @@ sg23
 g44
 ag45
 asg34
-S'>18.5'
+S'(test_data["Occupation"]>18.5'
 p3102
 sbasg21
 g62
@@ -8631,7 +8631,7 @@ p3103
 tp3104
 Rp3105
 sg34
-S'<=47.5'
+S'(test_data["Age"]<=47.5)'
 p3106
 sba(i__main__
 Decision_Tree
@@ -8659,7 +8659,7 @@ p3115
 tp3116
 Rp3117
 sg34
-S'<=17.5'
+S'(test_data["Occupation"]<=17.5)'
 p3118
 sba(i__main__
 Decision_Tree
@@ -8675,7 +8675,7 @@ p3121
 tp3122
 Rp3123
 sg34
-S'>17.5'
+S'(test_data["Occupation"]>17.5'
 p3124
 sbasg21
 g62
@@ -8708,7 +8708,7 @@ p3133
 tp3134
 Rp3135
 sg34
-S'<=8.5'
+S'(test_data["Occupation"]<=8.5)'
 p3136
 sba(i__main__
 Decision_Tree
@@ -8724,7 +8724,7 @@ p3139
 tp3140
 Rp3141
 sg34
-S'>8.5'
+S'(test_data["Occupation"]>8.5'
 p3142
 sbasg21
 g62
@@ -8744,7 +8744,7 @@ sg23
 g44
 ag45
 asg34
-S'>47.5'
+S'(test_data["Age"]>47.5'
 p3147
 sbasg21
 g109
@@ -8756,7 +8756,7 @@ p3148
 tp3149
 Rp3150
 sg34
-S'=="Western"'
+S'(test_data["Genre"]=="Western")'
 p3151
 sbasg21
 g1579
@@ -8790,7 +8790,7 @@ S"Action\x00\x00\x00\x00\x00Adventure\x00\x00Animation\x00\x00Children's\x00Come
 p3161
 tp3162
 bsg34
-S'>1977.5'
+S'(test_data["Year"]>1977.5'
 p3163
 sbasg21
 S'Year'
