@@ -41,6 +41,7 @@ def preprocess():
     user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
     whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
     test_data = whole_test_data[['Id_x', 'Gender', 'Age', 'Occupation', 'Year', 'Genre']]
+    test_data = test_data.rename(index=str, columns={'Id_x': 'Id'})
     predict(test_data, my_tree)
 
 def predict(test_data, decision_tree):
@@ -48,7 +49,9 @@ def predict(test_data, decision_tree):
     queries = build_queries(decision_tree)
     for q in queries:
         exec(q)
-    test_data.to_csv('prediction.csv',index=False)
+    result = test_data[['Id', 'rating']]
+    result.sort(['rating'], inplace = True)
+    result.to_csv('prediction.csv',index=False)
 
 def build_queries(decision_tree):
     queries = []
