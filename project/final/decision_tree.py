@@ -49,7 +49,6 @@ def predict(test_data, decision_tree):
     for q in queries:
         exec(q)
     test_data.to_csv('prediction.csv',index=False)
-    cdd = 0
 
 def build_queries(decision_tree):
     queries = []
@@ -126,7 +125,7 @@ def build_decision_tree(train_data, tree_root):
             for i in range(len(condition)):
                 group = (train_data[train_data['Genre'].str.contains(condition[i])]).drop(name, axis=1)
                 tree_root.children[i] = find_split(group)
-                tree_root.children[i].set_constraint(prev_constraint + '(test_data[\"' + name + '\"]' + '==' + '\"' + condition[i] + '\"' + ')')
+                tree_root.children[i].set_constraint(prev_constraint + '(test_data[\"' + name + '\"]' + '.str.contains(' + '\"' + condition[i] + '\")' + ')')
                 build_decision_tree(group, tree_root.children[i])
 
 # calculate continuous feature, 'Age', 'Occupation', and 'Year' in this project

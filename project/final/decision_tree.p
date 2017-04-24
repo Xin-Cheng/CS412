@@ -72,7 +72,7 @@ tp33
 Rp34
 sS'constraint'
 p35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
 p36
 sba(i__main__
 Decision_Tree
@@ -90,7 +90,7 @@ p40
 tp41
 Rp42
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
 p43
 sbasg22
 S'Gender'
@@ -102,7 +102,7 @@ p46
 aS'F'
 p47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=1.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=1.5)'
 p48
 sba(i__main__
 Decision_Tree
@@ -126,7 +126,7 @@ p55
 tp56
 Rp57
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
 p58
 sba(i__main__
 Decision_Tree
@@ -144,7 +144,7 @@ p62
 tp63
 Rp64
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
 p65
 sbasg22
 g44
@@ -153,7 +153,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>1.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>1.5)'
 p67
 sbasg22
 S'Occupation'
@@ -179,7 +179,7 @@ p74
 tp75
 Rp76
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0)'
 p77
 sba(i__main__
 Decision_Tree
@@ -209,7 +209,7 @@ p87
 tp88
 Rp89
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
 p90
 sba(i__main__
 Decision_Tree
@@ -227,7 +227,7 @@ p94
 tp95
 Rp96
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
 p97
 sbasg22
 g44
@@ -236,7 +236,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5)'
 p99
 sba(i__main__
 Decision_Tree
@@ -260,7 +260,7 @@ p106
 tp107
 Rp108
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
 p109
 sba(i__main__
 Decision_Tree
@@ -278,7 +278,7 @@ p113
 tp114
 Rp115
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
 p116
 sbasg22
 g44
@@ -287,7 +287,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5)'
 p118
 sbasg22
 g68
@@ -299,7 +299,7 @@ p119
 tp120
 Rp121
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0)'
 p122
 sbasg22
 S'Age'
@@ -312,7 +312,7 @@ p124
 tp125
 Rp126
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Action")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Action"))'
 p127
 sba(i__main__
 Decision_Tree
@@ -348,7 +348,7 @@ p140
 tp141
 Rp142
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5) & (test_data["Gender"] == "M")'
 p143
 sba(i__main__
 Decision_Tree
@@ -366,7 +366,7 @@ p147
 tp148
 Rp149
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5) & (test_data["Gender"] == "F")'
 p150
 sbasg22
 g44
@@ -375,7 +375,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5)'
 p152
 sba(i__main__
 Decision_Tree
@@ -399,7 +399,7 @@ p159
 tp160
 Rp161
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5) & (test_data["Gender"] == "M")'
 p162
 sba(i__main__
 Decision_Tree
@@ -417,7 +417,7 @@ p166
 tp167
 Rp168
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5) & (test_data["Gender"] == "F")'
 p169
 sbasg22
 g44
@@ -426,7 +426,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5)'
 p171
 sbasg22
 g68
@@ -438,7 +438,7 @@ p172
 tp173
 Rp174
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=21.5)'
 p175
 sba(i__main__
 Decision_Tree
@@ -468,7 +468,7 @@ p185
 tp186
 Rp187
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "M")'
 p188
 sba(i__main__
 Decision_Tree
@@ -486,7 +486,7 @@ p192
 tp193
 Rp194
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "F")'
 p195
 sbasg22
 g44
@@ -495,7 +495,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5)'
 p197
 sba(i__main__
 Decision_Tree
@@ -519,7 +519,7 @@ p204
 tp205
 Rp206
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "M")'
 p207
 sba(i__main__
 Decision_Tree
@@ -537,7 +537,7 @@ p211
 tp212
 Rp213
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "F")'
 p214
 sbasg22
 g44
@@ -546,7 +546,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5)'
 p216
 sbasg22
 g68
@@ -558,7 +558,7 @@ p217
 tp218
 Rp219
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>21.5)'
 p220
 sbasg22
 g123
@@ -570,7 +570,7 @@ p221
 tp222
 Rp223
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Adventure")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Adventure"))'
 p224
 sba(i__main__
 Decision_Tree
@@ -606,7 +606,7 @@ p237
 tp238
 Rp239
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
 p240
 sba(i__main__
 Decision_Tree
@@ -624,7 +624,7 @@ p244
 tp245
 Rp246
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
 p247
 sbasg22
 g68
@@ -636,7 +636,7 @@ p248
 tp249
 Rp250
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
 p251
 sba(i__main__
 Decision_Tree
@@ -660,7 +660,7 @@ p258
 tp259
 Rp260
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=16.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=16.5)'
 p261
 sba(i__main__
 Decision_Tree
@@ -678,7 +678,7 @@ p265
 tp266
 Rp267
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>16.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>16.5)'
 p268
 sbasg22
 g68
@@ -690,7 +690,7 @@ p269
 tp270
 Rp271
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
 p272
 sbasg22
 g123
@@ -702,7 +702,7 @@ p273
 tp274
 Rp275
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M")'
 p276
 sba(i__main__
 Decision_Tree
@@ -732,7 +732,7 @@ p286
 tp287
 Rp288
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=14.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=14.5)'
 p289
 sba(i__main__
 Decision_Tree
@@ -750,7 +750,7 @@ p293
 tp294
 Rp295
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>14.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>14.5)'
 p296
 sbasg22
 g68
@@ -762,7 +762,7 @@ p297
 tp298
 Rp299
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
 p300
 sba(i__main__
 Decision_Tree
@@ -786,7 +786,7 @@ p307
 tp308
 Rp309
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5)'
 p310
 sba(i__main__
 Decision_Tree
@@ -804,7 +804,7 @@ p314
 tp315
 Rp316
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5)'
 p317
 sbasg22
 g68
@@ -816,7 +816,7 @@ p318
 tp319
 Rp320
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
 p321
 sbasg22
 g123
@@ -828,7 +828,7 @@ p322
 tp323
 Rp324
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F")'
 p325
 sbasg22
 g44
@@ -837,7 +837,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Animation")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Animation"))'
 p327
 sba(i__main__
 Decision_Tree
@@ -873,7 +873,7 @@ p340
 tp341
 Rp342
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
 p343
 sba(i__main__
 Decision_Tree
@@ -891,7 +891,7 @@ p347
 tp348
 Rp349
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
 p350
 sbasg22
 g68
@@ -903,7 +903,7 @@ p351
 tp352
 Rp353
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
 p354
 sba(i__main__
 Decision_Tree
@@ -927,7 +927,7 @@ p361
 tp362
 Rp363
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=15.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=15.5)'
 p364
 sba(i__main__
 Decision_Tree
@@ -945,7 +945,7 @@ p368
 tp369
 Rp370
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>15.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>15.5)'
 p371
 sbasg22
 g68
@@ -957,7 +957,7 @@ p372
 tp373
 Rp374
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
 p375
 sbasg22
 g123
@@ -969,7 +969,7 @@ p376
 tp377
 Rp378
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M")'
 p379
 sba(i__main__
 Decision_Tree
@@ -999,7 +999,7 @@ p389
 tp390
 Rp391
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
 p392
 sba(i__main__
 Decision_Tree
@@ -1017,7 +1017,7 @@ p396
 tp397
 Rp398
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
 p399
 sbasg22
 g68
@@ -1029,7 +1029,7 @@ p400
 tp401
 Rp402
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
 p403
 sba(i__main__
 Decision_Tree
@@ -1053,7 +1053,7 @@ p410
 tp411
 Rp412
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=3.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=3.5)'
 p413
 sba(i__main__
 Decision_Tree
@@ -1071,7 +1071,7 @@ p417
 tp418
 Rp419
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>3.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>3.5)'
 p420
 sbasg22
 g68
@@ -1083,7 +1083,7 @@ p421
 tp422
 Rp423
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
 p424
 sbasg22
 g123
@@ -1095,7 +1095,7 @@ p425
 tp426
 Rp427
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F")'
 p428
 sbasg22
 g44
@@ -1104,7 +1104,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Children\'s")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Children\'s"))'
 p430
 sba(i__main__
 Decision_Tree
@@ -1140,7 +1140,7 @@ p443
 tp444
 Rp445
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5)'
 p446
 sba(i__main__
 Decision_Tree
@@ -1158,7 +1158,7 @@ p450
 tp451
 Rp452
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5)'
 p453
 sbasg22
 g68
@@ -1170,7 +1170,7 @@ p454
 tp455
 Rp456
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
 p457
 sba(i__main__
 Decision_Tree
@@ -1194,7 +1194,7 @@ p464
 tp465
 Rp466
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=4.5)'
 p467
 sba(i__main__
 Decision_Tree
@@ -1212,7 +1212,7 @@ p471
 tp472
 Rp473
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>4.5)'
 p474
 sbasg22
 g68
@@ -1224,7 +1224,7 @@ p475
 tp476
 Rp477
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
 p478
 sbasg22
 g123
@@ -1236,7 +1236,7 @@ p479
 tp480
 Rp481
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M")'
 p482
 sba(i__main__
 Decision_Tree
@@ -1266,7 +1266,7 @@ p492
 tp493
 Rp494
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5)'
 p495
 sba(i__main__
 Decision_Tree
@@ -1284,7 +1284,7 @@ p499
 tp500
 Rp501
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5)'
 p502
 sbasg22
 g68
@@ -1296,7 +1296,7 @@ p503
 tp504
 Rp505
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
 p506
 sba(i__main__
 Decision_Tree
@@ -1320,7 +1320,7 @@ p513
 tp514
 Rp515
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=12.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=12.5)'
 p516
 sba(i__main__
 Decision_Tree
@@ -1338,7 +1338,7 @@ p520
 tp521
 Rp522
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>12.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>12.5)'
 p523
 sbasg22
 g68
@@ -1350,7 +1350,7 @@ p524
 tp525
 Rp526
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
 p527
 sbasg22
 g123
@@ -1362,7 +1362,7 @@ p528
 tp529
 Rp530
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F")'
 p531
 sbasg22
 g44
@@ -1371,7 +1371,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Comedy")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Comedy"))'
 p533
 sba(i__main__
 Decision_Tree
@@ -1407,7 +1407,7 @@ p546
 tp547
 Rp548
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=3.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=3.5) & (test_data["Gender"] == "M")'
 p549
 sba(i__main__
 Decision_Tree
@@ -1425,7 +1425,7 @@ p553
 tp554
 Rp555
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=3.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=3.5) & (test_data["Gender"] == "F")'
 p556
 sbasg22
 g44
@@ -1434,7 +1434,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=3.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=3.5)'
 p558
 sba(i__main__
 Decision_Tree
@@ -1458,7 +1458,7 @@ p565
 tp566
 Rp567
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>3.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>3.5) & (test_data["Gender"] == "M")'
 p568
 sba(i__main__
 Decision_Tree
@@ -1476,7 +1476,7 @@ p572
 tp573
 Rp574
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>3.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>3.5) & (test_data["Gender"] == "F")'
 p575
 sbasg22
 g44
@@ -1485,7 +1485,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>3.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>3.5)'
 p577
 sbasg22
 g68
@@ -1497,7 +1497,7 @@ p578
 tp579
 Rp580
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=30.0)'
 p581
 sba(i__main__
 Decision_Tree
@@ -1527,7 +1527,7 @@ p591
 tp592
 Rp593
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
 p594
 sba(i__main__
 Decision_Tree
@@ -1545,7 +1545,7 @@ p598
 tp599
 Rp600
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
 p601
 sbasg22
 g44
@@ -1554,7 +1554,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=18.5)'
 p603
 sba(i__main__
 Decision_Tree
@@ -1578,7 +1578,7 @@ p610
 tp611
 Rp612
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
 p613
 sba(i__main__
 Decision_Tree
@@ -1596,7 +1596,7 @@ p617
 tp618
 Rp619
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
 p620
 sbasg22
 g44
@@ -1605,7 +1605,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>30.0) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>18.5)'
 p622
 sbasg22
 g68
@@ -1617,7 +1617,7 @@ p623
 tp624
 Rp625
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>30.0)'
 p626
 sbasg22
 g123
@@ -1629,7 +1629,7 @@ p627
 tp628
 Rp629
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Crime")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Crime"))'
 p630
 sba(i__main__
 Decision_Tree
@@ -1665,7 +1665,7 @@ p643
 tp644
 Rp645
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]<=4.5) & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=4.5) & (test_data["Age"]<=30.0)'
 p646
 sba(i__main__
 Decision_Tree
@@ -1683,7 +1683,7 @@ p650
 tp651
 Rp652
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]<=4.5) & (test_data["Age"]>30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=4.5) & (test_data["Age"]>30.0)'
 p653
 sbasg22
 g123
@@ -1695,7 +1695,7 @@ p654
 tp655
 Rp656
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]<=4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=4.5)'
 p657
 sba(i__main__
 Decision_Tree
@@ -1719,7 +1719,7 @@ p664
 tp665
 Rp666
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]>4.5) & (test_data["Age"]<=53.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]>4.5) & (test_data["Age"]<=53.0)'
 p667
 sba(i__main__
 Decision_Tree
@@ -1737,7 +1737,7 @@ p671
 tp672
 Rp673
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]>4.5) & (test_data["Age"]>53.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]>4.5) & (test_data["Age"]>53.0)'
 p674
 sbasg22
 g123
@@ -1749,7 +1749,7 @@ p675
 tp676
 Rp677
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]>4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]>4.5)'
 p678
 sbasg22
 g68
@@ -1761,7 +1761,7 @@ p679
 tp680
 Rp681
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M")'
 p682
 sba(i__main__
 Decision_Tree
@@ -1791,7 +1791,7 @@ p692
 tp693
 Rp694
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]<=5.0) & (test_data["Age"]<=40.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=5.0) & (test_data["Age"]<=40.0)'
 p695
 sba(i__main__
 Decision_Tree
@@ -1809,7 +1809,7 @@ p699
 tp700
 Rp701
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]<=5.0) & (test_data["Age"]>40.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=5.0) & (test_data["Age"]>40.0)'
 p702
 sbasg22
 g123
@@ -1821,7 +1821,7 @@ p703
 tp704
 Rp705
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]<=5.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=5.0)'
 p706
 sba(i__main__
 Decision_Tree
@@ -1845,7 +1845,7 @@ p713
 tp714
 Rp715
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]>5.0) & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]>5.0) & (test_data["Age"]<=30.0)'
 p716
 sba(i__main__
 Decision_Tree
@@ -1863,7 +1863,7 @@ p720
 tp721
 Rp722
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]>5.0) & (test_data["Age"]>30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]>5.0) & (test_data["Age"]>30.0)'
 p723
 sbasg22
 g123
@@ -1875,7 +1875,7 @@ p724
 tp725
 Rp726
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]>5.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]>5.0)'
 p727
 sbasg22
 g68
@@ -1887,7 +1887,7 @@ p728
 tp729
 Rp730
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F")'
 p731
 sbasg22
 g44
@@ -1896,7 +1896,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Documentary")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Documentary"))'
 p733
 sba(i__main__
 Decision_Tree
@@ -1932,7 +1932,7 @@ p746
 tp747
 Rp748
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "M")'
 p749
 sba(i__main__
 Decision_Tree
@@ -1950,7 +1950,7 @@ p753
 tp754
 Rp755
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "F")'
 p756
 sbasg22
 g44
@@ -1959,7 +1959,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5)'
 p758
 sba(i__main__
 Decision_Tree
@@ -1983,7 +1983,7 @@ p765
 tp766
 Rp767
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "M")'
 p768
 sba(i__main__
 Decision_Tree
@@ -2001,7 +2001,7 @@ p772
 tp773
 Rp774
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "F")'
 p775
 sbasg22
 g44
@@ -2010,7 +2010,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5)'
 p777
 sbasg22
 g68
@@ -2022,7 +2022,7 @@ p778
 tp779
 Rp780
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=21.5)'
 p781
 sba(i__main__
 Decision_Tree
@@ -2052,7 +2052,7 @@ p791
 tp792
 Rp793
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=10.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=10.5) & (test_data["Gender"] == "M")'
 p794
 sba(i__main__
 Decision_Tree
@@ -2070,7 +2070,7 @@ p798
 tp799
 Rp800
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=10.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=10.5) & (test_data["Gender"] == "F")'
 p801
 sbasg22
 g44
@@ -2079,7 +2079,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=10.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=10.5)'
 p803
 sba(i__main__
 Decision_Tree
@@ -2103,7 +2103,7 @@ p810
 tp811
 Rp812
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>21.5) & (test_data["Occupation"]>10.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>10.5) & (test_data["Gender"] == "M")'
 p813
 sba(i__main__
 Decision_Tree
@@ -2121,7 +2121,7 @@ p817
 tp818
 Rp819
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>21.5) & (test_data["Occupation"]>10.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>10.5) & (test_data["Gender"] == "F")'
 p820
 sbasg22
 g44
@@ -2130,7 +2130,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>21.5) & (test_data["Occupation"]>10.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>10.5)'
 p822
 sbasg22
 g68
@@ -2142,7 +2142,7 @@ p823
 tp824
 Rp825
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>21.5)'
 p826
 sbasg22
 g123
@@ -2154,7 +2154,7 @@ p827
 tp828
 Rp829
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Drama")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Drama"))'
 p830
 sba(i__main__
 Decision_Tree
@@ -2190,7 +2190,7 @@ p843
 tp844
 Rp845
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=19.5)'
 p846
 sba(i__main__
 Decision_Tree
@@ -2208,7 +2208,7 @@ p850
 tp851
 Rp852
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>19.5)'
 p853
 sbasg22
 g68
@@ -2220,7 +2220,7 @@ p854
 tp855
 Rp856
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0)'
 p857
 sba(i__main__
 Decision_Tree
@@ -2244,7 +2244,7 @@ p864
 tp865
 Rp866
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=11.5)'
 p867
 sba(i__main__
 Decision_Tree
@@ -2262,7 +2262,7 @@ p871
 tp872
 Rp873
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]>11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]>11.5)'
 p874
 sbasg22
 g68
@@ -2274,7 +2274,7 @@ p875
 tp876
 Rp877
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0)'
 p878
 sbasg22
 g123
@@ -2286,7 +2286,7 @@ p879
 tp880
 Rp881
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "M")'
 p882
 sba(i__main__
 Decision_Tree
@@ -2316,7 +2316,7 @@ p892
 tp893
 Rp894
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "F") & (test_data["Occupation"]<=4.5) & (test_data["Age"]<=9.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=4.5) & (test_data["Age"]<=9.5)'
 p895
 sba(i__main__
 Decision_Tree
@@ -2334,7 +2334,7 @@ p899
 tp900
 Rp901
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "F") & (test_data["Occupation"]<=4.5) & (test_data["Age"]>9.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=4.5) & (test_data["Age"]>9.5)'
 p902
 sbasg22
 g123
@@ -2346,7 +2346,7 @@ p903
 tp904
 Rp905
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "F") & (test_data["Occupation"]<=4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=4.5)'
 p906
 sba(i__main__
 Decision_Tree
@@ -2370,7 +2370,7 @@ p913
 tp914
 Rp915
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "F") & (test_data["Occupation"]>4.5) & (test_data["Age"]<=40.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "F") & (test_data["Occupation"]>4.5) & (test_data["Age"]<=40.0)'
 p916
 sba(i__main__
 Decision_Tree
@@ -2388,7 +2388,7 @@ p920
 tp921
 Rp922
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "F") & (test_data["Occupation"]>4.5) & (test_data["Age"]>40.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "F") & (test_data["Occupation"]>4.5) & (test_data["Age"]>40.0)'
 p923
 sbasg22
 g123
@@ -2400,7 +2400,7 @@ p924
 tp925
 Rp926
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "F") & (test_data["Occupation"]>4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "F") & (test_data["Occupation"]>4.5)'
 p927
 sbasg22
 g68
@@ -2412,7 +2412,7 @@ p928
 tp929
 Rp930
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Gender"] == "F")'
 p931
 sbasg22
 g44
@@ -2421,7 +2421,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Fantasy")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Fantasy"))'
 p933
 sba(i__main__
 Decision_Tree
@@ -2457,7 +2457,7 @@ p946
 tp947
 Rp948
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "M")'
 p949
 sba(i__main__
 Decision_Tree
@@ -2475,7 +2475,7 @@ p953
 tp954
 Rp955
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "F")'
 p956
 sbasg22
 g44
@@ -2484,7 +2484,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5)'
 p958
 sba(i__main__
 Decision_Tree
@@ -2508,7 +2508,7 @@ p965
 tp966
 Rp967
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "M")'
 p968
 sba(i__main__
 Decision_Tree
@@ -2526,7 +2526,7 @@ p972
 tp973
 Rp974
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "F")'
 p975
 sbasg22
 g44
@@ -2535,7 +2535,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5)'
 p977
 sbasg22
 g68
@@ -2547,7 +2547,7 @@ p978
 tp979
 Rp980
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]<=21.5)'
 p981
 sba(i__main__
 Decision_Tree
@@ -2577,7 +2577,7 @@ p991
 tp992
 Rp993
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=14.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=14.5) & (test_data["Gender"] == "M")'
 p994
 sba(i__main__
 Decision_Tree
@@ -2595,7 +2595,7 @@ p998
 tp999
 Rp1000
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=14.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=14.5) & (test_data["Gender"] == "F")'
 p1001
 sbasg22
 g44
@@ -2604,7 +2604,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=14.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=14.5)'
 p1003
 sba(i__main__
 Decision_Tree
@@ -2628,7 +2628,7 @@ p1010
 tp1011
 Rp1012
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]>21.5) & (test_data["Occupation"]>14.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>14.5) & (test_data["Gender"] == "M")'
 p1013
 sba(i__main__
 Decision_Tree
@@ -2646,7 +2646,7 @@ p1017
 tp1018
 Rp1019
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]>21.5) & (test_data["Occupation"]>14.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>14.5) & (test_data["Gender"] == "F")'
 p1020
 sbasg22
 g44
@@ -2655,7 +2655,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]>21.5) & (test_data["Occupation"]>14.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>14.5)'
 p1022
 sbasg22
 g68
@@ -2667,7 +2667,7 @@ p1023
 tp1024
 Rp1025
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Age"]>21.5)'
 p1026
 sbasg22
 g123
@@ -2679,7 +2679,7 @@ p1027
 tp1028
 Rp1029
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Film-Noir")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Film-Noir"))'
 p1030
 sba(i__main__
 Decision_Tree
@@ -2715,7 +2715,7 @@ p1043
 tp1044
 Rp1045
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "M")'
 p1046
 sba(i__main__
 Decision_Tree
@@ -2733,7 +2733,7 @@ p1050
 tp1051
 Rp1052
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "F")'
 p1053
 sbasg22
 g44
@@ -2742,7 +2742,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5)'
 p1055
 sba(i__main__
 Decision_Tree
@@ -2766,7 +2766,7 @@ p1062
 tp1063
 Rp1064
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "M")'
 p1065
 sba(i__main__
 Decision_Tree
@@ -2784,7 +2784,7 @@ p1069
 tp1070
 Rp1071
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "F")'
 p1072
 sbasg22
 g44
@@ -2793,7 +2793,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5)'
 p1074
 sbasg22
 g68
@@ -2805,7 +2805,7 @@ p1075
 tp1076
 Rp1077
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5)'
 p1078
 sba(i__main__
 Decision_Tree
@@ -2835,7 +2835,7 @@ p1088
 tp1089
 Rp1090
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5)'
 p1091
 sba(i__main__
 Decision_Tree
@@ -2853,7 +2853,7 @@ p1095
 tp1096
 Rp1097
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5)'
 p1098
 sbasg22
 g68
@@ -2865,7 +2865,7 @@ p1099
 tp1100
 Rp1101
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "M")'
 p1102
 sba(i__main__
 Decision_Tree
@@ -2889,7 +2889,7 @@ p1109
 tp1110
 Rp1111
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=13.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=13.5)'
 p1112
 sba(i__main__
 Decision_Tree
@@ -2907,7 +2907,7 @@ p1116
 tp1117
 Rp1118
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]>13.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]>13.5)'
 p1119
 sbasg22
 g68
@@ -2919,7 +2919,7 @@ p1120
 tp1121
 Rp1122
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "F")'
 p1123
 sbasg22
 g44
@@ -2928,7 +2928,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5)'
 p1125
 sbasg22
 g123
@@ -2940,7 +2940,7 @@ p1126
 tp1127
 Rp1128
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Horror")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Horror"))'
 p1129
 sba(i__main__
 Decision_Tree
@@ -2976,7 +2976,7 @@ p1142
 tp1143
 Rp1144
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5)'
 p1145
 sba(i__main__
 Decision_Tree
@@ -2994,7 +2994,7 @@ p1149
 tp1150
 Rp1151
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5)'
 p1152
 sbasg22
 g68
@@ -3006,7 +3006,7 @@ p1153
 tp1154
 Rp1155
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
 p1156
 sba(i__main__
 Decision_Tree
@@ -3030,7 +3030,7 @@ p1163
 tp1164
 Rp1165
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=5.5)'
 p1166
 sba(i__main__
 Decision_Tree
@@ -3048,7 +3048,7 @@ p1170
 tp1171
 Rp1172
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>5.5)'
 p1173
 sbasg22
 g68
@@ -3060,7 +3060,7 @@ p1174
 tp1175
 Rp1176
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
 p1177
 sbasg22
 g123
@@ -3072,7 +3072,7 @@ p1178
 tp1179
 Rp1180
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M")'
 p1181
 sba(i__main__
 Decision_Tree
@@ -3102,7 +3102,7 @@ p1191
 tp1192
 Rp1193
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.0)'
 p1194
 sba(i__main__
 Decision_Tree
@@ -3120,7 +3120,7 @@ p1198
 tp1199
 Rp1200
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.0)'
 p1201
 sbasg22
 g68
@@ -3132,7 +3132,7 @@ p1202
 tp1203
 Rp1204
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
 p1205
 sba(i__main__
 Decision_Tree
@@ -3156,7 +3156,7 @@ p1212
 tp1213
 Rp1214
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=1.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=1.5)'
 p1215
 sba(i__main__
 Decision_Tree
@@ -3174,7 +3174,7 @@ p1219
 tp1220
 Rp1221
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>1.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>1.5)'
 p1222
 sbasg22
 g68
@@ -3186,7 +3186,7 @@ p1223
 tp1224
 Rp1225
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
 p1226
 sbasg22
 g123
@@ -3198,7 +3198,7 @@ p1227
 tp1228
 Rp1229
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F")'
 p1230
 sbasg22
 g44
@@ -3207,7 +3207,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Musical")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Musical"))'
 p1232
 sba(i__main__
 Decision_Tree
@@ -3243,7 +3243,7 @@ p1245
 tp1246
 Rp1247
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "M")'
 p1248
 sba(i__main__
 Decision_Tree
@@ -3261,7 +3261,7 @@ p1252
 tp1253
 Rp1254
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "F")'
 p1255
 sbasg22
 g44
@@ -3270,7 +3270,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=4.5)'
 p1257
 sba(i__main__
 Decision_Tree
@@ -3294,7 +3294,7 @@ p1264
 tp1265
 Rp1266
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "M")'
 p1267
 sba(i__main__
 Decision_Tree
@@ -3312,7 +3312,7 @@ p1271
 tp1272
 Rp1273
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "F")'
 p1274
 sbasg22
 g44
@@ -3321,7 +3321,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>4.5)'
 p1276
 sbasg22
 g68
@@ -3333,7 +3333,7 @@ p1277
 tp1278
 Rp1279
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5)'
 p1280
 sba(i__main__
 Decision_Tree
@@ -3363,7 +3363,7 @@ p1290
 tp1291
 Rp1292
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
 p1293
 sba(i__main__
 Decision_Tree
@@ -3381,7 +3381,7 @@ p1297
 tp1298
 Rp1299
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
 p1300
 sbasg22
 g44
@@ -3390,7 +3390,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=1.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=1.5)'
 p1302
 sba(i__main__
 Decision_Tree
@@ -3414,7 +3414,7 @@ p1309
 tp1310
 Rp1311
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
 p1312
 sba(i__main__
 Decision_Tree
@@ -3432,7 +3432,7 @@ p1316
 tp1317
 Rp1318
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
 p1319
 sbasg22
 g44
@@ -3441,7 +3441,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]>1.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>1.5)'
 p1321
 sbasg22
 g68
@@ -3453,7 +3453,7 @@ p1322
 tp1323
 Rp1324
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5)'
 p1325
 sbasg22
 g123
@@ -3465,7 +3465,7 @@ p1326
 tp1327
 Rp1328
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Mystery")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Mystery"))'
 p1329
 sba(i__main__
 Decision_Tree
@@ -3501,7 +3501,7 @@ p1342
 tp1343
 Rp1344
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=6.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=6.5)'
 p1345
 sba(i__main__
 Decision_Tree
@@ -3519,7 +3519,7 @@ p1349
 tp1350
 Rp1351
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>6.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>6.5)'
 p1352
 sbasg22
 g68
@@ -3531,7 +3531,7 @@ p1353
 tp1354
 Rp1355
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]<=21.5)'
 p1356
 sba(i__main__
 Decision_Tree
@@ -3555,7 +3555,7 @@ p1363
 tp1364
 Rp1365
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=6.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=6.5)'
 p1366
 sba(i__main__
 Decision_Tree
@@ -3573,7 +3573,7 @@ p1370
 tp1371
 Rp1372
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>6.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5) & (test_data["Occupation"]>6.5)'
 p1373
 sbasg22
 g68
@@ -3585,7 +3585,7 @@ p1374
 tp1375
 Rp1376
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]>21.5)'
 p1377
 sbasg22
 g123
@@ -3597,7 +3597,7 @@ p1378
 tp1379
 Rp1380
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M")'
 p1381
 sba(i__main__
 Decision_Tree
@@ -3627,7 +3627,7 @@ p1391
 tp1392
 Rp1393
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]<=53.0) & (test_data["Occupation"]<=17.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]<=53.0) & (test_data["Occupation"]<=17.5)'
 p1394
 sba(i__main__
 Decision_Tree
@@ -3645,7 +3645,7 @@ p1398
 tp1399
 Rp1400
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]<=53.0) & (test_data["Occupation"]>17.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]<=53.0) & (test_data["Occupation"]>17.5)'
 p1401
 sbasg22
 g68
@@ -3657,7 +3657,7 @@ p1402
 tp1403
 Rp1404
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]<=53.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]<=53.0)'
 p1405
 sba(i__main__
 Decision_Tree
@@ -3681,7 +3681,7 @@ p1412
 tp1413
 Rp1414
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]>53.0) & (test_data["Occupation"]<=18.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]>53.0) & (test_data["Occupation"]<=18.0)'
 p1415
 sba(i__main__
 Decision_Tree
@@ -3699,7 +3699,7 @@ p1419
 tp1420
 Rp1421
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]>53.0) & (test_data["Occupation"]>18.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]>53.0) & (test_data["Occupation"]>18.0)'
 p1422
 sbasg22
 g68
@@ -3711,7 +3711,7 @@ p1423
 tp1424
 Rp1425
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]>53.0)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]>53.0)'
 p1426
 sbasg22
 g123
@@ -3723,7 +3723,7 @@ p1427
 tp1428
 Rp1429
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F")'
 p1430
 sbasg22
 g44
@@ -3732,7 +3732,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Romance")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Romance"))'
 p1432
 sba(i__main__
 Decision_Tree
@@ -3768,7 +3768,7 @@ p1445
 tp1446
 Rp1447
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5) & (test_data["Gender"] == "M")'
 p1448
 sba(i__main__
 Decision_Tree
@@ -3786,7 +3786,7 @@ p1452
 tp1453
 Rp1454
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5) & (test_data["Gender"] == "F")'
 p1455
 sbasg22
 g44
@@ -3795,7 +3795,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5)'
 p1457
 sba(i__main__
 Decision_Tree
@@ -3819,7 +3819,7 @@ p1464
 tp1465
 Rp1466
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5) & (test_data["Gender"] == "M")'
 p1467
 sba(i__main__
 Decision_Tree
@@ -3837,7 +3837,7 @@ p1471
 tp1472
 Rp1473
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5) & (test_data["Gender"] == "F")'
 p1474
 sbasg22
 g44
@@ -3846,7 +3846,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5)'
 p1476
 sbasg22
 g68
@@ -3858,7 +3858,7 @@ p1477
 tp1478
 Rp1479
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=21.5)'
 p1480
 sba(i__main__
 Decision_Tree
@@ -3888,7 +3888,7 @@ p1490
 tp1491
 Rp1492
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=6.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=6.5) & (test_data["Gender"] == "M")'
 p1493
 sba(i__main__
 Decision_Tree
@@ -3906,7 +3906,7 @@ p1497
 tp1498
 Rp1499
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=6.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=6.5) & (test_data["Gender"] == "F")'
 p1500
 sbasg22
 g44
@@ -3915,7 +3915,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=6.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=6.5)'
 p1502
 sba(i__main__
 Decision_Tree
@@ -3939,7 +3939,7 @@ p1509
 tp1510
 Rp1511
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>21.5) & (test_data["Occupation"]>6.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>6.5) & (test_data["Gender"] == "M")'
 p1512
 sba(i__main__
 Decision_Tree
@@ -3957,7 +3957,7 @@ p1516
 tp1517
 Rp1518
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>21.5) & (test_data["Occupation"]>6.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>6.5) & (test_data["Gender"] == "F")'
 p1519
 sbasg22
 g44
@@ -3966,7 +3966,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>21.5) & (test_data["Occupation"]>6.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>6.5)'
 p1521
 sbasg22
 g68
@@ -3978,7 +3978,7 @@ p1522
 tp1523
 Rp1524
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>21.5)'
 p1525
 sbasg22
 g123
@@ -3990,7 +3990,7 @@ p1526
 tp1527
 Rp1528
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Sci-Fi")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Sci-Fi"))'
 p1529
 sba(i__main__
 Decision_Tree
@@ -4026,7 +4026,7 @@ p1542
 tp1543
 Rp1544
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "M")'
 p1545
 sba(i__main__
 Decision_Tree
@@ -4044,7 +4044,7 @@ p1549
 tp1550
 Rp1551
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "F")'
 p1552
 sbasg22
 g44
@@ -4053,7 +4053,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5)'
 p1554
 sba(i__main__
 Decision_Tree
@@ -4077,7 +4077,7 @@ p1561
 tp1562
 Rp1563
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "M")'
 p1564
 sba(i__main__
 Decision_Tree
@@ -4095,7 +4095,7 @@ p1568
 tp1569
 Rp1570
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "F")'
 p1571
 sbasg22
 g44
@@ -4104,7 +4104,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5)'
 p1573
 sbasg22
 g68
@@ -4116,7 +4116,7 @@ p1574
 tp1575
 Rp1576
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]<=21.5)'
 p1577
 sba(i__main__
 Decision_Tree
@@ -4146,7 +4146,7 @@ p1587
 tp1588
 Rp1589
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=19.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=19.5) & (test_data["Gender"] == "M")'
 p1590
 sba(i__main__
 Decision_Tree
@@ -4164,7 +4164,7 @@ p1594
 tp1595
 Rp1596
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=19.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=19.5) & (test_data["Gender"] == "F")'
 p1597
 sbasg22
 g44
@@ -4173,7 +4173,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=19.5)'
 p1599
 sba(i__main__
 Decision_Tree
@@ -4197,7 +4197,7 @@ p1606
 tp1607
 Rp1608
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]>21.5) & (test_data["Occupation"]>19.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>19.5) & (test_data["Gender"] == "M")'
 p1609
 sba(i__main__
 Decision_Tree
@@ -4215,7 +4215,7 @@ p1613
 tp1614
 Rp1615
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]>21.5) & (test_data["Occupation"]>19.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>19.5) & (test_data["Gender"] == "F")'
 p1616
 sbasg22
 g44
@@ -4224,7 +4224,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]>21.5) & (test_data["Occupation"]>19.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>19.5)'
 p1618
 sbasg22
 g68
@@ -4236,7 +4236,7 @@ p1619
 tp1620
 Rp1621
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Age"]>21.5)'
 p1622
 sbasg22
 g123
@@ -4248,7 +4248,7 @@ p1623
 tp1624
 Rp1625
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Thriller")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Thriller"))'
 p1626
 sba(i__main__
 Decision_Tree
@@ -4284,7 +4284,7 @@ p1639
 tp1640
 Rp1641
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "M")'
 p1642
 sba(i__main__
 Decision_Tree
@@ -4302,7 +4302,7 @@ p1646
 tp1647
 Rp1648
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "F")'
 p1649
 sbasg22
 g44
@@ -4311,7 +4311,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=5.5)'
 p1651
 sba(i__main__
 Decision_Tree
@@ -4335,7 +4335,7 @@ p1658
 tp1659
 Rp1660
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "M")'
 p1661
 sba(i__main__
 Decision_Tree
@@ -4353,7 +4353,7 @@ p1665
 tp1666
 Rp1667
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "F")'
 p1668
 sbasg22
 g44
@@ -4362,7 +4362,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>5.5)'
 p1670
 sbasg22
 g68
@@ -4374,7 +4374,7 @@ p1671
 tp1672
 Rp1673
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]<=21.5)'
 p1674
 sba(i__main__
 Decision_Tree
@@ -4404,7 +4404,7 @@ p1684
 tp1685
 Rp1686
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=8.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=8.5) & (test_data["Gender"] == "M")'
 p1687
 sba(i__main__
 Decision_Tree
@@ -4422,7 +4422,7 @@ p1691
 tp1692
 Rp1693
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=8.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=8.5) & (test_data["Gender"] == "F")'
 p1694
 sbasg22
 g44
@@ -4431,7 +4431,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=8.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=8.5)'
 p1696
 sba(i__main__
 Decision_Tree
@@ -4455,7 +4455,7 @@ p1703
 tp1704
 Rp1705
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]>21.5) & (test_data["Occupation"]>8.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>8.5) & (test_data["Gender"] == "M")'
 p1706
 sba(i__main__
 Decision_Tree
@@ -4473,7 +4473,7 @@ p1710
 tp1711
 Rp1712
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]>21.5) & (test_data["Occupation"]>8.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>8.5) & (test_data["Gender"] == "F")'
 p1713
 sbasg22
 g44
@@ -4482,7 +4482,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]>21.5) & (test_data["Occupation"]>8.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>8.5)'
 p1715
 sbasg22
 g68
@@ -4494,7 +4494,7 @@ p1716
 tp1717
 Rp1718
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Age"]>21.5)'
 p1719
 sbasg22
 g123
@@ -4506,7 +4506,7 @@ p1720
 tp1721
 Rp1722
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="War")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("War"))'
 p1723
 sba(i__main__
 Decision_Tree
@@ -4542,7 +4542,7 @@ p1736
 tp1737
 Rp1738
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5) & (test_data["Gender"] == "M")'
 p1739
 sba(i__main__
 Decision_Tree
@@ -4560,7 +4560,7 @@ p1743
 tp1744
 Rp1745
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5) & (test_data["Gender"] == "F")'
 p1746
 sbasg22
 g44
@@ -4569,7 +4569,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=16.5)'
 p1748
 sba(i__main__
 Decision_Tree
@@ -4593,7 +4593,7 @@ p1755
 tp1756
 Rp1757
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5) & (test_data["Gender"] == "M")'
 p1758
 sba(i__main__
 Decision_Tree
@@ -4611,7 +4611,7 @@ p1762
 tp1763
 Rp1764
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5) & (test_data["Gender"] == "F")'
 p1765
 sbasg22
 g44
@@ -4620,7 +4620,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>16.5)'
 p1767
 sbasg22
 g68
@@ -4632,7 +4632,7 @@ p1768
 tp1769
 Rp1770
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=21.5)'
 p1771
 sba(i__main__
 Decision_Tree
@@ -4662,7 +4662,7 @@ p1781
 tp1782
 Rp1783
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "M")'
 p1784
 sba(i__main__
 Decision_Tree
@@ -4680,7 +4680,7 @@ p1788
 tp1789
 Rp1790
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "F")'
 p1791
 sbasg22
 g44
@@ -4689,7 +4689,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=11.5)'
 p1793
 sba(i__main__
 Decision_Tree
@@ -4713,7 +4713,7 @@ p1800
 tp1801
 Rp1802
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "M")'
 p1803
 sba(i__main__
 Decision_Tree
@@ -4731,7 +4731,7 @@ p1807
 tp1808
 Rp1809
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "F")'
 p1810
 sbasg22
 g44
@@ -4740,7 +4740,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>11.5)'
 p1812
 sbasg22
 g68
@@ -4752,7 +4752,7 @@ p1813
 tp1814
 Rp1815
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>21.5)'
 p1816
 sbasg22
 g123
@@ -4764,7 +4764,7 @@ p1817
 tp1818
 Rp1819
 sg35
-S'(test_data["Year"]<=1977.5) & (test_data["Genre"]=="Western")'
+S'(test_data["Year"]<=1977.5) & (test_data["Genre"].str.contains("Western"))'
 p1820
 sbasg22
 S'Genre'
@@ -4846,7 +4846,7 @@ p1852
 tp1853
 Rp1854
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
 p1855
 sba(i__main__
 Decision_Tree
@@ -4864,7 +4864,7 @@ p1859
 tp1860
 Rp1861
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
 p1862
 sbasg22
 g44
@@ -4873,7 +4873,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
 p1864
 sba(i__main__
 Decision_Tree
@@ -4897,7 +4897,7 @@ p1871
 tp1872
 Rp1873
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
 p1874
 sba(i__main__
 Decision_Tree
@@ -4915,7 +4915,7 @@ p1878
 tp1879
 Rp1880
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
 p1881
 sbasg22
 g44
@@ -4924,7 +4924,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
 p1883
 sbasg22
 g68
@@ -4936,7 +4936,7 @@ p1884
 tp1885
 Rp1886
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]<=30.0)'
 p1887
 sba(i__main__
 Decision_Tree
@@ -4966,7 +4966,7 @@ p1897
 tp1898
 Rp1899
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=1.5)'
 p1900
 sba(i__main__
 Decision_Tree
@@ -4984,7 +4984,7 @@ p1904
 tp1905
 Rp1906
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Gender"] == "M") & (test_data["Occupation"]>1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M") & (test_data["Occupation"]>1.5)'
 p1907
 sbasg22
 g68
@@ -4996,7 +4996,7 @@ p1908
 tp1909
 Rp1910
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M")'
 p1911
 sba(i__main__
 Decision_Tree
@@ -5020,7 +5020,7 @@ p1918
 tp1919
 Rp1920
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=3.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=3.5)'
 p1921
 sba(i__main__
 Decision_Tree
@@ -5038,7 +5038,7 @@ p1925
 tp1926
 Rp1927
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Gender"] == "F") & (test_data["Occupation"]>3.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F") & (test_data["Occupation"]>3.5)'
 p1928
 sbasg22
 g68
@@ -5050,7 +5050,7 @@ p1929
 tp1930
 Rp1931
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F")'
 p1932
 sbasg22
 g44
@@ -5059,7 +5059,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action")) & (test_data["Age"]>30.0)'
 p1934
 sbasg22
 g123
@@ -5071,7 +5071,7 @@ p1935
 tp1936
 Rp1937
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Action")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Action"))'
 p1938
 sba(i__main__
 Decision_Tree
@@ -5107,7 +5107,7 @@ p1951
 tp1952
 Rp1953
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
 p1954
 sba(i__main__
 Decision_Tree
@@ -5125,7 +5125,7 @@ p1958
 tp1959
 Rp1960
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
 p1961
 sbasg22
 g44
@@ -5134,7 +5134,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
 p1963
 sba(i__main__
 Decision_Tree
@@ -5158,7 +5158,7 @@ p1970
 tp1971
 Rp1972
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
 p1973
 sba(i__main__
 Decision_Tree
@@ -5176,7 +5176,7 @@ p1977
 tp1978
 Rp1979
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
 p1980
 sbasg22
 g44
@@ -5185,7 +5185,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
 p1982
 sbasg22
 g68
@@ -5197,7 +5197,7 @@ p1983
 tp1984
 Rp1985
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]<=30.0)'
 p1986
 sba(i__main__
 Decision_Tree
@@ -5227,7 +5227,7 @@ p1996
 tp1997
 Rp1998
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=17.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=17.5) & (test_data["Gender"] == "M")'
 p1999
 sba(i__main__
 Decision_Tree
@@ -5245,7 +5245,7 @@ p2003
 tp2004
 Rp2005
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=17.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=17.5) & (test_data["Gender"] == "F")'
 p2006
 sbasg22
 g44
@@ -5254,7 +5254,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=17.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=17.5)'
 p2008
 sba(i__main__
 Decision_Tree
@@ -5278,7 +5278,7 @@ p2015
 tp2016
 Rp2017
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>30.0) & (test_data["Occupation"]>17.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>17.5) & (test_data["Gender"] == "M")'
 p2018
 sba(i__main__
 Decision_Tree
@@ -5296,7 +5296,7 @@ p2022
 tp2023
 Rp2024
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>30.0) & (test_data["Occupation"]>17.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>17.5) & (test_data["Gender"] == "F")'
 p2025
 sbasg22
 g44
@@ -5305,7 +5305,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>30.0) & (test_data["Occupation"]>17.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>17.5)'
 p2027
 sbasg22
 g68
@@ -5317,7 +5317,7 @@ p2028
 tp2029
 Rp2030
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure")) & (test_data["Age"]>30.0)'
 p2031
 sbasg22
 g123
@@ -5329,7 +5329,7 @@ p2032
 tp2033
 Rp2034
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Adventure")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Adventure"))'
 p2035
 sba(i__main__
 Decision_Tree
@@ -5365,7 +5365,7 @@ p2048
 tp2049
 Rp2050
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]<=9.5) & (test_data["Occupation"]<=3.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]<=9.5) & (test_data["Occupation"]<=3.0)'
 p2051
 sba(i__main__
 Decision_Tree
@@ -5383,7 +5383,7 @@ p2055
 tp2056
 Rp2057
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]<=9.5) & (test_data["Occupation"]>3.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]<=9.5) & (test_data["Occupation"]>3.0)'
 p2058
 sbasg22
 g68
@@ -5395,7 +5395,7 @@ p2059
 tp2060
 Rp2061
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]<=9.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]<=9.5)'
 p2062
 sba(i__main__
 Decision_Tree
@@ -5419,7 +5419,7 @@ p2069
 tp2070
 Rp2071
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]>9.5) & (test_data["Occupation"]<=1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]>9.5) & (test_data["Occupation"]<=1.5)'
 p2072
 sba(i__main__
 Decision_Tree
@@ -5437,7 +5437,7 @@ p2076
 tp2077
 Rp2078
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]>9.5) & (test_data["Occupation"]>1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]>9.5) & (test_data["Occupation"]>1.5)'
 p2079
 sbasg22
 g68
@@ -5449,7 +5449,7 @@ p2080
 tp2081
 Rp2082
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M") & (test_data["Age"]>9.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M") & (test_data["Age"]>9.5)'
 p2083
 sbasg22
 g123
@@ -5461,7 +5461,7 @@ p2084
 tp2085
 Rp2086
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "M")'
 p2087
 sba(i__main__
 Decision_Tree
@@ -5491,7 +5491,7 @@ p2097
 tp2098
 Rp2099
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=8.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=8.0)'
 p2100
 sba(i__main__
 Decision_Tree
@@ -5509,7 +5509,7 @@ p2104
 tp2105
 Rp2106
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>8.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>8.0)'
 p2107
 sbasg22
 g68
@@ -5521,7 +5521,7 @@ p2108
 tp2109
 Rp2110
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
 p2111
 sba(i__main__
 Decision_Tree
@@ -5545,7 +5545,7 @@ p2118
 tp2119
 Rp2120
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=13.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=13.5)'
 p2121
 sba(i__main__
 Decision_Tree
@@ -5563,7 +5563,7 @@ p2125
 tp2126
 Rp2127
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>13.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>13.5)'
 p2128
 sbasg22
 g68
@@ -5575,7 +5575,7 @@ p2129
 tp2130
 Rp2131
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
 p2132
 sbasg22
 g123
@@ -5587,7 +5587,7 @@ p2133
 tp2134
 Rp2135
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation")) & (test_data["Gender"] == "F")'
 p2136
 sbasg22
 g44
@@ -5596,7 +5596,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Animation")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Animation"))'
 p2138
 sba(i__main__
 Decision_Tree
@@ -5632,7 +5632,7 @@ p2151
 tp2152
 Rp2153
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
 p2154
 sba(i__main__
 Decision_Tree
@@ -5650,7 +5650,7 @@ p2158
 tp2159
 Rp2160
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
 p2161
 sbasg22
 g68
@@ -5662,7 +5662,7 @@ p2162
 tp2163
 Rp2164
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0)'
 p2165
 sba(i__main__
 Decision_Tree
@@ -5686,7 +5686,7 @@ p2172
 tp2173
 Rp2174
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=10.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=10.5)'
 p2175
 sba(i__main__
 Decision_Tree
@@ -5704,7 +5704,7 @@ p2179
 tp2180
 Rp2181
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]>10.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]>10.5)'
 p2182
 sbasg22
 g68
@@ -5716,7 +5716,7 @@ p2183
 tp2184
 Rp2185
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0)'
 p2186
 sbasg22
 g123
@@ -5728,7 +5728,7 @@ p2187
 tp2188
 Rp2189
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "M")'
 p2190
 sba(i__main__
 Decision_Tree
@@ -5758,7 +5758,7 @@ p2200
 tp2201
 Rp2202
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
 p2203
 sba(i__main__
 Decision_Tree
@@ -5776,7 +5776,7 @@ p2207
 tp2208
 Rp2209
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
 p2210
 sbasg22
 g68
@@ -5788,7 +5788,7 @@ p2211
 tp2212
 Rp2213
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
 p2214
 sba(i__main__
 Decision_Tree
@@ -5812,7 +5812,7 @@ p2221
 tp2222
 Rp2223
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=3.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=3.5)'
 p2224
 sba(i__main__
 Decision_Tree
@@ -5830,7 +5830,7 @@ p2228
 tp2229
 Rp2230
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>3.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>3.5)'
 p2231
 sbasg22
 g68
@@ -5842,7 +5842,7 @@ p2232
 tp2233
 Rp2234
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
 p2235
 sbasg22
 g123
@@ -5854,7 +5854,7 @@ p2236
 tp2237
 Rp2238
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s")) & (test_data["Gender"] == "F")'
 p2239
 sbasg22
 g44
@@ -5863,7 +5863,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Children\'s")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Children\'s"))'
 p2241
 sba(i__main__
 Decision_Tree
@@ -5899,7 +5899,7 @@ p2254
 tp2255
 Rp2256
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5)'
 p2257
 sba(i__main__
 Decision_Tree
@@ -5917,7 +5917,7 @@ p2261
 tp2262
 Rp2263
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5)'
 p2264
 sbasg22
 g123
@@ -5929,7 +5929,7 @@ p2265
 tp2266
 Rp2267
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=18.5)'
 p2268
 sba(i__main__
 Decision_Tree
@@ -5953,7 +5953,7 @@ p2275
 tp2276
 Rp2277
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Occupation"]>18.5) & (test_data["Age"]<=47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Occupation"]>18.5) & (test_data["Age"]<=47.5)'
 p2278
 sba(i__main__
 Decision_Tree
@@ -5971,7 +5971,7 @@ p2282
 tp2283
 Rp2284
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Occupation"]>18.5) & (test_data["Age"]>47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Occupation"]>18.5) & (test_data["Age"]>47.5)'
 p2285
 sbasg22
 g123
@@ -5983,7 +5983,7 @@ p2286
 tp2287
 Rp2288
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M") & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M") & (test_data["Occupation"]>18.5)'
 p2289
 sbasg22
 g68
@@ -5995,7 +5995,7 @@ p2290
 tp2291
 Rp2292
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "M")'
 p2293
 sba(i__main__
 Decision_Tree
@@ -6025,7 +6025,7 @@ p2303
 tp2304
 Rp2305
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=19.5)'
 p2306
 sba(i__main__
 Decision_Tree
@@ -6043,7 +6043,7 @@ p2310
 tp2311
 Rp2312
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>19.5)'
 p2313
 sbasg22
 g68
@@ -6055,7 +6055,7 @@ p2314
 tp2315
 Rp2316
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
 p2317
 sba(i__main__
 Decision_Tree
@@ -6079,7 +6079,7 @@ p2324
 tp2325
 Rp2326
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=0.5)'
 p2327
 sba(i__main__
 Decision_Tree
@@ -6097,7 +6097,7 @@ p2331
 tp2332
 Rp2333
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>0.5)'
 p2334
 sbasg22
 g68
@@ -6109,7 +6109,7 @@ p2335
 tp2336
 Rp2337
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
 p2338
 sbasg22
 g123
@@ -6121,7 +6121,7 @@ p2339
 tp2340
 Rp2341
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy")) & (test_data["Gender"] == "F")'
 p2342
 sbasg22
 g44
@@ -6130,7 +6130,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Comedy")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Comedy"))'
 p2344
 sba(i__main__
 Decision_Tree
@@ -6166,7 +6166,7 @@ p2357
 tp2358
 Rp2359
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=1.5)'
 p2360
 sba(i__main__
 Decision_Tree
@@ -6184,7 +6184,7 @@ p2364
 tp2365
 Rp2366
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]>1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]>1.5)'
 p2367
 sbasg22
 g68
@@ -6196,7 +6196,7 @@ p2368
 tp2369
 Rp2370
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M")'
 p2371
 sba(i__main__
 Decision_Tree
@@ -6220,7 +6220,7 @@ p2378
 tp2379
 Rp2380
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=15.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=15.5)'
 p2381
 sba(i__main__
 Decision_Tree
@@ -6238,7 +6238,7 @@ p2385
 tp2386
 Rp2387
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]>15.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]>15.5)'
 p2388
 sbasg22
 g68
@@ -6250,7 +6250,7 @@ p2389
 tp2390
 Rp2391
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F")'
 p2392
 sbasg22
 g44
@@ -6259,7 +6259,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]<=21.5)'
 p2394
 sba(i__main__
 Decision_Tree
@@ -6289,7 +6289,7 @@ p2404
 tp2405
 Rp2406
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "M")'
 p2407
 sba(i__main__
 Decision_Tree
@@ -6307,7 +6307,7 @@ p2411
 tp2412
 Rp2413
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=4.5) & (test_data["Gender"] == "F")'
 p2414
 sbasg22
 g44
@@ -6316,7 +6316,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=4.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=4.5)'
 p2416
 sba(i__main__
 Decision_Tree
@@ -6340,7 +6340,7 @@ p2423
 tp2424
 Rp2425
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "M")'
 p2426
 sba(i__main__
 Decision_Tree
@@ -6358,7 +6358,7 @@ p2430
 tp2431
 Rp2432
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>4.5) & (test_data["Gender"] == "F")'
 p2433
 sbasg22
 g44
@@ -6367,7 +6367,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>21.5) & (test_data["Occupation"]>4.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>4.5)'
 p2435
 sbasg22
 g68
@@ -6379,7 +6379,7 @@ p2436
 tp2437
 Rp2438
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime")) & (test_data["Age"]>21.5)'
 p2439
 sbasg22
 g123
@@ -6391,7 +6391,7 @@ p2440
 tp2441
 Rp2442
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Crime")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Crime"))'
 p2443
 sba(i__main__
 Decision_Tree
@@ -6427,7 +6427,7 @@ p2456
 tp2457
 Rp2458
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5) & (test_data["Age"]<=47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5) & (test_data["Age"]<=47.5)'
 p2459
 sba(i__main__
 Decision_Tree
@@ -6445,7 +6445,7 @@ p2463
 tp2464
 Rp2465
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5) & (test_data["Age"]>47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5) & (test_data["Age"]>47.5)'
 p2466
 sbasg22
 g123
@@ -6457,7 +6457,7 @@ p2467
 tp2468
 Rp2469
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5)'
 p2470
 sba(i__main__
 Decision_Tree
@@ -6481,7 +6481,7 @@ p2477
 tp2478
 Rp2479
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5) & (test_data["Age"]<=40.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5) & (test_data["Age"]<=40.0)'
 p2480
 sba(i__main__
 Decision_Tree
@@ -6499,7 +6499,7 @@ p2484
 tp2485
 Rp2486
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5) & (test_data["Age"]>40.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5) & (test_data["Age"]>40.0)'
 p2487
 sbasg22
 g123
@@ -6511,7 +6511,7 @@ p2488
 tp2489
 Rp2490
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5)'
 p2491
 sbasg22
 g68
@@ -6523,7 +6523,7 @@ p2492
 tp2493
 Rp2494
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "M")'
 p2495
 sba(i__main__
 Decision_Tree
@@ -6553,7 +6553,7 @@ p2505
 tp2506
 Rp2507
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]<=19.5) & (test_data["Age"]<=9.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=19.5) & (test_data["Age"]<=9.5)'
 p2508
 sba(i__main__
 Decision_Tree
@@ -6571,7 +6571,7 @@ p2512
 tp2513
 Rp2514
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]<=19.5) & (test_data["Age"]>9.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=19.5) & (test_data["Age"]>9.5)'
 p2515
 sbasg22
 g123
@@ -6583,7 +6583,7 @@ p2516
 tp2517
 Rp2518
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]<=19.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=19.5)'
 p2519
 sba(i__main__
 Decision_Tree
@@ -6607,7 +6607,7 @@ p2526
 tp2527
 Rp2528
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]>19.5) & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]>19.5) & (test_data["Age"]<=30.0)'
 p2529
 sba(i__main__
 Decision_Tree
@@ -6625,7 +6625,7 @@ p2533
 tp2534
 Rp2535
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]>19.5) & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]>19.5) & (test_data["Age"]>30.0)'
 p2536
 sbasg22
 g123
@@ -6637,7 +6637,7 @@ p2537
 tp2538
 Rp2539
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F") & (test_data["Occupation"]>19.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F") & (test_data["Occupation"]>19.5)'
 p2540
 sbasg22
 g68
@@ -6649,7 +6649,7 @@ p2541
 tp2542
 Rp2543
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary")) & (test_data["Gender"] == "F")'
 p2544
 sbasg22
 g44
@@ -6658,7 +6658,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Documentary")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Documentary"))'
 p2546
 sba(i__main__
 Decision_Tree
@@ -6694,7 +6694,7 @@ p2559
 tp2560
 Rp2561
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
 p2562
 sba(i__main__
 Decision_Tree
@@ -6712,7 +6712,7 @@ p2566
 tp2567
 Rp2568
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
 p2569
 sbasg22
 g44
@@ -6721,7 +6721,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
 p2571
 sba(i__main__
 Decision_Tree
@@ -6745,7 +6745,7 @@ p2578
 tp2579
 Rp2580
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
 p2581
 sba(i__main__
 Decision_Tree
@@ -6763,7 +6763,7 @@ p2585
 tp2586
 Rp2587
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
 p2588
 sbasg22
 g44
@@ -6772,7 +6772,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
 p2590
 sbasg22
 g68
@@ -6784,7 +6784,7 @@ p2591
 tp2592
 Rp2593
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]<=30.0)'
 p2594
 sba(i__main__
 Decision_Tree
@@ -6814,7 +6814,7 @@ p2604
 tp2605
 Rp2606
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>30.0) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=0.5)'
 p2607
 sba(i__main__
 Decision_Tree
@@ -6832,7 +6832,7 @@ p2611
 tp2612
 Rp2613
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>30.0) & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M") & (test_data["Occupation"]>0.5)'
 p2614
 sbasg22
 g68
@@ -6844,7 +6844,7 @@ p2615
 tp2616
 Rp2617
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>30.0) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M")'
 p2618
 sba(i__main__
 Decision_Tree
@@ -6868,7 +6868,7 @@ p2625
 tp2626
 Rp2627
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>30.0) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=0.5)'
 p2628
 sba(i__main__
 Decision_Tree
@@ -6886,7 +6886,7 @@ p2632
 tp2633
 Rp2634
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>30.0) & (test_data["Gender"] == "F") & (test_data["Occupation"]>0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F") & (test_data["Occupation"]>0.5)'
 p2635
 sbasg22
 g68
@@ -6898,7 +6898,7 @@ p2636
 tp2637
 Rp2638
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>30.0) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F")'
 p2639
 sbasg22
 g44
@@ -6907,7 +6907,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama")) & (test_data["Age"]>30.0)'
 p2641
 sbasg22
 g123
@@ -6919,7 +6919,7 @@ p2642
 tp2643
 Rp2644
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Drama")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Drama"))'
 p2645
 sba(i__main__
 Decision_Tree
@@ -6955,7 +6955,7 @@ p2658
 tp2659
 Rp2660
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
 p2661
 sba(i__main__
 Decision_Tree
@@ -6973,7 +6973,7 @@ p2665
 tp2666
 Rp2667
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
 p2668
 sbasg22
 g44
@@ -6982,7 +6982,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5)'
 p2670
 sba(i__main__
 Decision_Tree
@@ -7006,7 +7006,7 @@ p2677
 tp2678
 Rp2679
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
 p2680
 sba(i__main__
 Decision_Tree
@@ -7024,7 +7024,7 @@ p2684
 tp2685
 Rp2686
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
 p2687
 sbasg22
 g44
@@ -7033,7 +7033,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5)'
 p2689
 sbasg22
 g68
@@ -7045,7 +7045,7 @@ p2690
 tp2691
 Rp2692
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]<=21.5)'
 p2693
 sba(i__main__
 Decision_Tree
@@ -7075,7 +7075,7 @@ p2703
 tp2704
 Rp2705
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]>21.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=4.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]>21.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=4.5)'
 p2706
 sba(i__main__
 Decision_Tree
@@ -7093,7 +7093,7 @@ p2710
 tp2711
 Rp2712
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]>21.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]>4.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]>21.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]>4.5)'
 p2713
 sbasg22
 g68
@@ -7105,7 +7105,7 @@ p2714
 tp2715
 Rp2716
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]>21.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]>21.5) & (test_data["Gender"] == "M")'
 p2717
 sba(i__main__
 Decision_Tree
@@ -7129,7 +7129,7 @@ p2724
 tp2725
 Rp2726
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]>21.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=4.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]>21.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=4.5)'
 p2727
 sba(i__main__
 Decision_Tree
@@ -7147,7 +7147,7 @@ p2731
 tp2732
 Rp2733
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]>21.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]>4.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]>21.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]>4.5)'
 p2734
 sbasg22
 g68
@@ -7159,7 +7159,7 @@ p2735
 tp2736
 Rp2737
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]>21.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]>21.5) & (test_data["Gender"] == "F")'
 p2738
 sbasg22
 g44
@@ -7168,7 +7168,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy")) & (test_data["Age"]>21.5)'
 p2740
 sbasg22
 g123
@@ -7180,7 +7180,7 @@ p2741
 tp2742
 Rp2743
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Fantasy")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Fantasy"))'
 p2744
 sba(i__main__
 Decision_Tree
@@ -7216,7 +7216,7 @@ p2757
 tp2758
 Rp2759
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]<=9.5) & (test_data["Age"]<=30.0) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]<=9.5) & (test_data["Age"]<=30.0) & (test_data["Gender"] == "M")'
 p2760
 sba(i__main__
 Decision_Tree
@@ -7234,7 +7234,7 @@ p2764
 tp2765
 Rp2766
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]<=9.5) & (test_data["Age"]<=30.0) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]<=9.5) & (test_data["Age"]<=30.0) & (test_data["Gender"] == "F")'
 p2767
 sbasg22
 g44
@@ -7243,7 +7243,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]<=9.5) & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]<=9.5) & (test_data["Age"]<=30.0)'
 p2769
 sba(i__main__
 Decision_Tree
@@ -7267,7 +7267,7 @@ p2776
 tp2777
 Rp2778
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]<=9.5) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]<=9.5) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M")'
 p2779
 sba(i__main__
 Decision_Tree
@@ -7285,7 +7285,7 @@ p2783
 tp2784
 Rp2785
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]<=9.5) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]<=9.5) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F")'
 p2786
 sbasg22
 g44
@@ -7294,7 +7294,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]<=9.5) & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]<=9.5) & (test_data["Age"]>30.0)'
 p2788
 sbasg22
 g123
@@ -7306,7 +7306,7 @@ p2789
 tp2790
 Rp2791
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]<=9.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]<=9.5)'
 p2792
 sba(i__main__
 Decision_Tree
@@ -7336,7 +7336,7 @@ p2802
 tp2803
 Rp2804
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]>9.5) & (test_data["Age"]<=9.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]>9.5) & (test_data["Age"]<=9.5) & (test_data["Gender"] == "M")'
 p2805
 sba(i__main__
 Decision_Tree
@@ -7354,7 +7354,7 @@ p2809
 tp2810
 Rp2811
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]>9.5) & (test_data["Age"]<=9.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]>9.5) & (test_data["Age"]<=9.5) & (test_data["Gender"] == "F")'
 p2812
 sbasg22
 g44
@@ -7363,7 +7363,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]>9.5) & (test_data["Age"]<=9.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]>9.5) & (test_data["Age"]<=9.5)'
 p2814
 sba(i__main__
 Decision_Tree
@@ -7387,7 +7387,7 @@ p2821
 tp2822
 Rp2823
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]>9.5) & (test_data["Age"]>9.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]>9.5) & (test_data["Age"]>9.5) & (test_data["Gender"] == "M")'
 p2824
 sba(i__main__
 Decision_Tree
@@ -7405,7 +7405,7 @@ p2828
 tp2829
 Rp2830
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]>9.5) & (test_data["Age"]>9.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]>9.5) & (test_data["Age"]>9.5) & (test_data["Gender"] == "F")'
 p2831
 sbasg22
 g44
@@ -7414,7 +7414,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]>9.5) & (test_data["Age"]>9.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]>9.5) & (test_data["Age"]>9.5)'
 p2833
 sbasg22
 g123
@@ -7426,7 +7426,7 @@ p2834
 tp2835
 Rp2836
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir") & (test_data["Occupation"]>9.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir")) & (test_data["Occupation"]>9.5)'
 p2837
 sbasg22
 g68
@@ -7438,7 +7438,7 @@ p2838
 tp2839
 Rp2840
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Film-Noir")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Film-Noir"))'
 p2841
 sba(i__main__
 Decision_Tree
@@ -7474,7 +7474,7 @@ p2854
 tp2855
 Rp2856
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "M")'
 p2857
 sba(i__main__
 Decision_Tree
@@ -7492,7 +7492,7 @@ p2861
 tp2862
 Rp2863
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5) & (test_data["Gender"] == "F")'
 p2864
 sbasg22
 g44
@@ -7501,7 +7501,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=11.5)'
 p2866
 sba(i__main__
 Decision_Tree
@@ -7525,7 +7525,7 @@ p2873
 tp2874
 Rp2875
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "M")'
 p2876
 sba(i__main__
 Decision_Tree
@@ -7543,7 +7543,7 @@ p2880
 tp2881
 Rp2882
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5) & (test_data["Gender"] == "F")'
 p2883
 sbasg22
 g44
@@ -7552,7 +7552,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]>11.5)'
 p2885
 sbasg22
 g68
@@ -7564,7 +7564,7 @@ p2886
 tp2887
 Rp2888
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]<=47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]<=47.5)'
 p2889
 sba(i__main__
 Decision_Tree
@@ -7594,7 +7594,7 @@ p2899
 tp2900
 Rp2901
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
 p2902
 sba(i__main__
 Decision_Tree
@@ -7612,7 +7612,7 @@ p2906
 tp2907
 Rp2908
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
 p2909
 sbasg22
 g44
@@ -7621,7 +7621,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Occupation"]<=1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Occupation"]<=1.5)'
 p2911
 sba(i__main__
 Decision_Tree
@@ -7645,7 +7645,7 @@ p2918
 tp2919
 Rp2920
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
 p2921
 sba(i__main__
 Decision_Tree
@@ -7663,7 +7663,7 @@ p2925
 tp2926
 Rp2927
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
 p2928
 sbasg22
 g44
@@ -7672,7 +7672,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5) & (test_data["Occupation"]>1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5) & (test_data["Occupation"]>1.5)'
 p2930
 sbasg22
 g68
@@ -7684,7 +7684,7 @@ p2931
 tp2932
 Rp2933
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror") & (test_data["Age"]>47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror")) & (test_data["Age"]>47.5)'
 p2934
 sbasg22
 g123
@@ -7696,7 +7696,7 @@ p2935
 tp2936
 Rp2937
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Horror")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Horror"))'
 p2938
 sba(i__main__
 Decision_Tree
@@ -7732,7 +7732,7 @@ p2951
 tp2952
 Rp2953
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=11.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=11.5)'
 p2954
 sba(i__main__
 Decision_Tree
@@ -7750,7 +7750,7 @@ p2958
 tp2959
 Rp2960
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>11.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>11.5)'
 p2961
 sbasg22
 g68
@@ -7762,7 +7762,7 @@ p2962
 tp2963
 Rp2964
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0)'
 p2965
 sba(i__main__
 Decision_Tree
@@ -7786,7 +7786,7 @@ p2972
 tp2973
 Rp2974
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=7.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=7.5)'
 p2975
 sba(i__main__
 Decision_Tree
@@ -7804,7 +7804,7 @@ p2979
 tp2980
 Rp2981
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]>7.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]>7.5)'
 p2982
 sbasg22
 g68
@@ -7816,7 +7816,7 @@ p2983
 tp2984
 Rp2985
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0)'
 p2986
 sbasg22
 g123
@@ -7828,7 +7828,7 @@ p2987
 tp2988
 Rp2989
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "M")'
 p2990
 sba(i__main__
 Decision_Tree
@@ -7858,7 +7858,7 @@ p3000
 tp3001
 Rp3002
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=2.5)'
 p3003
 sba(i__main__
 Decision_Tree
@@ -7876,7 +7876,7 @@ p3007
 tp3008
 Rp3009
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>2.5)'
 p3010
 sbasg22
 g68
@@ -7888,7 +7888,7 @@ p3011
 tp3012
 Rp3013
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
 p3014
 sba(i__main__
 Decision_Tree
@@ -7912,7 +7912,7 @@ p3021
 tp3022
 Rp3023
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=3.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=3.5)'
 p3024
 sba(i__main__
 Decision_Tree
@@ -7930,7 +7930,7 @@ p3028
 tp3029
 Rp3030
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>3.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5) & (test_data["Occupation"]>3.5)'
 p3031
 sbasg22
 g68
@@ -7942,7 +7942,7 @@ p3032
 tp3033
 Rp3034
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
 p3035
 sbasg22
 g123
@@ -7954,7 +7954,7 @@ p3036
 tp3037
 Rp3038
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical")) & (test_data["Gender"] == "F")'
 p3039
 sbasg22
 g44
@@ -7963,7 +7963,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Musical")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Musical"))'
 p3041
 sba(i__main__
 Decision_Tree
@@ -7999,7 +7999,7 @@ p3054
 tp3055
 Rp3056
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
 p3057
 sba(i__main__
 Decision_Tree
@@ -8017,7 +8017,7 @@ p3061
 tp3062
 Rp3063
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
 p3064
 sbasg22
 g44
@@ -8026,7 +8026,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]<=18.5)'
 p3066
 sba(i__main__
 Decision_Tree
@@ -8050,7 +8050,7 @@ p3073
 tp3074
 Rp3075
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
 p3076
 sba(i__main__
 Decision_Tree
@@ -8068,7 +8068,7 @@ p3080
 tp3081
 Rp3082
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
 p3083
 sbasg22
 g44
@@ -8077,7 +8077,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5) & (test_data["Occupation"]>18.5)'
 p3085
 sbasg22
 g68
@@ -8089,7 +8089,7 @@ p3086
 tp3087
 Rp3088
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]<=21.5)'
 p3089
 sba(i__main__
 Decision_Tree
@@ -8119,7 +8119,7 @@ p3099
 tp3100
 Rp3101
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "M")'
 p3102
 sba(i__main__
 Decision_Tree
@@ -8137,7 +8137,7 @@ p3106
 tp3107
 Rp3108
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=5.5) & (test_data["Gender"] == "F")'
 p3109
 sbasg22
 g44
@@ -8146,7 +8146,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]<=5.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]<=5.5)'
 p3111
 sba(i__main__
 Decision_Tree
@@ -8170,7 +8170,7 @@ p3118
 tp3119
 Rp3120
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "M")'
 p3121
 sba(i__main__
 Decision_Tree
@@ -8188,7 +8188,7 @@ p3125
 tp3126
 Rp3127
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>5.5) & (test_data["Gender"] == "F")'
 p3128
 sbasg22
 g44
@@ -8197,7 +8197,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5) & (test_data["Occupation"]>5.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5) & (test_data["Occupation"]>5.5)'
 p3130
 sbasg22
 g68
@@ -8209,7 +8209,7 @@ p3131
 tp3132
 Rp3133
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery")) & (test_data["Age"]>21.5)'
 p3134
 sbasg22
 g123
@@ -8221,7 +8221,7 @@ p3135
 tp3136
 Rp3137
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Mystery")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Mystery"))'
 p3138
 sba(i__main__
 Decision_Tree
@@ -8257,7 +8257,7 @@ p3151
 tp3152
 Rp3153
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
 p3154
 sba(i__main__
 Decision_Tree
@@ -8275,7 +8275,7 @@ p3158
 tp3159
 Rp3160
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
 p3161
 sbasg22
 g68
@@ -8287,7 +8287,7 @@ p3162
 tp3163
 Rp3164
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]<=30.0)'
 p3165
 sba(i__main__
 Decision_Tree
@@ -8311,7 +8311,7 @@ p3172
 tp3173
 Rp3174
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=17.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=17.5)'
 p3175
 sba(i__main__
 Decision_Tree
@@ -8329,7 +8329,7 @@ p3179
 tp3180
 Rp3181
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]>17.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0) & (test_data["Occupation"]>17.5)'
 p3182
 sbasg22
 g68
@@ -8341,7 +8341,7 @@ p3183
 tp3184
 Rp3185
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M") & (test_data["Age"]>30.0)'
 p3186
 sbasg22
 g123
@@ -8353,7 +8353,7 @@ p3187
 tp3188
 Rp3189
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "M")'
 p3190
 sba(i__main__
 Decision_Tree
@@ -8383,7 +8383,7 @@ p3200
 tp3201
 Rp3202
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
 p3203
 sba(i__main__
 Decision_Tree
@@ -8401,7 +8401,7 @@ p3207
 tp3208
 Rp3209
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
 p3210
 sbasg22
 g68
@@ -8413,7 +8413,7 @@ p3211
 tp3212
 Rp3213
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]<=30.0)'
 p3214
 sba(i__main__
 Decision_Tree
@@ -8437,7 +8437,7 @@ p3221
 tp3222
 Rp3223
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=0.5)'
 p3224
 sba(i__main__
 Decision_Tree
@@ -8455,7 +8455,7 @@ p3228
 tp3229
 Rp3230
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]>30.0) & (test_data["Occupation"]>0.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]>30.0) & (test_data["Occupation"]>0.5)'
 p3231
 sbasg22
 g68
@@ -8467,7 +8467,7 @@ p3232
 tp3233
 Rp3234
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F") & (test_data["Age"]>30.0)'
 p3235
 sbasg22
 g123
@@ -8479,7 +8479,7 @@ p3236
 tp3237
 Rp3238
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance") & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance")) & (test_data["Gender"] == "F")'
 p3239
 sbasg22
 g44
@@ -8488,7 +8488,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Romance")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Romance"))'
 p3241
 sba(i__main__
 Decision_Tree
@@ -8524,7 +8524,7 @@ p3254
 tp3255
 Rp3256
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
 p3257
 sba(i__main__
 Decision_Tree
@@ -8542,7 +8542,7 @@ p3261
 tp3262
 Rp3263
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
 p3264
 sbasg22
 g44
@@ -8551,7 +8551,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]<=18.5)'
 p3266
 sba(i__main__
 Decision_Tree
@@ -8575,7 +8575,7 @@ p3273
 tp3274
 Rp3275
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
 p3276
 sba(i__main__
 Decision_Tree
@@ -8593,7 +8593,7 @@ p3280
 tp3281
 Rp3282
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
 p3283
 sbasg22
 g44
@@ -8602,7 +8602,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=30.0) & (test_data["Occupation"]>18.5)'
 p3285
 sbasg22
 g68
@@ -8614,7 +8614,7 @@ p3286
 tp3287
 Rp3288
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]<=30.0)'
 p3289
 sba(i__main__
 Decision_Tree
@@ -8644,7 +8644,7 @@ p3299
 tp3300
 Rp3301
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "M")'
 p3302
 sba(i__main__
 Decision_Tree
@@ -8662,7 +8662,7 @@ p3306
 tp3307
 Rp3308
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5) & (test_data["Gender"] == "F")'
 p3309
 sbasg22
 g44
@@ -8671,7 +8671,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>30.0) & (test_data["Occupation"]<=1.5)'
 p3311
 sba(i__main__
 Decision_Tree
@@ -8695,7 +8695,7 @@ p3318
 tp3319
 Rp3320
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "M")'
 p3321
 sba(i__main__
 Decision_Tree
@@ -8713,7 +8713,7 @@ p3325
 tp3326
 Rp3327
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5) & (test_data["Gender"] == "F")'
 p3328
 sbasg22
 g44
@@ -8722,7 +8722,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>30.0) & (test_data["Occupation"]>1.5)'
 p3330
 sbasg22
 g68
@@ -8734,7 +8734,7 @@ p3331
 tp3332
 Rp3333
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi") & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi")) & (test_data["Age"]>30.0)'
 p3334
 sbasg22
 g123
@@ -8746,7 +8746,7 @@ p3335
 tp3336
 Rp3337
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Sci-Fi")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Sci-Fi"))'
 p3338
 sba(i__main__
 Decision_Tree
@@ -8782,7 +8782,7 @@ p3351
 tp3352
 Rp3353
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M")'
 p3354
 sba(i__main__
 Decision_Tree
@@ -8800,7 +8800,7 @@ p3358
 tp3359
 Rp3360
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F")'
 p3361
 sbasg22
 g44
@@ -8809,7 +8809,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5)'
 p3363
 sba(i__main__
 Decision_Tree
@@ -8833,7 +8833,7 @@ p3370
 tp3371
 Rp3372
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5) & (test_data["Gender"] == "M")'
 p3373
 sba(i__main__
 Decision_Tree
@@ -8851,7 +8851,7 @@ p3377
 tp3378
 Rp3379
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5) & (test_data["Gender"] == "F")'
 p3380
 sbasg22
 g44
@@ -8860,7 +8860,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5)'
 p3382
 sbasg22
 g123
@@ -8872,7 +8872,7 @@ p3383
 tp3384
 Rp3385
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]<=18.5)'
 p3386
 sba(i__main__
 Decision_Tree
@@ -8902,7 +8902,7 @@ p3396
 tp3397
 Rp3398
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]>18.5) & (test_data["Age"]<=30.0) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]>18.5) & (test_data["Age"]<=30.0) & (test_data["Gender"] == "M")'
 p3399
 sba(i__main__
 Decision_Tree
@@ -8920,7 +8920,7 @@ p3403
 tp3404
 Rp3405
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]>18.5) & (test_data["Age"]<=30.0) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]>18.5) & (test_data["Age"]<=30.0) & (test_data["Gender"] == "F")'
 p3406
 sbasg22
 g44
@@ -8929,7 +8929,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]>18.5) & (test_data["Age"]<=30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]>18.5) & (test_data["Age"]<=30.0)'
 p3408
 sba(i__main__
 Decision_Tree
@@ -8953,7 +8953,7 @@ p3415
 tp3416
 Rp3417
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]>18.5) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]>18.5) & (test_data["Age"]>30.0) & (test_data["Gender"] == "M")'
 p3418
 sba(i__main__
 Decision_Tree
@@ -8971,7 +8971,7 @@ p3422
 tp3423
 Rp3424
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]>18.5) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]>18.5) & (test_data["Age"]>30.0) & (test_data["Gender"] == "F")'
 p3425
 sbasg22
 g44
@@ -8980,7 +8980,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]>18.5) & (test_data["Age"]>30.0)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]>18.5) & (test_data["Age"]>30.0)'
 p3427
 sbasg22
 g123
@@ -8992,7 +8992,7 @@ p3428
 tp3429
 Rp3430
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller") & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller")) & (test_data["Occupation"]>18.5)'
 p3431
 sbasg22
 g68
@@ -9004,7 +9004,7 @@ p3432
 tp3433
 Rp3434
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Thriller")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Thriller"))'
 p3435
 sba(i__main__
 Decision_Tree
@@ -9040,7 +9040,7 @@ p3448
 tp3449
 Rp3450
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "M")'
 p3451
 sba(i__main__
 Decision_Tree
@@ -9058,7 +9058,7 @@ p3455
 tp3456
 Rp3457
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5) & (test_data["Gender"] == "F")'
 p3458
 sbasg22
 g44
@@ -9067,7 +9067,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]<=21.5)'
 p3460
 sba(i__main__
 Decision_Tree
@@ -9091,7 +9091,7 @@ p3467
 tp3468
 Rp3469
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5) & (test_data["Gender"] == "M")'
 p3470
 sba(i__main__
 Decision_Tree
@@ -9109,7 +9109,7 @@ p3474
 tp3475
 Rp3476
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5) & (test_data["Gender"] == "F")'
 p3477
 sbasg22
 g44
@@ -9118,7 +9118,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]<=18.5) & (test_data["Age"]>21.5)'
 p3479
 sbasg22
 g123
@@ -9130,7 +9130,7 @@ p3480
 tp3481
 Rp3482
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]<=18.5)'
 p3483
 sba(i__main__
 Decision_Tree
@@ -9160,7 +9160,7 @@ p3493
 tp3494
 Rp3495
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M") & (test_data["Age"]<=47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M") & (test_data["Age"]<=47.5)'
 p3496
 sba(i__main__
 Decision_Tree
@@ -9178,7 +9178,7 @@ p3500
 tp3501
 Rp3502
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M") & (test_data["Age"]>47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M") & (test_data["Age"]>47.5)'
 p3503
 sbasg22
 g123
@@ -9190,7 +9190,7 @@ p3504
 tp3505
 Rp3506
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
 p3507
 sba(i__main__
 Decision_Tree
@@ -9214,7 +9214,7 @@ p3514
 tp3515
 Rp3516
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F") & (test_data["Age"]<=21.5)'
 p3517
 sba(i__main__
 Decision_Tree
@@ -9232,7 +9232,7 @@ p3521
 tp3522
 Rp3523
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F") & (test_data["Age"]>21.5)'
 p3524
 sbasg22
 g123
@@ -9244,7 +9244,7 @@ p3525
 tp3526
 Rp3527
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
 p3528
 sbasg22
 g44
@@ -9253,7 +9253,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War") & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War")) & (test_data["Occupation"]>18.5)'
 p3530
 sbasg22
 g68
@@ -9265,7 +9265,7 @@ p3531
 tp3532
 Rp3533
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="War")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("War"))'
 p3534
 sba(i__main__
 Decision_Tree
@@ -9301,7 +9301,7 @@ p3547
 tp3548
 Rp3549
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "M")'
 p3550
 sba(i__main__
 Decision_Tree
@@ -9319,7 +9319,7 @@ p3554
 tp3555
 Rp3556
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=18.5) & (test_data["Gender"] == "F")'
 p3557
 sbasg22
 g44
@@ -9328,7 +9328,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]<=18.5)'
 p3559
 sba(i__main__
 Decision_Tree
@@ -9352,7 +9352,7 @@ p3566
 tp3567
 Rp3568
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=47.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "M")'
 p3569
 sba(i__main__
 Decision_Tree
@@ -9370,7 +9370,7 @@ p3573
 tp3574
 Rp3575
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=47.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]>18.5) & (test_data["Gender"] == "F")'
 p3576
 sbasg22
 g44
@@ -9379,7 +9379,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=47.5) & (test_data["Occupation"]>18.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=47.5) & (test_data["Occupation"]>18.5)'
 p3578
 sbasg22
 g68
@@ -9391,7 +9391,7 @@ p3579
 tp3580
 Rp3581
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]<=47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]<=47.5)'
 p3582
 sba(i__main__
 Decision_Tree
@@ -9421,7 +9421,7 @@ p3592
 tp3593
 Rp3594
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>47.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=17.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]<=17.5)'
 p3595
 sba(i__main__
 Decision_Tree
@@ -9439,7 +9439,7 @@ p3599
 tp3600
 Rp3601
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>47.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]>17.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "M") & (test_data["Occupation"]>17.5)'
 p3602
 sbasg22
 g68
@@ -9451,7 +9451,7 @@ p3603
 tp3604
 Rp3605
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>47.5) & (test_data["Gender"] == "M")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "M")'
 p3606
 sba(i__main__
 Decision_Tree
@@ -9475,7 +9475,7 @@ p3613
 tp3614
 Rp3615
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>47.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=8.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]<=8.5)'
 p3616
 sba(i__main__
 Decision_Tree
@@ -9493,7 +9493,7 @@ p3620
 tp3621
 Rp3622
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>47.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]>8.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "F") & (test_data["Occupation"]>8.5)'
 p3623
 sbasg22
 g68
@@ -9505,7 +9505,7 @@ p3624
 tp3625
 Rp3626
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>47.5) & (test_data["Gender"] == "F")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>47.5) & (test_data["Gender"] == "F")'
 p3627
 sbasg22
 g44
@@ -9514,7 +9514,7 @@ sg24
 g46
 ag47
 asg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western") & (test_data["Age"]>47.5)'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western")) & (test_data["Age"]>47.5)'
 p3629
 sbasg22
 g123
@@ -9526,7 +9526,7 @@ p3630
 tp3631
 Rp3632
 sg35
-S'(test_data["Year"]>1977.5) & (test_data["Genre"]=="Western")'
+S'(test_data["Year"]>1977.5) & (test_data["Genre"].str.contains("Western"))'
 p3633
 sbasg22
 g1821
