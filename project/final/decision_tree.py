@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 from math import *
 from numpy import *
+from collections import deque
 
 class Decision_Tree:
     def __init__(self, name, condition, is_label):
@@ -39,26 +40,31 @@ def preprocess():
     # test data
     user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
     whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
-    test_data = whole_test_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre']]
+    test_data = whole_test_data[['Id_x', 'Gender', 'Age', 'Occupation', 'Year', 'Genre']]
     predict(test_data, my_tree)
 
 def predict(test_data, decision_tree):
     test_data['rating'] = 0
-    build_queries(decision_tree)
-    # exec(cdd)
-    print test_data
+    queries = build_queries(decision_tree)
+    for q in queries:
+        exec(q)
+    test_data.to_csv('prediction.csv',index=False)
     cdd = 0
 
 def build_queries(decision_tree):
     queries = []
     prefix = 'test_data.loc['
     suffix = ', "rating"] ='
-    node_list = []
+    node_list = deque([])
+    node_list.append(decision_tree)
     while node_list:
-        node_stack.append(curr_node)
-        if curr_node.constraint is not None:
-            constraint_stack.append(curr_node.constraint)
-    cxx = 1
+        curr_node = node_list.popleft()
+        if curr_node.name == 'label' and curr_node.constraint is not None:
+            queries.append(prefix + curr_node.constraint + suffix + str(curr_node.condition))
+        for node in curr_node.children:
+            if node is not None:
+                node_list.append(node)
+    return queries
 
 # find split feature according to information gain
 def find_split(train_data):
