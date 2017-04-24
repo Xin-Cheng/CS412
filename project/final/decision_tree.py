@@ -8,12 +8,15 @@ class Decision_Tree:
     def __init__(self, name, condition, is_label):
         self.name = name    # name of each tree node
         self.condition = condition
+        self.constraint = None
         if not is_label:
             if condition is None:
                 num_of_children = 1
             else:
                 num_of_children = 2 if isinstance(condition, int) or isinstance(condition, float) else len(condition)
             self.children = [None]*num_of_children
+    def set_constraint(self, constraint):
+        self.constraint = constraint
     
 # load data and preprocess
 def preprocess():
@@ -38,6 +41,30 @@ def preprocess():
     user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
     whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
     test_data = whole_test_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre']]
+    predict(test_data, my_tree.children[0])
+
+def predict(test_data, decision_tree):
+    test_data['rating'] = 0
+    queries = []
+    build_queries(decision_tree, queries)
+    # exec(cdd)
+    print test_data
+    cdd = 0
+
+def build_queries(decision_tree, queries):
+    string = 'test_data.loc[(test_data["Gender"] == "M") & (test_data["Age"] >= 45), "rating"] = 2'
+    prefix = 'test_data.loc['
+    suffix = ', "rating"] ='
+    constraint = '> 1997'
+    rating = str(3)
+    condition = '(test_data[\"' + decision_tree.name + '\"]' + constraint + ')'
+    cdd = prefix + condition + suffix + rating
+    node_stack = []
+    curr_node = decision_tree
+    # while curr_node is not None:
+    #     if isinstance(curr_node.condition, int) or isinstance(curr_node.condition, float):
+    #         condition = '(test_data[\"' + curr_node.name + '\"]'
+    cxx = 1
 
 # find split feature according to information gain
 def find_split(train_data):
@@ -86,12 +113,19 @@ def build_decision_tree(train_data, tree_root):
             right = (train_data[train_data[name] > condition] if name != 'Gender' else train_data.groupby('Gender').get_group('F')).drop(name, axis=1)
             tree_root.children[0] = find_split(left)
             tree_root.children[1] = find_split(right)
+            if name != 'Gender':
+                tree_root.children[0].set_constraint('<=' + str(condition))
+                tree_root.children[1].set_constraint('>' + str(condition))
+            else:
+                tree_root.children[0].set_constraint('==\"M\"')
+                tree_root.children[1].set_constraint('==\"F\"')
             build_decision_tree(left, tree_root.children[0])
             build_decision_tree(right, tree_root.children[1])
         else:
             for i in range(len(condition)):
                 group = (train_data[train_data['Genre'].str.contains(condition[i])]).drop(name, axis=1)
                 tree_root.children[i] = find_split(group)
+                tree_root.children[i].set_constraint('==' + '\"' + condition[i] + '\"')
                 build_decision_tree(group, tree_root.children[i])
 
 # calculate continuous feature, 'Age', 'Occupation', and 'Year' in this project
