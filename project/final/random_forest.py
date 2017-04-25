@@ -33,11 +33,7 @@ def preprocess():
     user_train = pd.merge(users, train, how='inner', left_on='ID', right_on='user-Id')
     whole_train_data = pd.merge(user_train, movies, how='inner', left_on='movie-Id', right_on='Id')
     train_data = whole_train_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre', 'rating']]
-    # build decision tree
-    # root = Decision_Tree('root', None, False)
-    # build_decision_tree(train_data, root)
-    # pickle.dump( root, open( 'decision_tree.p', 'wb' ) )
-    # my_tree = pickle.load( open( 'decision_tree.p', 'rb' ) )
+    # build random forest
     forest = build_forest(train_data)
     # test data
     user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
@@ -80,7 +76,7 @@ def build_queries(decision_tree):
 
 def build_forest(train_data):
     features = list(train_data)[0 : train_data.shape[1] - 1]
-    combinations = itertools.combinations(features, 3)
+    combinations = itertools.combinations(features, 4)
     forest = []
     for c in combinations:
         tr = list(c)
