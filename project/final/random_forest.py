@@ -38,19 +38,21 @@ def preprocess():
     # build_decision_tree(train_data, root)
     # pickle.dump( root, open( 'decision_tree.p', 'wb' ) )
     # my_tree = pickle.load( open( 'decision_tree.p', 'rb' ) )
-    build_forest(train_data)
+    forest = build_forest(train_data)
     # test data
-    # user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
-    # whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
-    # test_data = whole_test_data[['Id_x', 'Gender', 'Age', 'Occupation', 'Year', 'Genre']]
-    # test_data = test_data.rename(index=str, columns={'Id_x': 'Id'})
-    # predict(test_data, my_tree)
+    user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
+    whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
+    test_data = whole_test_data[['Id_x', 'Gender', 'Age', 'Occupation', 'Year', 'Genre']]
+    test_data = test_data.rename(index=str, columns={'Id_x': 'Id'})
+    predict(test_data, forest)
 
-def predict(test_data, decision_tree):
+def predict(test_data, forest):
     test_data['rating_str'] = ''
-    queries = build_queries(decision_tree)
-    for q in queries:
-        exec(q)
+    for decision_tree in forest:
+        queries = build_queries(decision_tree)
+        for q in queries:
+            exec(q)
+    # test_data.to_csv('forest_prediction.csv',index=False)
     rating = []
     for index, row in test_data.iterrows():
         votes = array(map(int, list(row['rating_str'])))
@@ -58,7 +60,7 @@ def predict(test_data, decision_tree):
     test_data['rating'] = rating
     result = test_data[['Id', 'rating']]
     result.sort(['rating'], inplace = True)
-    result.to_csv('prediction.csv',index=False)
+    result.to_csv('forest_prediction.csv',index=False)
 
 def build_queries(decision_tree):
     queries = []
@@ -77,19 +79,19 @@ def build_queries(decision_tree):
 
 
 def build_forest(train_data):
-    # features = list(train_data)[0 : train_data.shape[1] - 1]
-    # combinations = itertools.combinations(features, 2)
-    # forest = []
-    # for c in combinations:
-    #     tr = list(c)
-    #     tr.append('rating')
-    #     # build single decision tree
-    #     root = Decision_Tree('root', None, False)
-    #     build_decision_tree(train_data[tr], root)
-    #     forest.append(root)
-    # pickle.dump( forest, open( 'forest.p', 'wb' ) )
-    my_tree = pickle.load( open( 'forest.p', 'rb' ) )
-    print 'forest' 
+    features = list(train_data)[0 : train_data.shape[1] - 1]
+    combinations = itertools.combinations(features, 3)
+    forest = []
+    for c in combinations:
+        tr = list(c)
+        tr.append('rating')
+        # build single decision tree
+        root = Decision_Tree('root', None, False)
+        build_decision_tree(train_data[tr], root)
+        forest.append(root)
+    pickle.dump( forest, open( 'forest.p', 'wb' ) )
+    random_forest = pickle.load( open( 'forest.p', 'rb' ) )
+    return random_forest
 
 # find split feature according to information gain
 def find_split(train_data):
