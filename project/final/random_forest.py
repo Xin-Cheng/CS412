@@ -75,18 +75,18 @@ def build_queries(decision_tree):
 
 
 def build_forest(train_data):
-    features = list(train_data)[0 : train_data.shape[1] - 1]
-    combinations = itertools.combinations(features, 4)
-    forest = []
-    for c in combinations:
-        tr = list(c)
-        tr.append('rating')
-        # build single decision tree
-        root = Decision_Tree('root', None, False)
-        build_decision_tree(train_data[tr], root)
-        forest.append(root)
-    pickle.dump( forest, open( 'forest.p', 'wb' ) )
-    random_forest = pickle.load( open( 'forest.p', 'rb' ) )
+    # features = list(train_data)[0 : train_data.shape[1] - 1]
+    # combinations = itertools.combinations(features, 3)
+    # forest = []
+    # for c in combinations:
+    #     tr = list(c)
+    #     tr.append('rating')
+    #     # build single decision tree
+    #     root = Decision_Tree('root', None, False)
+    #     build_decision_tree(train_data[tr], root)
+    #     forest.append(root)
+    # pickle.dump( forest, open( 'forest-3.p', 'wb' ) )
+    random_forest = pickle.load( open( 'forest-3.p', 'rb' ) )
     return random_forest
 
 # find split feature according to information gain
