@@ -1,71 +1,54 @@
 from sys import stdin
 from math import log
+from sets import Set
 
 def split(dataset, size, header):
-    label = len(dataset[0]) - 1
-    prs = probability(dataset, label)
-    entr = entropy(prs)
-    info_gains = []
-    gain_ratio = []
-    for i in range(label):
-        infogain, splitinfo = info_gain(dataset, i, entr)
-        info_gains.append(infogain)
-        gain_ratio.append(infogain/splitinfo)
+    label = dataset[len(header) - 1]
+    entr = 0
+    for c in label.values():
+        pr = float(c)/size
+        entr += -pr*log(pr, 2)
+    col = len(dataset) - 1
+    info = [0]*col
+    info_gains = [entr]*col
+    split_info = [0]*col
+    for i in range(col):
+        group = dataset[i]
+        for g in group.values():
+            p = float(len(g))/size
+            split_info[i] += -p*log(p, 2)
+            entro = entropy(g)
+            info[i] += p*entro
+        info_gains[i] -= info[i]
+        split_info[i] = info_gains[i]/split_info[i]
     print header[info_gains.index(max(info_gains))]
-    print header[gain_ratio.index(max(gain_ratio))]
+    print header[split_info.index(max(split_info))]
 
-def info_gain(dataset, idx, all_info):
-    size = len(dataset)
-    label = len(dataset[0]) - 1
-    groups = []
-    features = {}
-    for i in range(size):
-        if dataset[i][idx] in features:
-            features[dataset[i][idx]][1] += 1
-            groups[features[dataset[i][idx]][0]].append(dataset[i])
-        else:
-            features[dataset[i][idx]] = [len(groups), 1]
-            groups.append([dataset[i]])
-    ens = []
-    prs = []
-    for i in range(len(groups)):
-        pr = probability(groups[i], label)
-        ens.append(entropy(pr))
-        prs.append(float(len(groups[i]))/size)
-    info = 0
-    splitinfo = 0
-    for i in range(len(prs)):
-        info += prs[i]*ens[i]
-        splitinfo += prs[i]*log(prs[i], 2)
-    return all_info - info, -splitinfo
-
-def probability(group, idx):
-    lables = {}
-    size = len(group)
-    for t in group:
-        if t[idx] in lables:
-            lables[t[idx]] += 1
-        else:
-            lables[t[idx]] = 1
-    counts = lables.values()
-    prs = []
-    for c in counts:
-        prs.append(float(c)/size)
-    return prs
-
-# calculate entropy
-def entropy(probability):
-    ent = 0
-    for p in probability:
-        ent += p*log(p, 2)
-    return -ent
+def entropy(labels):
+    lbs = set(labels)
+    entro = 0
+    for l in lbs:
+        pr = float(labels.count(l))/len(labels)
+        entro += -pr*log(pr, 2)
+    return entro
 
 def main():
     size = input() - 1
     header = stdin.readline().split(',')
-    dataset = []
+    col = len(header) - 1
+    dataset = [{} for x in range(col + 1)]
     for line in stdin.readlines():
-        dataset.append(line.rstrip().split(','))
+        l = line.rstrip().split(',')
+        label = l[-1]
+        if label in dataset[col]:
+            dataset[col][label] += 1
+        else:
+            dataset[col][label] = 1
+        for i in range(col):
+            if l[i] in dataset[i]:
+                dataset[i][l[i]].append(label)
+            else:
+                dataset[i][l[i]] = [label]
     split(dataset, size, header)
     
 if __name__ == "__main__":
