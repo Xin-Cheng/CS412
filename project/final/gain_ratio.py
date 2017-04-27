@@ -124,10 +124,7 @@ def build_decision_tree(train_data, tree_root):
         prev_constraint = tree_root.constraint + ' & ' if tree_root.constraint is not None else ''
         if name != 'Genre':
             left = (train_data[train_data[name] <= condition] if name != 'Gender' else train_data.groupby('Gender').get_group('M')).drop(name, axis=1)
-            try:
-                right = (train_data[train_data[name] > condition] if name != 'Gender' else train_data.groupby('Gender').get_group('F')).drop(name, axis=1)
-            except:
-                print train_data, name
+            right = (train_data[train_data[name] > condition] if name != 'Gender' else train_data.groupby('Gender').get_group('F')).drop(name, axis=1)
             left_info = entropy(left)
             right_info = entropy(right)
             tree_root.children[0] = find_split(left, left_info)
