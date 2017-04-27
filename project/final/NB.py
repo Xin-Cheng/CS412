@@ -45,7 +45,37 @@ def preprocess():
     predict(test_data, parameters, genders, genres)
 
 def predict(test_data, parameters, genders, genres):
+    label(test_data.iloc[[0]], parameters, genders, genres)
+
+def label(test_tuple, parameters, genders, genres):
+    # print test_tuple
+    g = test_tuple['Gender'][0]
+    g_idx = where(genders == g)[0][0]
+    g_probs = []
+    for i in range(5):
+        g_probs.append(parameters[1][2*i+g_idx])
+    gr_probs = []
+    gr = test_tuple['Genre'][0].split('|')
+    for gi in gr:
+        gr_idx = where(genres == gi)[0][0]
+        gp = []
+        for i in range(5):
+            gp.append(parameters[2][len(genres)*i+g_idx])
+        gr_probs.append(gp)
+    a = test_tuple['Age'][0]
+    a_probs = gaussian_prob(parameters[3], a)
+    o = test_tuple['Occupation'][0]
+    o_probs = gaussian_prob(parameters[4], o)
+    y = test_tuple['Year'][0]
+    y_probs = gaussian_prob(parameters[5], y)
     cdd = 0
+
+def gaussian_prob(parameters, value):
+    probs = []
+    for p in parameters:
+        probs.append(norm(p[0], p[1]).pdf(value))
+    print probs
+    return probs
 
 
 def label_probs(train_data):
@@ -58,7 +88,7 @@ def gaussian(train_data, attr_name, rating):
     parameters = []
     for r in rating:
         r_data = train_data[train_data['rating'] == r]
-        mu, std = norm.fit(train_data[attr_name])
+        mu, std = norm.fit(r_data[attr_name])
         parameters.append([mu, std])
     return parameters
 
