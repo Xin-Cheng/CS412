@@ -46,34 +46,37 @@ def preprocess():
 
 def predict(test_data, parameters, genders, genres):
     size = test_data.shape[0]
-    result = zeros((size, 2))
-    for i in range(size):
-        t = test_data.iloc[[i]]
-        l = label(t, parameters, genders, genres)
-        result[i][0] = t['Id_x'][0]
-        result[i][1] = l
-    cdd = 0
+    result = empty((size, 2))
+    for row in test_data.iterrows():
+        index, data = row
+        print index
+        temp = data.tolist()
+        l = label(temp, parameters, genders, genres)
+        result[index][0] = int(temp[0])
+        result[index][1] = int(l)        
+    df = pd.DataFrame(result, columns=['Id', 'rating'])
+    df.sort(['rating'], inplace = True)
+    df.to_csv('nb_prediction.csv',index=False)
 
 def label(test_tuple, parameters, genders, genres):
-    print test_tuple['Gender']
-    g = test_tuple['Gender'][0]
+    g = test_tuple[1]
     g_idx = where(genders == g)[0][0]
     g_probs = []
     for i in range(5):
         g_probs.append(parameters[1][2*i+g_idx])
     gr_probs = []
-    gr = test_tuple['Genre'][0].split('|')
+    gr = test_tuple[5].split('|')
     for gi in gr:
         gr_idx = where(genres == gi)[0][0]
         gp = []
         for i in range(5):
             gp.append(parameters[2][len(genres)*i+gr_idx])
         gr_probs.append(gp)
-    a = test_tuple['Age'][0]
+    a = test_tuple[2]
     a_probs = gaussian_prob(parameters[3], a)
-    o = test_tuple['Occupation'][0]
+    o = test_tuple[3]
     o_probs = gaussian_prob(parameters[4], o)
-    y = test_tuple['Year'][0]
+    y = test_tuple[4]
     y_probs = gaussian_prob(parameters[5], y)
     probs = []
     temp = []
@@ -84,7 +87,7 @@ def label(test_tuple, parameters, genders, genres):
         probs.append([max(prs), prs.index(max(prs))])
         temp.append(max(prs))
     l_idx = temp.index(max(temp))
-    return probs[l_idx][1]
+    return probs[l_idx][1] + 1
 
 def gaussian_prob(parameters, value):
     probs = []
