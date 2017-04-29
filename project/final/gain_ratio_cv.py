@@ -5,6 +5,7 @@ from math import *
 from numpy import *
 from collections import deque
 
+# decision tree structure
 class Decision_Tree:
     def __init__(self, name, condition, is_label):
         self.name = name    # name of each tree node
@@ -44,6 +45,7 @@ def preprocess():
     prediction = predict(test_data, my_tree)
     output(prediction)
 
+# predict using the decision tree with the highest score
 def predict(test_data, decision_tree):
     test_data['rating_str'] = ''
     queries = build_queries(decision_tree)
@@ -59,11 +61,13 @@ def predict(test_data, decision_tree):
     test_data['rating'] = rating
     return test_data
 
+# output result to csv file
 def output(test_data):
     result = test_data[['Id', 'rating']]
     result.sort(['rating'], inplace = True)
     result.to_csv('gain_ratio_cv.csv',index=False)
 
+# cross validate using 80% trainding dataset
 def cross_validate(train_data):
     cv = 10
     trees = []
@@ -83,6 +87,7 @@ def cross_validate(train_data):
         print scores[i]
     return trees[scores.index(max(scores))]
 
+# extract queries from decision tree
 def build_queries(decision_tree):
     queries = []
     prefix = 'test_data.loc['
