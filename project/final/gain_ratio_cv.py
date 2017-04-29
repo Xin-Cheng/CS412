@@ -33,16 +33,17 @@ def preprocess():
     whole_train_data = pd.merge(user_train, movies, how='inner', left_on='movie-Id', right_on='Id')
     train_data = whole_train_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre', 'rating']]
     # build decision tree
-    root = Decision_Tree('root', None, False)
-    build_decision_tree(train_data, root)
-    pickle.dump( root, open( 'gain_ratio.p', 'wb' ) )
-    my_tree = pickle.load( open( 'gain_ratio.p', 'rb' ) )
-    # test data
-    user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
-    whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
-    test_data = whole_test_data[['Id_x', 'Gender', 'Age', 'Occupation', 'Year', 'Genre']]
-    test_data = test_data.rename(index=str, columns={'Id_x': 'Id'})
-    predict(test_data, my_tree)
+    cross_validate(train_data)
+    # root = Decision_Tree('root', None, False)
+    # build_decision_tree(train_data, root)
+    # pickle.dump( root, open( 'gain_ratio.p', 'wb' ) )
+    # my_tree = pickle.load( open( 'gain_ratio.p', 'rb' ) )
+    # # test data
+    # user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
+    # whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
+    # test_data = whole_test_data[['Id_x', 'Gender', 'Age', 'Occupation', 'Year', 'Genre']]
+    # test_data = test_data.rename(index=str, columns={'Id_x': 'Id'})
+    # predict(test_data, my_tree)
 
 def predict(test_data, decision_tree):
     test_data['rating_str'] = ''
@@ -54,9 +55,26 @@ def predict(test_data, decision_tree):
         votes = array(map(int, list(row['rating_str'])))
         rating.append(bincount(votes).argmax())
     test_data['rating'] = rating
+    return test_data
+
+def output(test_data):
     result = test_data[['Id', 'rating']]
     result.sort(['rating'], inplace = True)
     result.to_csv('gain_ratio_prediction.csv',index=False)
+
+def cross_validate(train_data):
+    cv = 5
+    msk = random.rand(len(train_data)) < 0.7
+    train = train_data[msk]
+    test_data = train_data[~msk]
+    true_rating = test_data['rating'].values
+    test = test_data.drop('rating', axis = 1)
+    root = Decision_Tree('root', None, False)
+    build_decision_tree(train, root)
+    predicted_data = predict(test, root)
+    predicted_rating = predicted_data['rating'].values
+    print float(sum(true_rating == predicted_rating))/len(true_rating)
+    cdd = 0
 
 def build_queries(decision_tree):
     queries = []
