@@ -34,16 +34,14 @@ def preprocess():
     train_data = whole_train_data[['Gender', 'Age', 'Occupation', 'Year', 'Genre', 'rating']]
     # build decision tree
     tree = cross_validate(train_data)
-    # root = Decision_Tree('root', None, False)
-    # build_decision_tree(train_data, root)
-    # pickle.dump( root, open( 'gain_ratio.p', 'wb' ) )
-    # my_tree = pickle.load( open( 'gain_ratio.p', 'rb' ) )
+    pickle.dump( tree, open( 'gain_ratio_cv.p', 'wb' ) )
+    my_tree = pickle.load( open( 'gain_ratio_cv.p', 'rb' ) )
     # test data
     user_test = pd.merge(users, test, how='inner', left_on='ID', right_on='user-Id')
     whole_test_data = pd.merge(user_test, movies, how='inner', left_on='movie-Id', right_on='Id')
     test_data = whole_test_data[['Id_x', 'Gender', 'Age', 'Occupation', 'Year', 'Genre']]
     test_data = test_data.rename(index=str, columns={'Id_x': 'Id'})
-    prediction = predict(test_data, tree)
+    prediction = predict(test_data, my_tree)
     output(prediction)
 
 def predict(test_data, decision_tree):
@@ -67,11 +65,11 @@ def output(test_data):
     result.to_csv('gain_ratio_cv.csv',index=False)
 
 def cross_validate(train_data):
-    cv = 5
+    cv = 10
     trees = []
     scores = []
     for i in range(cv):
-        msk = random.rand(len(train_data)) < 0.85
+        msk = random.rand(len(train_data)) < 0.8
         train = train_data[msk]
         test_data = train_data[~msk]
         true_rating = test_data['rating'].values
